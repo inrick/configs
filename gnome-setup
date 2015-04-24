@@ -1,0 +1,58 @@
+#!/bin/sh
+gsettings set org.gnome.Evince.Default show-sidebar false
+
+gsettings set org.gnome.Empathy.conversation graphical-smileys false
+gsettings set org.gnome.Empathy.conversation spell-checker-languages "en,sv"
+gsettings set org.gnome.Empathy.notifications notifications-contact-signin true
+gsettings set org.gnome.Empathy.notifications notifications-contact-signout true
+gsettings set org.gnome.Empathy.notifications notifications-disabled-away false
+gsettings set org.gnome.Empathy.ui show-groups false
+gsettings set org.gnome.Empathy.ui show-offline false
+
+# See /usr/share/X11/xkb/rules/base.lst for xkb-options
+gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'us+altgr-intl'), ('xkb', 'se')]"
+gsettings set org.gnome.desktop.input-sources xkb-options "['nodeadkeys', 'altwin:swap_alt_win', 'lv3:ralt_switch', 'ctrl:nocaps', 'grp:alts_toggle']"
+
+gsettings set org.gnome.desktop.interface automatic-mnemonics false
+gsettings set org.gnome.desktop.interface clock-show-date true
+gsettings set org.gnome.desktop.interface cursor-theme Bluecurve-FC6
+gsettings set org.gnome.desktop.interface can-change-accels true
+gsettings set org.gnome.desktop.interface monospace-font-name 'Ubuntu Mono 12'
+
+gsettings set org.gnome.desktop.lockdown disable-user-switching true
+gsettings set org.gnome.desktop.media-handling automount false
+gsettings set org.gnome.desktop.privacy remember-recent-files false
+gsettings set org.gnome.desktop.screensaver user-switch-enabled false
+
+gsettings set org.gnome.desktop.wm.keybindings close "['<Shift><Super>c']"
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-1 "['<Super>1']"
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-2 "['<Super>2']"
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-3 "['<Super>3']"
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-4 "['<Super>4']"
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-5 "['<Super>5']"
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-6 "['<Super>6']"
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-7 "['<Super>7']"
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-8 "['<Super>8']"
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-9 "['<Super>9']"
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-down "['<Control><Super>Down']"
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-up "['<Control><Super>Up']"
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-down "['<Shift><Super>Down']"
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-up "['<Shift><Super>Up']"
+gsettings set org.gnome.desktop.wm.keybindings move-to-monitor-left "['<Control><Shift><Super>Left']"
+gsettings set org.gnome.desktop.wm.keybindings move-to-monitor-right "['<Control><Shift><Super>Right']"
+gsettings set org.gnome.desktop.wm.keybindings move-to-monitor-down "['<Control><Shift><Super>Down']"
+gsettings set org.gnome.desktop.wm.keybindings move-to-monitor-up "['<Control><Shift><Super>Up']"
+gsettings set org.gnome.desktop.wm.keybindings switch-input-source "[]"
+gsettings set org.gnome.desktop.wm.keybindings toggle-shaded "['<Control><Alt>s']"
+
+gsettings set org.gnome.desktop.wm.preferences resize-with-right-button true
+
+gsettings set org.gnome.mutter.keybindings toggle-tiled-left "['<Super>Left']"
+gsettings set org.gnome.mutter.keybindings toggle-tiled-right "['<Super>Right']"
+
+gsettings set org.gnome.settings-daemon.plugins.xrandr active false
+
+gsettings set org.gnome.nautilus.list-view default-zoom-level "smallest"
+gsettings set org.gnome.nautilus.preferences default-folder-viewer "list-view"
+gsettings set org.gnome.nautilus.preferences enable-delete true
+gsettings set org.gnome.nautilus.preferences sort-directories-first true
