@@ -1,0 +1,91 @@
+#!/usr/bin/env zsh
+readonly SCRIPT=$0
+readonly SCRIPTPATH=${0:a}
+readonly SOURCE=${SCRIPTPATH%/*}
+readonly TARGET=$HOME
+
+typeset -a files
+files=(xmonad/xmonad.hs tmux.conf zlogin zshenv zshrc)
+readonly files
+
+print_usage() {
+  cat << EOF
+Usage: $SCRIPT [OPTIONS]
+
+OPTIONS:
+    -i  Install config files to '$TARGET'.
+    -r  Remove config files from '$TARGET'.
+    -h  Print this help.
+EOF
+  exit $1
+}
+
+check_src_files() {
+  local src=
+  for f in $files; do
+    src=$SOURCE/$f
+    if [[ ! -e "$src" ]]; then
+      echo "ERROR: expected source file '$src' does not exist"
+      exit 1
+    fi
+  done
+}
+
+install() {
+  local src=
+  local target=
+  local target_base=
+  local installed=
+  local exists=
+
+  for f in $files; do
+    src=$SOURCE/$f
+    target=$TARGET/.$f
+    target_base=${target%/*}
+    if [[ -e "$target" ]]; then
+      exists+=("$target")
+    else
+      [[ -d "$target_base" ]] || mkdir -p "$target_base"
+      ln -s "$src" "$target"
+      installed+=("$target")
+    fi
+  done
+
+  echo "Installed:"
+  printf "    %s\n" $installed
+  echo "Already exist, remove and run again to install:"
+  printf "    %s\n" $exists
+}
+
+remove() {
+  local src=
+  local target=
+  local removed=
+  local kept=
+
+  for f in $files; do
+    src=$SOURCE/$f
+    target=$TARGET/.$f
+    # Remove if target is symlink to src
+    if [[ -L "$target" && $(readlink "$target") == $src ]]; then
+      rm "$target"
+      removed+=("$target")
+    else
+      kept+=("$target")
+    fi
+  done
+
+  echo "Removed:"
+  printf "    %s\n" $removed
+  echo "Kept because not linked here:"
+  printf "    %s\n" $kept
+}
+
+while getopts irh opt; do
+  case $opt in
+    i) check_src_files; install; exit 0;;
+    r) remove; exit 0;;
+    h) print_usage 0;;
+  esac
+done
+print_usage 1
