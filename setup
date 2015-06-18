@@ -5,7 +5,7 @@ readonly SOURCE=${SCRIPTPATH%/*}
 readonly TARGET=$HOME
 
 typeset -a files
-files=(xmonad/xmonad.hs tmux.conf zlogin zshenv zshrc)
+files=(emacs.d/init.el xmonad/xmonad.hs tmux.conf zlogin zshenv zshrc)
 readonly files
 
 print_usage() {
