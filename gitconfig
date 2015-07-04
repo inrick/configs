@@ -1,0 +1,22 @@
+[push]
+	default = simple
+[core]
+	editor = vim
+	pager = less
+[merge]
+	tool = vimdiff
+[color]
+	ui = true
+[alias]
+	a = add
+	ap = add --patch
+	br = branch
+	bra = branch --all
+	c = commit
+	co = checkout
+	d = diff
+	dc = diff --cached
+	f = fetch
+	fa = fetch --all
+	new = log ..@{u}
+	s = status
