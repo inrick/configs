@@ -13,7 +13,6 @@ gsettings set org.gnome.Empathy.ui show-offline false
 gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'us+altgr-intl'), ('xkb', 'se')]"
 gsettings set org.gnome.desktop.input-sources xkb-options "['nodeadkeys', 'lv3:ralt_switch', 'ctrl:nocaps', 'grp:alts_toggle']"
 
-gsettings set org.gnome.desktop.interface automatic-mnemonics false
 gsettings set org.gnome.desktop.interface clock-show-date true
 gsettings set org.gnome.desktop.interface cursor-theme Bluecurve-FC6
 gsettings set org.gnome.desktop.interface can-change-accels true
@@ -54,5 +53,4 @@ gsettings set org.gnome.settings-daemon.plugins.xrandr active false
 
 gsettings set org.gnome.nautilus.list-view default-zoom-level "smallest"
 gsettings set org.gnome.nautilus.preferences default-folder-viewer "list-view"
-gsettings set org.gnome.nautilus.preferences enable-delete true
 gsettings set org.gnome.nautilus.preferences sort-directories-first true
