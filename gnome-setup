@@ -24,7 +24,7 @@ gsettings set org.gnome.desktop.media-handling automount false
 gsettings set org.gnome.desktop.privacy remember-recent-files false
 gsettings set org.gnome.desktop.screensaver user-switch-enabled false
 
-gsettings set org.gnome.desktop.wm.keybindings close "['<Shift><Super>c']"
+gsettings set org.gnome.desktop.wm.keybindings close "['<Super>c']"
 gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-1 "['<Super>1']"
 gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-2 "['<Super>2']"
 gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-3 "['<Super>3']"
@@ -34,15 +34,15 @@ gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-6 "['<Super>6
 gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-7 "['<Super>7']"
 gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-8 "['<Super>8']"
 gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-9 "['<Super>9']"
-gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-down "['<Control><Super>Down']"
-gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-up "['<Control><Super>Up']"
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-down "['<Control>Down']"
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-up "['<Control>Up']"
 gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-down "['<Shift><Super>Down']"
 gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-up "['<Shift><Super>Up']"
 gsettings set org.gnome.desktop.wm.keybindings move-to-monitor-left "['<Control><Shift><Super>Left']"
 gsettings set org.gnome.desktop.wm.keybindings move-to-monitor-right "['<Control><Shift><Super>Right']"
 gsettings set org.gnome.desktop.wm.keybindings move-to-monitor-down "['<Control><Shift><Super>Down']"
 gsettings set org.gnome.desktop.wm.keybindings move-to-monitor-up "['<Control><Shift><Super>Up']"
-gsettings set org.gnome.desktop.wm.keybindings switch-input-source "[]"
+gsettings set org.gnome.desktop.wm.keybindings switch-input-source "['<Super><Alt>Space']"
 gsettings set org.gnome.desktop.wm.keybindings toggle-shaded "['<Control><Alt>s']"
 
 gsettings set org.gnome.desktop.wm.preferences resize-with-right-button true
