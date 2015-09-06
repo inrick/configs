@@ -23,7 +23,7 @@ gsettings set org.gnome.desktop.media-handling automount false
 gsettings set org.gnome.desktop.privacy remember-recent-files false
 gsettings set org.gnome.desktop.screensaver user-switch-enabled false
 
-gsettings set org.gnome.desktop.wm.keybindings close "['<Super>c']"
+gsettings set org.gnome.desktop.wm.keybindings close "['<Super>q']"
 gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-1 "['<Super>1']"
 gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-2 "['<Super>2']"
 gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-3 "['<Super>3']"
