@@ -33,12 +33,16 @@ bindkey '^Xe' edit-command-line
 bindkey '^[[Z' reverse-menu-complete # shift-tab
 
 case "$(uname)" in
-  Linux) alias ls='ls -F --color=auto --group-directories-first';;
-  FreeBSD|Darwin) alias ls='ls -FG';;
-  OpenBSD) alias ls='ls -F';;
+  Linux)
+    alias ls='ls -F --color=auto --group-directories-first'
+    alias grep='grep --color=auto';;
+  FreeBSD|Darwin)
+    alias ls='ls -FG'
+    alias grep='grep --color=auto';;
+  OpenBSD)
+    alias ls='ls -F';;
 esac
 alias ll='ls -la'
-alias grep='grep --color=auto'
 alias c='cat'
 alias e='$EDITOR'
 alias g='git'
