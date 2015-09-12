@@ -32,11 +32,11 @@ bindkey -e # -e emacs, -v vi
 bindkey '^Xe' edit-command-line
 bindkey '^[[Z' reverse-menu-complete # shift-tab
 
-if [[ $(uname -o) =~ "^GNU/" ]]; then
-  alias ls='ls -F --color=auto --group-directories-first'
-else
-  alias ls='ls -FG'
-fi
+case "$(uname)" in
+  Linux) alias ls='ls -F --color=auto --group-directories-first';;
+  FreeBSD|Darwin) alias ls='ls -FG';;
+  OpenBSD) alias ls='ls -F';;
+esac
 alias ll='ls -la'
 alias grep='grep --color=auto'
 alias c='cat'
