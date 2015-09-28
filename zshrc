@@ -19,6 +19,7 @@ unsetopt \
 
 autoload -U compinit # tab completion
 compinit
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' # case insensitive
 autoload -U select-word-style
 select-word-style bash
 autoload -U colors
