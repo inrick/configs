@@ -1,5 +1,5 @@
 export EDITOR=vim
 export PAGER=less
 export VISUAL=vim
-export BROWSER=/usr/bin/google-chrome-stable
+export BROWSER=firefox
 export MANWIDTH=80
