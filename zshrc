@@ -68,10 +68,10 @@ zip_epub() {
 precmd() { vcs_info }
 zstyle ':vcs_info:*' enable git svn cvs
 zstyle ':vcs_info:*' check-for-changes true
-zstyle ':vcs_info:*' formats "%{$reset_color%}[%{$fg[green]%}%s:%b%{$reset_color%}]%{$fg[red]%}%m%u%c%{$reset_color%} "
-zstyle ':vcs_info:*' actionformats "%{$reset_color%}[%{$fg[red]%}%s:%b|%a%{$reset_color%}]%{$fg[red]%}%m%u%c%{$reset_color%} "
-PROMPT='%{$fg[green]%}%m %(!.%{$fg[red]%}.%{$fg[blue]%})%~ ${vcs_info_msg_0_}%{$reset_color%}%# '
-RPROMPT='%(?.%{$fg[green]%}.%{$fg[red]%})%?%{$reset_color%} %T'
+zstyle ':vcs_info:*' formats "%f[%F{green}%s:%b%f]%F{red}%m%u%c%f "
+zstyle ':vcs_info:*' actionformats "%f[%F{red}%s:%b|%a%f]%F{red}%m%u%c%f "
+PROMPT='%F{green}%m %(!.%F{red}.%F{blue})%~ ${vcs_info_msg_0_}%f%# '
+RPROMPT='%(?.%F{green}.%F{red})%?%f %T'
 
 HISTSIZE=10000
 SAVEHIST=10000
