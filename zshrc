@@ -70,7 +70,7 @@ zstyle ':vcs_info:*' enable git svn cvs
 zstyle ':vcs_info:*' check-for-changes true
 zstyle ':vcs_info:*' formats "%f[%F{green}%s:%b%f]%F{red}%m%u%c%f "
 zstyle ':vcs_info:*' actionformats "%f[%F{red}%s:%b|%a%f]%F{red}%m%u%c%f "
-PROMPT='%F{green}%m %(!.%F{red}.%F{blue})%~ ${vcs_info_msg_0_}%f%# '
+PROMPT='%F{green}%m %(!.%F{red}.%F{blue})%~ ${vcs_info_msg_0_}%f'$'\n''%# '
 RPROMPT='%(?.%F{green}.%F{red})%?%f %T'
 
 HISTSIZE=10000
