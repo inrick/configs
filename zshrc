@@ -9,6 +9,7 @@ setopt \
   hist_ignore_dups \
   hist_ignore_space \
   inc_append_history \
+  interactive_comments \
   list_types \
   no_beep \
   prompt_subst
