@@ -18,5 +18,6 @@
 	dc = diff --cached
 	f = fetch
 	fa = fetch --all
+	ff = merge --ff-only
 	new = log ..@{u}
 	s = status
