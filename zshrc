@@ -34,6 +34,8 @@ bindkey -e # -e emacs, -v vi
 bindkey '^Xe' edit-command-line
 bindkey '^[[Z' reverse-menu-complete # shift-tab
 
+stty -ixon
+
 case "$(uname)" in
   Linux)
     alias ls='ls -F --color=auto --group-directories-first'
