@@ -5,8 +5,8 @@ readonly SOURCE=${SCRIPTPATH%/*}
 readonly TARGET=$HOME
 
 typeset -a files
-files=(emacs.d/init.el xmonad/xmonad.hs gitconfig lambda-term-inputrc tmux.conf
-  utoprc zlogin zshenv zshrc)
+files=(emacs.d/init.el xmonad/xmonad.hs gitconfig lambda-term-inputrc ocamlinit
+  tmux.conf utoprc zlogin zshenv zshrc)
 readonly files
 
 print_usage() {
