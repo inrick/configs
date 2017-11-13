@@ -9,6 +9,7 @@ files=(
   emacs.d/init.el
   xmonad/xmonad.hs
   gitconfig
+  inputrc
   lambda-term-inputrc
   ocamlinit
   tmux.conf
