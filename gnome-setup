@@ -18,7 +18,10 @@ gsettings set org.gnome.desktop.interface cursor-blink false
 gsettings set org.gnome.desktop.interface cursor-theme Bluecurve-FC6
 gsettings set org.gnome.desktop.interface can-change-accels true
 gsettings set org.gnome.desktop.interface enable-animations false
-gsettings set org.gnome.desktop.interface monospace-font-name 'Ubuntu Mono 12'
+gsettings set org.gnome.desktop.interface font-name 'San Francisco Text 11'
+gsettings set org.gnome.desktop.interface document-font-name 'San Francisco Text 11'
+gsettings set org.gnome.desktop.interface monospace-font-name 'Fira Mono 11'
+gsettings set org.gnome.desktop.interface text-scaling-factor 1
 
 gsettings set org.gnome.desktop.lockdown disable-user-switching true
 gsettings set org.gnome.desktop.media-handling automount false
