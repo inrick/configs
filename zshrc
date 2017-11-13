@@ -55,7 +55,9 @@ alias p='$PAGER'
 alias gk='gitk &> /dev/null &'
 alias open='xdg-open'
 alias cdrip='rip cd rip --track-template="%A/%d (%y)/%t - %n" --disc-template="%A/%d (%y)/%d"'
-alias k='rlwrap $HOME/.builds/kona/k'
+alias kona='rlwrap $HOME/.builds/kona/k'
+alias k='rlwrap $HOME/.bin/k'
+alias kg='( cd $HOME/.builds/klong && rlwrap ./kg )'
 
 alias -s gz=tar xvfz
 alias -s bz2=tar xvfj
