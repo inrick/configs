@@ -1,0 +1,23 @@
+unmapAll
+map j scrollDown
+map k scrollUp
+map h scrollLeft
+map l scrollRight
+map z goBack
+map x goForward
+map t createTab
+map w removeTab
+map T restoreTab
+map 1 previousTab
+map 2 nextTab
+map d scrollPageDown
+map u scrollPageUp
+map gg scrollToTop
+map G scrollToBottom
+map f LinkHints.activateMode
+map F LinkHints.activateModeToOpenInNewTab
+map [[ goPrevious
+map ]] goNext
+map i enterInsertMode
+map <c-e> Vomnibar.activate
+map ? showHelp
