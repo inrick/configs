@@ -1,14 +1,6 @@
 #!/bin/sh
 gsettings set org.gnome.Evince.Default show-sidebar false
 
-gsettings set org.gnome.Empathy.conversation graphical-smileys false
-gsettings set org.gnome.Empathy.conversation spell-checker-languages "en,sv"
-gsettings set org.gnome.Empathy.notifications notifications-contact-signin true
-gsettings set org.gnome.Empathy.notifications notifications-contact-signout true
-gsettings set org.gnome.Empathy.notifications notifications-disabled-away false
-gsettings set org.gnome.Empathy.ui show-groups false
-gsettings set org.gnome.Empathy.ui show-offline false
-
 # See /usr/share/X11/xkb/rules/base.lst for xkb-options
 gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'us+altgr-intl'), ('xkb', 'se')]"
 gsettings set org.gnome.desktop.input-sources xkb-options "['nodeadkeys', 'lv3:ralt_switch', 'ctrl:nocaps', 'grp:alts_toggle']"
