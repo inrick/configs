@@ -5,8 +5,12 @@ let () =
 ;;
 
 #use "topfind";;
-#require "core_kernel";;
-open Core_kernel.Std;;
+#require "sexplib";;
+#ppx "ppx-jane -as-ppx"
+#require "base";;
+#require "stdio";;
+open Base;;
+open Stdio;;
 
 #require "lambda-term";;
 let () =
