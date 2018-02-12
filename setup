@@ -8,6 +8,7 @@ typeset -a files
 files=(
   emacs.d/init.el
   xmonad/xmonad.hs
+  gdbinit
   gitconfig
   inputrc
   lambda-term-inputrc
