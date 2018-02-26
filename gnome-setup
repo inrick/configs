@@ -34,14 +34,24 @@ gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-down "['<Cont
 gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-up "['<Control>Up']"
 gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-down "['<Shift><Super>Down']"
 gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-up "['<Shift><Super>Up']"
-gsettings set org.gnome.desktop.wm.keybindings move-to-monitor-left "['<Control><Shift><Super>Left']"
-gsettings set org.gnome.desktop.wm.keybindings move-to-monitor-right "['<Control><Shift><Super>Right']"
-gsettings set org.gnome.desktop.wm.keybindings move-to-monitor-down "['<Control><Shift><Super>Down']"
-gsettings set org.gnome.desktop.wm.keybindings move-to-monitor-up "['<Control><Shift><Super>Up']"
+gsettings set org.gnome.desktop.wm.keybindings move-to-monitor-left "[]"
+gsettings set org.gnome.desktop.wm.keybindings move-to-monitor-right "[]"
+gsettings set org.gnome.desktop.wm.keybindings move-to-monitor-down "[]"
+gsettings set org.gnome.desktop.wm.keybindings move-to-monitor-up "[]"
 gsettings set org.gnome.desktop.wm.keybindings switch-input-source "['<Super><Alt>Space']"
+gsettings set org.gnome.desktop.wm.keybindings toggle-fullscreen "['<Alt>F11']"
 gsettings set org.gnome.desktop.wm.keybindings toggle-shaded "['<Control><Alt>s']"
 
 gsettings set org.gnome.settings-daemon.plugins.media-keys home "<Super>e"
+gsettings set org.gnome.settings-daemon.plugins.media-keys email ""
+gsettings set org.gnome.settings-daemon.plugins.media-keys www ""
+gsettings set org.gnome.settings-daemon.plugins.media-keys media ""
+gsettings set org.gnome.settings-daemon.plugins.media-keys play ""
+gsettings set org.gnome.settings-daemon.plugins.media-keys pause ""
+gsettings set org.gnome.settings-daemon.plugins.media-keys stop ""
+gsettings set org.gnome.settings-daemon.plugins.media-keys next ""
+gsettings set org.gnome.settings-daemon.plugins.media-keys previous ""
+gsettings set org.gnome.settings-daemon.plugins.media-keys screensaver "<Alt><Super>l"
 gsettings set org.gnome.settings-daemon.plugins.media-keys custom-keybindings "['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom5/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom6/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom7/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom8/']"
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ binding ""
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ command "fb2kshoworhide"
@@ -71,7 +81,7 @@ gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/or
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom8/ command "cmus-remote -p"
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom8/ name "cmus prev"
 
-gsettings set org.gnome.settings-daemon.plugins.color night-light-temperature 3400
+gsettings set org.gnome.settings-daemon.plugins.color night-light-temperature 3500
 
 gsettings set org.gnome.desktop.wm.preferences resize-with-right-button true
 gsettings set org.gnome.desktop.wm.preferences button-layout "appmenu:minimize,close"
@@ -80,8 +90,7 @@ gsettings set org.gnome.mutter.keybindings toggle-tiled-left "['<Super>Left']"
 gsettings set org.gnome.mutter.keybindings toggle-tiled-right "['<Super>Right']"
 gsettings set org.gnome.mutter center-new-windows true
 
-gsettings set org.gnome.settings-daemon.plugins.xrandr active true
-
 gsettings set org.gnome.nautilus.list-view default-zoom-level "smallest"
 gsettings set org.gnome.nautilus.preferences default-folder-viewer "list-view"
-gsettings set org.gnome.nautilus.preferences sort-directories-first true
+gsettings set org.gnome.nautilus.preferences fts-default false
+gsettings set org.gnome.nautilus.preferences recursive-search "never"
