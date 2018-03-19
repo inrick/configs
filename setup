@@ -12,6 +12,7 @@ files=(
   gitconfig
   inputrc
   lambda-term-inputrc
+  latexmkrc
   ocamlinit
   tmux.conf
   utoprc
