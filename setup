@@ -14,6 +14,7 @@ files=(
   config/rofi/config
   config/tint2/tint2rc
   emacs.d/init.el
+  themes/LAUGHm2
   xmonad/xmonad.hs
   gdbinit
   gitconfig
