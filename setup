@@ -16,6 +16,7 @@ files=(
   ocamlinit
   tmux.conf
   utoprc
+  Xresources
   zlogin
   zshenv
   zshrc
