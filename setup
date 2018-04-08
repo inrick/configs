@@ -6,7 +6,9 @@ readonly TARGET=$HOME
 
 typeset -a files
 files=(
+  config/gsimplecal/config
   config/rofi/config
+  config/tint2/tint2rc
   emacs.d/init.el
   xmonad/xmonad.hs
   gdbinit
