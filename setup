@@ -6,6 +6,7 @@ readonly TARGET=$HOME
 
 typeset -a files
 files=(
+  config/rofi/config
   emacs.d/init.el
   xmonad/xmonad.hs
   gdbinit
