@@ -7,6 +7,10 @@ readonly TARGET=$HOME
 typeset -a files
 files=(
   config/gsimplecal/config
+  config/openbox/autostart
+  config/openbox/environment
+  config/openbox/menu.xml
+  config/openbox/rc.xml
   config/rofi/config
   config/tint2/tint2rc
   emacs.d/init.el

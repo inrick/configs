@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openbox_menu xmlns="http://openbox.org/3.4/menu">
+  <menu id="openbox-conf-menu" label="Openbox">
+    <item label="ObConf">
+      <action name="Execute">
+        <execute>
+          obconf
+        </execute>
+      </action>
+    </item>
+    <item label="Reconfigure">
+      <action name="Reconfigure"/>
+    </item>
+    <separator/>
+    <item label="autostart">
+      <action name="Execute">
+        <execute>
+          gvim ~/.config/openbox/autostart
+        </execute>
+      </action>
+    </item>
+    <item label="environment">
+      <action name="Execute">
+        <execute>
+          gvim ~/.config/openbox/environment
+        </execute>
+      </action>
+    </item>
+    <item label="menu.xml">
+      <action name="Execute">
+        <execute>
+          gvim ~/.config/openbox/menu.xml
+        </execute>
+      </action>
+    </item>
+    <item label="rc.xml">
+      <action name="Execute">
+        <execute>
+          gvim ~/.config/openbox/rc.xml
+        </execute>
+      </action>
+    </item>
+    <separator/>
+    <item label="Exit">
+      <action name="Exit"/>
+    </item>
+  </menu>
+
+  <menu id="system-menu" label="System">
+    <item label="Suspend">
+      <action name="Execute">
+        <execute>
+          systemctl suspend
+        </execute>
+      </action>
+    </item>
+    <item label="Hibernate">
+      <action name="Execute">
+        <execute>
+          systemctl hibernate
+        </execute>
+      </action>
+    </item>
+    <separator/>
+    <item label="Reboot">
+      <action name="Execute">
+        <execute>
+          systemctl reboot
+        </execute>
+      </action>
+    </item>
+    <item label="Power off">
+      <action name="Execute">
+        <execute>
+          systemctl poweroff
+        </execute>
+      </action>
+    </item>
+  </menu>
+
+  <menu id="root-menu" label="Openbox 3">
+    <item label="Terminal">
+      <action name="Execute">
+        <execute>urxvt</execute>
+      </action>
+    </item>
+    <separator/>
+    <!--<menu id="client-list-menu"/>-->
+    <menu id="openbox-conf-menu"/>
+    <menu id="system-menu"/>
+  </menu>
+</openbox_menu>

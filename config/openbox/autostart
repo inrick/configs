@@ -1,0 +1,20 @@
+#xrandr --dpi 100
+xrdb -merge ~/.Xresources
+rfkill block bluetooth
+xset -b  # turn bell off
+
+# man xkeyboard-config
+setxkbmap -model pc105 -layout "us,se" -variant "altgr-intl," -option "nodeadkeys,lv3:ralt_switch,ctrl:nocaps,grp:shifts_toggle"
+xset r rate 300 30
+
+/usr/lib/xfce4/notifyd/xfce4-notifyd &
+volumeicon &
+nm-applet &
+thunar --daemon &
+xscreensaver -no-splash &
+xss-lock -- xscreensaver-command -lock &
+compton -bcC --no-fading-openclose --no-fading-destroyed-argb
+~/.fehbg
+
+# run after openbox has started
+(sleep 2 && tint2) &

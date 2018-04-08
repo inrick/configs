@@ -1,0 +1,18 @@
+# the default umask is set in /etc/profile; for setting the umask
+# for ssh logins, install and configure the libpam-umask package.
+umask 022
+
+export PATH=~/.bin:$PATH
+export MANPATH=$MANPATH
+export EDITOR=vim
+export PAGER=less
+export VISUAL=vim
+export BROWSER=chromium
+export TERMINAL=urxvt
+export MANWIDTH=80
+export DE=xfce # make xdg-open use exo-open
+export DESKTOP_SESSION=xfce
+export OOO_FORCE_DESKTOP=gnome
+
+eval $(gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
+export SSH_AUTH_SOCK
