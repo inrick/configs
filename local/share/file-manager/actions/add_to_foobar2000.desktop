@@ -1,0 +1,13 @@
+[Desktop Entry]
+Type=Action
+Name=Add to foobar2000
+ToolbarLabel=Add to foobar2000
+Tooltip=Add selected files to foobar2000
+Icon=tango_foobar2k_2
+Profiles=addToFoobar;
+
+[X-Action-Profile addToFoobar]
+MimeTypes=application/ogg;audio/x-vorbis+ogg;audio/mpeg;audio/x-flac;audio/x-flac+ogg;audio/x-musepack;audio/x-wav;audio/mp4;inode/directory;application/zip;application/x-rar;
+Exec=fb2kadd %F
+Name=Add to foobar2000
+

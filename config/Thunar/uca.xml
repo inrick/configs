@@ -1,0 +1,55 @@
+<?xml encoding="UTF-8" version="1.0"?>
+<actions>
+<action>
+	<icon>utilities-terminal</icon>
+	<name>Open Terminal Here</name>
+	<unique-id>1509274778923125-1</unique-id>
+	<command>exo-open --working-directory %f --launch TerminalEmulator</command>
+	<description></description>
+	<patterns>*</patterns>
+	<directories/>
+</action>
+<action>
+	<icon>gvim</icon>
+	<name>Open in gvim</name>
+	<unique-id>1509222408731183-2</unique-id>
+	<command>gvim %f</command>
+	<description>Opens the selected file in gvim</description>
+	<patterns>*</patterns>
+	<other-files/>
+	<text-files/>
+</action>
+<action>
+	<icon>tango_foobar2k_2</icon>
+	<name>Add to foobar2000</name>
+	<unique-id>1523447519272687-1</unique-id>
+	<command>fb2kadd %F</command>
+	<description>Add selected files to foobar2000</description>
+	<patterns>*</patterns>
+	<directories/>
+	<audio-files/>
+	<other-files/>
+	<video-files/>
+</action>
+<action>
+	<icon>tango_foobar2k_2</icon>
+	<name>Send to foobar2000</name>
+	<unique-id>1523447525431621-2</unique-id>
+	<command>fb2kadd --replace %F</command>
+	<description>Send selected files to foobar2000</description>
+	<patterns>*</patterns>
+	<directories/>
+	<audio-files/>
+	<other-files/>
+	<video-files/>
+</action>
+<action>
+	<icon>background</icon>
+	<name>Set as wallpaper</name>
+	<unique-id>1509222408731207-5</unique-id>
+	<command>feh --bg-scale %f</command>
+	<description>Set selected image as wallpaper</description>
+	<patterns>*</patterns>
+	<image-files/>
+</action>
+</actions>

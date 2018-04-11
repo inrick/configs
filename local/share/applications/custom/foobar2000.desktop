@@ -1,0 +1,10 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Name=foobar2000
+Comment=Audio Player
+Exec=foobar2000
+Terminal=false
+Icon=foobar_flat.png
+Type=Application
+Categories=AudioVideo;
+StartupWMClass=foobar2000.exe

@@ -1,0 +1,13 @@
+[Desktop Entry]
+Type=Action
+Name=Send to foobar2000
+ToolbarLabel=Send to foobar2000
+Tooltip=Send selected files to foobar2000
+Icon=tango_foobar2k_2
+Profiles=sendToFoobar;
+
+[X-Action-Profile sendToFoobar]
+MimeTypes=application/ogg;audio/x-vorbis+ogg;audio/mpeg;audio/x-flac;audio/x-flac+ogg;audio/x-musepack;audio/x-wav;audio/mp4;inode/directory;application/zip;application/x-rar;
+Exec=fb2kadd --replace %F
+Name=Send to foobar2000
+

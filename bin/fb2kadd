@@ -1,0 +1,33 @@
+#!/bin/sh
+
+# Path to foobar2000
+FOOBAR="~/.foobar2000/foobar2000.exe"
+
+usage() {
+  cat << EOF
+Usage: $0 [--replace] FILE [FILE2] [FILE3] [...]
+  --replace If the files should replace the playlist instead of being added to it
+  --help Show this help text
+EOF
+  exit $1
+}
+
+REPLACE=false
+
+case "$1" in
+  --help)    usage 0;;
+  --replace) REPLACE=true; shift;;
+  ""|--*)    usage 1;;
+esac
+
+FILES=""
+for i in "$@"; do
+    FILES="\"`winepath "$i" | sed "s/.*\(z:.*\)/\1/"`\" $FILES"
+done
+
+if $REPLACE; then
+    COMMAND="/immediate /command:\"Send to Playlist...\""
+else
+    COMMAND="/immediate /add"
+fi
+eval wine "$FOOBAR" $COMMAND $FILES

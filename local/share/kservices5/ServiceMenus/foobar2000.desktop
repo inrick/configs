@@ -1,0 +1,18 @@
+[Desktop Entry]
+Type=Service
+X-KDE-ServiceTypes=KonqPopupMenu/Plugin
+MimeType=inode/directory;application/x-ogg;application/ogg;audio/x-vorbis+ogg;audio/x-mp3;audio/x-mpeg;audio/mpeg;audio/x-mpegurl;audio/x-flac;audio/x-flac+ogg;audio/x-musepack;audio/x-aiff;audio/x-wav;audio/mp4;application/x-cue;audio/x-scpls;audio/x-ms-wma;audio/x-wa;application/zip;application/x-rar
+Actions=addToFoobar;sendToFoobar;
+X-KDE-Priority=TopLevel
+
+[Desktop Action addToFoobar]
+Name=Add to foobar2000
+Comment=Add selected files to foobar2000
+Icon=tango_foobar2k_2.png
+Exec=fb2kadd %F
+
+[Desktop Action sendToFoobar]
+Name=Send to foobar2000
+Comment=Send selected files to foobar2000
+Icon=tango_foobar2k_2.png
+Exec=fb2kadd --replace %F
