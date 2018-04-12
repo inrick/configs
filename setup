@@ -10,6 +10,7 @@ files=(
   bin/fb2kshoworhide
   bin/foobar2000
   bin/mediacontrol
+  config/autostart/xresources.desktop
   config/gsimplecal/config
   config/openbox/autostart
   config/openbox/environment
