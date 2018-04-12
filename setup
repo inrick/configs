@@ -7,11 +7,9 @@ readonly TARGET=$HOME
 typeset -a files
 files=(
   bin/fb2kadd
-  bin/fb2knext
-  bin/fb2kplaypause
-  bin/fb2kprev
   bin/fb2kshoworhide
   bin/foobar2000
+  bin/mediacontrol
   config/gsimplecal/config
   config/openbox/autostart
   config/openbox/environment

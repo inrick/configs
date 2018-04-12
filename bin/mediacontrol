@@ -1,0 +1,45 @@
+#!/bin/sh
+FOOBAR2000=~/.foobar2000/foobar2000.exe
+
+usage() {
+  echo "Usage: $0 <playpause|next|prev|stop>"
+  exit 1
+}
+
+if pgrep foobar2000; then
+  case $1 in
+    playpause) wine "$FOOBAR2000" /playpause &> /dev/null;;
+    next) wine "$FOOBAR2000" /next &> /dev/null;;
+    prev) wine "$FOOBAR2000" /prev &> /dev/null;;
+    stop) wine "$FOOBAR2000" /stop &> /dev/null;;
+    *) usage;;
+  esac
+else
+  case $1 in
+    playpause) dbus-send \
+      --type=method_call \
+      --dest=org.mpris.MediaPlayer2.spotify \
+      /org/mpris/MediaPlayer2 \
+      org.mpris.MediaPlayer2.Player.PlayPause
+    ;;
+    next) dbus-send \
+      --type=method_call \
+      --dest=org.mpris.MediaPlayer2.spotify \
+      /org/mpris/MediaPlayer2 \
+      org.mpris.MediaPlayer2.Player.Next
+    ;;
+    prev) dbus-send \
+      --type=method_call \
+      --dest=org.mpris.MediaPlayer2.spotify \
+      /org/mpris/MediaPlayer2 \
+      org.mpris.MediaPlayer2.Player.Previous
+    ;;
+    stop) dbus-send \
+      --type=method_call \
+      --dest=org.mpris.MediaPlayer2.spotify \
+      /org/mpris/MediaPlayer2 \
+      org.mpris.MediaPlayer2.Player.Stop
+    ;;
+    *) usage;;
+  esac
+fi

@@ -122,25 +122,25 @@
     </keybind>
     <keybind key="XF86AudioPlay">
       <action name="Execute">
-        <execute>wine ~/.foobar2000/foobar2000.exe /playpause</execute>
+        <execute>mediacontrol playpause</execute>
       </action>
     </keybind>
     <keybind key="XF86AudioStop">
       <action name="Execute">
-        <execute>wine ~/.foobar2000/foobar2000.exe /stop</execute>
+        <execute>mediacontrol stop</execute>
       </action>
     </keybind>
     <keybind key="XF86AudioPrev">
       <action name="Execute">
-        <execute>wine ~/.foobar2000/foobar2000.exe /prev</execute>
+        <execute>mediacontrol prev</execute>
       </action>
     </keybind>
     <keybind key="XF86AudioNext">
       <action name="Execute">
-        <execute>wine ~/.foobar2000/foobar2000.exe /next</execute>
+        <execute>mediacontrol next</execute>
       </action>
     </keybind>
-<!--
+    <!--
     <keybind key="XF86AudioRaiseVolume">
       <action name="Execute">
         <execute>amixer set Master 3%+ &gt; /dev/null </execute>
