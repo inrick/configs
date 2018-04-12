@@ -3,16 +3,16 @@ gsettings set org.gnome.Evince.Default show-sidebar false
 
 # See /usr/share/X11/xkb/rules/base.lst for xkb-options
 gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'us+altgr-intl'), ('xkb', 'se')]"
-gsettings set org.gnome.desktop.input-sources xkb-options "['nodeadkeys', 'lv3:ralt_switch', 'ctrl:nocaps', 'grp:alts_toggle']"
+gsettings set org.gnome.desktop.input-sources xkb-options "['nodeadkeys', 'lv3:ralt_switch', 'ctrl:nocaps', 'grp:shifts_toggle']"
 
 gsettings set org.gnome.desktop.interface clock-show-date true
 gsettings set org.gnome.desktop.interface cursor-blink false
-gsettings set org.gnome.desktop.interface cursor-theme Bluecurve-FC6
+gsettings set org.gnome.desktop.interface cursor-theme OSX-ElCap
 gsettings set org.gnome.desktop.interface can-change-accels true
 gsettings set org.gnome.desktop.interface enable-animations false
 gsettings set org.gnome.desktop.interface font-name 'San Francisco Text 11'
 gsettings set org.gnome.desktop.interface document-font-name 'San Francisco Text 11'
-gsettings set org.gnome.desktop.interface monospace-font-name 'Fira Mono 11'
+gsettings set org.gnome.desktop.interface monospace-font-name 'Source Code Pro 11'
 gsettings set org.gnome.desktop.interface text-scaling-factor 1
 
 gsettings set org.gnome.desktop.lockdown disable-user-switching true
@@ -21,6 +21,11 @@ gsettings set org.gnome.desktop.privacy remember-recent-files false
 gsettings set org.gnome.desktop.screensaver user-switch-enabled false
 
 gsettings set org.gnome.desktop.wm.keybindings close "['<Super>q']"
+gsettings set org.gnome.desktop.wm.keybindings cycle-windows "['<Control>Up']"
+gsettings set org.gnome.desktop.wm.keybindings cycle-windows-backward "['<Control>Down']"
+gsettings set org.gnome.desktop.wm.keybindings maximize "['<Super>Up']"
+gsettings set org.gnome.desktop.wm.keybindings maximize-vertically "['<Super><Alt>Up']"
+gsettings set org.gnome.desktop.wm.keybindings minimize "['<Super>h']"
 gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-1 "[]"
 gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-2 "[]"
 gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-3 "[]"
@@ -30,15 +35,18 @@ gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-6 "[]"
 gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-7 "[]"
 gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-8 "[]"
 gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-9 "[]"
-gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-down "['<Control>Down']"
-gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-up "['<Control>Up']"
-gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-down "['<Shift><Super>Down']"
-gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-up "['<Shift><Super>Up']"
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-down "[]"
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-up "[]"
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-down "[]"
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-up "[]"
 gsettings set org.gnome.desktop.wm.keybindings move-to-monitor-left "[]"
 gsettings set org.gnome.desktop.wm.keybindings move-to-monitor-right "[]"
 gsettings set org.gnome.desktop.wm.keybindings move-to-monitor-down "[]"
 gsettings set org.gnome.desktop.wm.keybindings move-to-monitor-up "[]"
+gsettings set org.gnome.desktop.wm.keybindings show-desktop "['<Super>d']"
 gsettings set org.gnome.desktop.wm.keybindings switch-input-source "['<Super><Alt>Space']"
+gsettings set org.gnome.desktop.wm.keybindings switch-windows "['<Alt>Tab']"
+gsettings set org.gnome.desktop.wm.keybindings switch-windows-backward "['<Shift><Alt>Tab']"
 gsettings set org.gnome.desktop.wm.keybindings toggle-fullscreen "['<Alt>F11']"
 gsettings set org.gnome.desktop.wm.keybindings toggle-shaded "['<Control><Alt>s']"
 
@@ -80,7 +88,7 @@ gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/or
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom8/ binding ""
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom8/ command "cmus-remote -p"
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom8/ name "cmus prev"
-gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom9/ binding "<Super>r"
+rsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom9/ binding ""
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom9/ command "runrofidmenu.sh"
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom9/ name "rofi dmenu"
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom10/ binding "<Super>space"
@@ -92,6 +100,7 @@ gsettings set org.gnome.settings-daemon.plugins.color night-light-temperature 35
 gsettings set org.gnome.desktop.wm.preferences resize-with-right-button true
 gsettings set org.gnome.desktop.wm.preferences button-layout "appmenu:minimize,maximize,close"
 
+gsettings set org.gnome.mutter overlay-key ""
 gsettings set org.gnome.mutter.keybindings toggle-tiled-left "['<Super>Left']"
 gsettings set org.gnome.mutter.keybindings toggle-tiled-right "['<Super>Right']"
 gsettings set org.gnome.mutter center-new-windows true
