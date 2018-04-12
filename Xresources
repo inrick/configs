@@ -1,8 +1,11 @@
 Xcursor.theme: OSX-ElCap
-Xft.rgba:      rgb
+!Xft.dpi:       96
+Xft.autohint:  false
+Xft.antialias: true
 Xft.hinting:   true
 Xft.hintstyle: hintslight
-!Xft.dpi:       96
+Xft.lcdfilter: lcddefault
+Xft.rgba:      rgb
 
 ! disable 'New Login' button in xscreensaver
 xscreensaver.newLoginCommand:
