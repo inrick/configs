@@ -8,10 +8,10 @@ usage() {
 
 if pgrep foobar2000; then
   case $1 in
-    playpause) wine "$FOOBAR2000" /playpause &> /dev/null;;
-    next) wine "$FOOBAR2000" /next &> /dev/null;;
-    prev) wine "$FOOBAR2000" /prev &> /dev/null;;
-    stop) wine "$FOOBAR2000" /stop &> /dev/null;;
+    playpause) wine "$FOOBAR2000" /playpause > /dev/null 2>&1;;
+    next) wine "$FOOBAR2000" /next > /dev/null 2>&1;;
+    prev) wine "$FOOBAR2000" /prev > /dev/null 2>&1;;
+    stop) wine "$FOOBAR2000" /stop > /dev/null 2>&1;;
     *) usage;;
   esac
 else
