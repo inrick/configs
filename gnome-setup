@@ -17,7 +17,12 @@ gsettings set org.gnome.desktop.interface text-scaling-factor 1
 
 gsettings set org.gnome.desktop.lockdown disable-user-switching true
 gsettings set org.gnome.desktop.media-handling automount false
+gsettings set org.gnome.desktop.media-handling automount-open false
+gsettings set org.gnome.desktop.media-handling autorun-never true
+gsettings set org.gnome.desktop.privacy hide-identity true
 gsettings set org.gnome.desktop.privacy remember-recent-files false
+gsettings set org.gnome.desktop.peripherals.keyboard delay 300
+gsettings set org.gnome.desktop.peripherals.keyboard repeat-interval 30
 gsettings set org.gnome.desktop.screensaver user-switch-enabled false
 
 gsettings set org.gnome.desktop.wm.keybindings close "['<Super>q']"
@@ -59,7 +64,7 @@ gsettings set org.gnome.settings-daemon.plugins.media-keys pause ""
 gsettings set org.gnome.settings-daemon.plugins.media-keys stop ""
 gsettings set org.gnome.settings-daemon.plugins.media-keys next ""
 gsettings set org.gnome.settings-daemon.plugins.media-keys previous ""
-gsettings set org.gnome.settings-daemon.plugins.media-keys screensaver "<Alt><Super>l"
+gsettings set org.gnome.settings-daemon.plugins.media-keys screensaver "<Super>l"
 gsettings set org.gnome.settings-daemon.plugins.media-keys custom-keybindings "['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom5/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom6/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom7/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom8/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom9/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom10/']"
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ binding ""
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ command "fb2kshoworhide"
@@ -99,6 +104,9 @@ gsettings set org.gnome.settings-daemon.plugins.color night-light-temperature 35
 
 gsettings set org.gnome.settings-daemon.plugins.xsettings overrides "{'Gtk/ShellShowsAppMenu': <1>, 'Gtk/EnablePrimaryPaste': <1>, 'Gtk/ButtonImages': <1>, 'Gtk/MenuImages': <1>}"
 
+gsettings set org.gnome.desktop.wm.preferences action-double-click-titlebar 'toggle-maximize'
+gsettings set org.gnome.desktop.wm.preferences action-middle-click-titlebar 'toggle-maximize-vertically'
+gsettings set org.gnome.desktop.wm.preferences auto-raise true
 gsettings set org.gnome.desktop.wm.preferences resize-with-right-button true
 gsettings set org.gnome.desktop.wm.preferences button-layout "appmenu:minimize,maximize,close"
 
