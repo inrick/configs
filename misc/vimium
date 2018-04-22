@@ -16,6 +16,7 @@ map gg scrollToTop
 map G scrollToBottom
 map f LinkHints.activateMode
 map F LinkHints.activateModeToOpenInNewTab
+map <c-F> LinkHints.activateModeToOpenIncognito
 map [[ goPrevious
 map ]] goNext
 map i enterInsertMode
