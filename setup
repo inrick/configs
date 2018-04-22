@@ -10,6 +10,7 @@ files=(
   bin/fb2kshoworhide
   bin/foobar2000
   bin/mediacontrol
+  bin/rofi_run_custom_list
   config/autostart/xresources.desktop
   config/gsimplecal/config
   config/openbox/autostart
