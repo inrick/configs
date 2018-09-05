@@ -55,6 +55,12 @@ gsettings set org.gnome.desktop.wm.keybindings switch-windows-backward "['<Shift
 gsettings set org.gnome.desktop.wm.keybindings toggle-fullscreen "['<Alt>F11']"
 gsettings set org.gnome.desktop.wm.keybindings toggle-shaded "['<Control><Alt>s']"
 
+gsettings set org.gnome.desktop.wm.preferences action-double-click-titlebar 'toggle-maximize'
+gsettings set org.gnome.desktop.wm.preferences action-middle-click-titlebar 'toggle-maximize-vertically'
+gsettings set org.gnome.desktop.wm.preferences auto-raise true
+gsettings set org.gnome.desktop.wm.preferences resize-with-right-button true
+gsettings set org.gnome.desktop.wm.preferences button-layout "appmenu:minimize,maximize,close"
+
 gsettings set org.gnome.settings-daemon.plugins.media-keys home "<Super>e"
 gsettings set org.gnome.settings-daemon.plugins.media-keys email ""
 gsettings set org.gnome.settings-daemon.plugins.media-keys www ""
@@ -89,12 +95,6 @@ gsettings set org.gnome.settings-daemon.plugins.color night-light-temperature 35
 
 gsettings set org.gnome.settings-daemon.plugins.xsettings overrides "{'Gtk/ShellShowsAppMenu': <1>, 'Gtk/EnablePrimaryPaste': <1>, 'Gtk/ButtonImages': <1>, 'Gtk/MenuImages': <1>}"
 
-gsettings set org.gnome.desktop.wm.preferences action-double-click-titlebar 'toggle-maximize'
-gsettings set org.gnome.desktop.wm.preferences action-middle-click-titlebar 'toggle-maximize-vertically'
-gsettings set org.gnome.desktop.wm.preferences auto-raise true
-gsettings set org.gnome.desktop.wm.preferences resize-with-right-button true
-gsettings set org.gnome.desktop.wm.preferences button-layout "appmenu:minimize,maximize,close"
-
 gsettings set org.gnome.mutter overlay-key ""
 gsettings set org.gnome.mutter.keybindings toggle-tiled-left "['<Super>Left']"
 gsettings set org.gnome.mutter.keybindings toggle-tiled-right "['<Super>Right']"
@@ -103,3 +103,6 @@ gsettings set org.gnome.mutter center-new-windows true
 gsettings set org.gnome.nautilus.list-view default-zoom-level "smallest"
 gsettings set org.gnome.nautilus.preferences default-folder-viewer "list-view"
 gsettings set org.gnome.nautilus.preferences recursive-search "never"
+
+gsettings set org.gnome.shell.overrides edge-tiling false
+gsettings set org.gnome.shell.overrides dynamic-workspaces false
