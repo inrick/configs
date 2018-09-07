@@ -6,7 +6,7 @@ usage() {
   exit 1
 }
 
-if pgrep foobar2000; then
+if pgrep foobar2000 2>&1 > /dev/null; then
   case $1 in
     playpause) wine "$FOOBAR2000" /playpause > /dev/null 2>&1;;
     next) wine "$FOOBAR2000" /next > /dev/null 2>&1;;
