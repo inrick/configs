@@ -2,9 +2,11 @@
 
 rofi.modi:           window,run,combi,usr:rofi_run_custom_list
 rofi.combi-modi:     window,usr,run
-rofi.window-format:  :: {c} {t}
+rofi.window-format:  {L} {O} {L} {c} {t}
+rofi.display-combi:  :
 rofi.display-window: win
 rofi.display-run:    run
 rofi.lines:          20
 rofi.terminal:       gnome-terminal
 rofi.kb-cancel:      Escape,Control+c,Super+space
+rofi.font:           Source Code Pro 11

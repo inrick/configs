@@ -97,12 +97,12 @@ LS_COLORS='no=00:fi=00:di=36:ln=35:pi=30;44:so=35;44:do=35;44:bd=33;44:cd=37;44:
 export LS_COLORS
 
 # less colors
-export LESS_TERMCAP_mb=$'\e[5;32m'  # begin blinking
-export LESS_TERMCAP_md=$'\e[1;31m'  # begin bold
-export LESS_TERMCAP_us=$'\e[4;34m'  # begin underline
-export LESS_TERMCAP_so=$'\e[7;32m'  # begin standout-mode (info box)
-export LESS_TERMCAP_me=$'\e[0m'     # end mode
-export LESS_TERMCAP_se=$'\e[0m'     # end standout-mode
+export LESS_TERMCAP_mb=$'\e[5m'     # start blink
+export LESS_TERMCAP_md=$'\e[1m'     # start bold
+export LESS_TERMCAP_us=$'\e[4m'     # start underline
+export LESS_TERMCAP_so=$'\e[7;32m'  # start standout (e.g. info box)
+export LESS_TERMCAP_me=$'\e[0m'     # end bold/blink/underline
+export LESS_TERMCAP_se=$'\e[0m'     # end standout
 export LESS_TERMCAP_ue=$'\e[0m'     # end underline
 
 if [[ -f ~/.zshrc_local ]]; then
