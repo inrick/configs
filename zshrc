@@ -59,7 +59,6 @@ alias cdrip='whipper cd rip --track-template="%A/%d (%y)/%t. %n" --disc-template
 alias kona='rlwrap $HOME/.builds/kona/k'
 alias k='rlwrap $HOME/.bin/k'
 alias kg='( cd $HOME/.builds/klong && rlwrap ./kg )'
-alias night='gsettings set org.gnome.settings-daemon.plugins.color night-light-temperature'
 
 alias -s gz=tar xvfz
 alias -s bz2=tar xvfj
