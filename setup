@@ -33,11 +33,10 @@ files=(
   lambda-term-inputrc
   latexmkrc
   ocamlinit
+  profile
   tmux.conf
   utoprc
   Xresources
-  zlogin
-  zshenv
   zshrc
 )
 readonly files
