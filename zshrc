@@ -65,6 +65,14 @@ alias -s gz=tar xvfz
 alias -s bz2=tar xvfj
 alias -s txt=$EDITOR
 
+night() {
+  if [[ -z "$1" ]]; then
+    gsettings get org.gnome.settings-daemon.plugins.color night-light-temperature
+  else
+    gsettings set org.gnome.settings-daemon.plugins.color night-light-temperature $1
+  fi
+}
+
 zip_epub() {
   # $1 = book_name.epub
   # mimetype has to be first in epub file and it has to be uncompressed.

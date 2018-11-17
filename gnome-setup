@@ -100,9 +100,29 @@ gsettings set org.gnome.mutter.keybindings toggle-tiled-left "['<Super>Left']"
 gsettings set org.gnome.mutter.keybindings toggle-tiled-right "['<Super>Right']"
 gsettings set org.gnome.mutter center-new-windows true
 
-gsettings set org.gnome.nautilus.list-view default-zoom-level "smallest"
+gsettings set org.gnome.nautilus.list-view default-zoom-level "small"
 gsettings set org.gnome.nautilus.preferences default-folder-viewer "list-view"
 gsettings set org.gnome.nautilus.preferences recursive-search "never"
+
+gsettings set org.gnome.Terminal.ProfilesList default "17a98387-24ac-4f9f-a4fb-2eae7fc08550"
+gsettings set org.gnome.Terminal.ProfilesList list "['17a98387-24ac-4f9f-a4fb-2eae7fc08550']"
+gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:17a98387-24ac-4f9f-a4fb-2eae7fc08550/ allow-bold true
+gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:17a98387-24ac-4f9f-a4fb-2eae7fc08550/ background-color "rgb(255,255,234)"
+gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:17a98387-24ac-4f9f-a4fb-2eae7fc08550/ bold-color "rgb(100,99,79)"
+gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:17a98387-24ac-4f9f-a4fb-2eae7fc08550/ bold-color-same-as-fg true
+gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:17a98387-24ac-4f9f-a4fb-2eae7fc08550/ bold-is-bright false
+gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:17a98387-24ac-4f9f-a4fb-2eae7fc08550/ cjk-utf8-ambiguous-width "wide"
+gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:17a98387-24ac-4f9f-a4fb-2eae7fc08550/ cursor-blink-mode "off"
+gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:17a98387-24ac-4f9f-a4fb-2eae7fc08550/ cursor-shape "block"
+gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:17a98387-24ac-4f9f-a4fb-2eae7fc08550/ default-size-columns 84
+gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:17a98387-24ac-4f9f-a4fb-2eae7fc08550/ default-size-rows 26
+gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:17a98387-24ac-4f9f-a4fb-2eae7fc08550/ font "Source Code Pro 11"
+gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:17a98387-24ac-4f9f-a4fb-2eae7fc08550/ foreground-color "rgb(0,0,0)"
+gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:17a98387-24ac-4f9f-a4fb-2eae7fc08550/ login-shell true
+gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:17a98387-24ac-4f9f-a4fb-2eae7fc08550/ palette "['rgb(0,0,0)', 'rgb(170,0,0)', 'rgb(0,102,0)', 'rgb(181,137,0)', 'rgb(25,148,209)', 'rgb(211,54,130)', 'rgb(33,125,118)', 'rgb(255,255,234)', 'rgb(0,43,54)', 'rgb(131,38,0)', 'rgb(88,110,117)', 'rgb(101,123,131)', 'rgb(131,148,150)', 'rgb(136,136,204)', 'rgb(147,161,161)', 'rgb(238,238,158)']"
+gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:17a98387-24ac-4f9f-a4fb-2eae7fc08550/ scrollback-unlimited true
+gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:17a98387-24ac-4f9f-a4fb-2eae7fc08550/ scrollbar-policy "never"
+gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:17a98387-24ac-4f9f-a4fb-2eae7fc08550/ visible-name "Default"
 
 gsettings set org.gnome.shell.overrides edge-tiling false
 gsettings set org.gnome.shell.overrides dynamic-workspaces false
