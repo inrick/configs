@@ -46,8 +46,8 @@ case "$(uname)" in
   OpenBSD)
     alias ls='ls -F';;
 esac
-alias l='ls -l'
-alias ll='ls -la'
+alias l='ls -1'
+alias ll='ls -l'
 alias c='cat'
 alias e='$EDITOR'
 alias g='git'
