@@ -40,7 +40,7 @@ case "$(uname)" in
   Linux)
     alias ls='ls -F --color=auto --group-directories-first'
     alias grep='grep --color=auto';;
-  FreeBSD|Darwin)
+  FreeBSD)
     alias ls='ls -FG'
     alias grep='grep --color=auto';;
   OpenBSD)
