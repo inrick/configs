@@ -100,6 +100,9 @@ gsettings set org.gnome.mutter.keybindings toggle-tiled-left "['<Super>Left']"
 gsettings set org.gnome.mutter.keybindings toggle-tiled-right "['<Super>Right']"
 gsettings set org.gnome.mutter center-new-windows true
 
+gsettings set org.gnome.eog.view extrapolate false
+gsettings set org.gnome.eog.view interpolate false
+
 gsettings set org.gnome.nautilus.list-view default-zoom-level "small"
 gsettings set org.gnome.nautilus.preferences default-folder-viewer "list-view"
 gsettings set org.gnome.nautilus.preferences recursive-search "never"
