@@ -10,3 +10,10 @@ rofi.lines:          20
 rofi.terminal:       gnome-terminal
 rofi.kb-cancel:      Escape,Control+c,Super+space
 rofi.font:           Source Code Pro 11
+
+!                  bg       fg       bgalt    hlbg     hlfg
+rofi.color-normal: #ffffea, #000000, #ffffea, #eaffff, #000000
+rofi.color-urgent: #ffffea, #660000, #ffffea, #eaffff, #660000
+rofi.color-active: #eeee9e, #000000, #9eeeee, #eaffff, #000000
+!                  bg       border   sep
+rofi.color-window: #ffffea, #000000, #ffffea
