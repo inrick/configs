@@ -9,3 +9,4 @@ export BROWSER=chromium
 export MANWIDTH=80
 export QT_QPA_PLATFORMTHEME=qt5ct
 export WINEDLLOVERRIDES=mscoree=d;mshtml=d
+export GTK_OVERLAY_SCROLLING=0
