@@ -14,6 +14,14 @@ if pgrep foobar2000 2>&1 > /dev/null; then
     stop) wine "$FOOBAR2000" /stop > /dev/null 2>&1;;
     *) usage;;
   esac
+elif pgrep cmus 2>&1 > /dev/null; then
+  case $1 in
+    playpause) cmus-remote --pause;;
+    next) cmus-remote --next;;
+    prev) cmus-remote --prev;;
+    stop) cmus-remote --stop;;
+    *) usage;;
+  esac
 else
   case $1 in
     playpause) dbus-send \
