@@ -5,8 +5,8 @@ export MANPATH=$MANPATH
 export EDITOR=vim
 export PAGER=less
 export VISUAL=vim
-export BROWSER=chromium
+export BROWSER=firefox
 export MANWIDTH=80
 export QT_QPA_PLATFORMTHEME=qt5ct
-export WINEDLLOVERRIDES=mscoree=d;mshtml=d
+export WINEDLLOVERRIDES="mscoree=d;mshtml=d"
 export GTK_OVERLAY_SCROLLING=0
