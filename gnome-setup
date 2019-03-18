@@ -132,5 +132,7 @@ gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profi
 gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:17a98387-24ac-4f9f-a4fb-2eae7fc08550/ scrollbar-policy "never"
 gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:17a98387-24ac-4f9f-a4fb-2eae7fc08550/ visible-name "Default"
 
+gsettings set org.gnome.Terminal.Legacy.Settings headerbar false
+
 gsettings set org.gnome.shell.overrides edge-tiling false
 gsettings set org.gnome.shell.overrides dynamic-workspaces false
