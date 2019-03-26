@@ -12,6 +12,7 @@ files=(
   bin/mediacontrol
   bin/rofi_run_custom_list
   config/autostart/xresources.desktop
+  config/gtk-3.0/gtk.css
   config/gsimplecal/config
   config/openbox/autostart
   config/openbox/environment
