@@ -13,15 +13,8 @@ files=(
   bin/rofi_run_custom_list
   config/autostart/xresources.desktop
   config/gtk-3.0/gtk.css
-  config/gsimplecal/config
-  config/openbox/autostart
-  config/openbox/environment
-  config/openbox/menu.xml
-  config/openbox/rc.xml
   config/rofi/config
-  config/tint2/tint2rc
   config/Thunar/uca.xml
-  emacs.d/init.el
   local/share/applications/custom/ark.desktop
   local/share/applications/custom/dolphin.desktop
   local/share/applications/custom/foobar2000.desktop
@@ -29,8 +22,6 @@ files=(
   local/share/file-manager/actions/add_to_foobar2000.desktop
   local/share/file-manager/actions/send_to_foobar2000.desktop
   local/share/kservices5/ServiceMenus/foobar2000.desktop
-  themes/LAUGHm2
-  xmonad/xmonad.hs
   gdbinit
   gitconfig
   inputrc
