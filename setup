@@ -38,12 +38,16 @@ readonly files
 
 print_usage() {
   cat << EOF
-Usage: $SCRIPT [OPTIONS]
+Usage: $SCRIPT <COMMAND>
 
-OPTIONS:
-    -i  Install config files to '$TARGET'.
-    -r  Remove config files from '$TARGET'.
-    -h  Print this help.
+COMMANDS:
+    install  Install config files to '$TARGET'.
+    remove   Remove config files from '$TARGET'.
+    help     Print this help.
+
+Note that setup will only remove files that are linked to this path and
+will only install files that do not already exist, meaning it is always
+safe to run.
 EOF
   exit $1
 }
@@ -79,10 +83,10 @@ install() {
     fi
   done
 
-  echo "Installed:"
-  printf "    %s\n" $installed
   echo "Already exist, remove and run again to install:"
   printf "    %s\n" $exists
+  echo "Installed:"
+  printf "    %s\n" $installed
 }
 
 remove() {
@@ -103,17 +107,15 @@ remove() {
     fi
   done
 
-  echo "Removed:"
-  printf "    %s\n" $removed
   echo "Kept because not linked here:"
   printf "    %s\n" $kept
+  echo "Removed:"
+  printf "    %s\n" $removed
 }
 
-while getopts irh opt; do
-  case $opt in
-    i) check_src_files; install; exit 0;;
-    r) remove; exit 0;;
-    h) print_usage 0;;
-  esac
-done
+case $1 in
+  install) check_src_files; install; exit 0;;
+  remove) remove; exit 0;;
+  help|--help|-h) print_usage 0;;
+esac
 print_usage 1
