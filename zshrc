@@ -31,7 +31,8 @@ zle -N edit-command-line
 autoload -U zmv
 
 bindkey -e # -e emacs, -v vi
-bindkey '^Xe' edit-command-line
+bindkey '^xe' edit-command-line
+bindkey '^x^e' edit-command-line
 bindkey '^[[Z' reverse-menu-complete # shift-tab
 
 stty -ixon
