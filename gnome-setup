@@ -29,6 +29,8 @@ gsettings set org.gnome.desktop.privacy remember-recent-files false
 gsettings set org.gnome.desktop.peripherals.keyboard delay 300
 gsettings set org.gnome.desktop.peripherals.keyboard repeat-interval 30
 gsettings set org.gnome.desktop.screensaver user-switch-enabled false
+gsettings set org.gnome.desktop.search-providers disable-external true
+gsettings set org.gnome.desktop.session idle-delay 600
 
 gsettings set org.gnome.desktop.wm.keybindings close "['<Super>q']"
 gsettings set org.gnome.desktop.wm.keybindings cycle-windows "['<Control>Up']"
@@ -65,6 +67,8 @@ gsettings set org.gnome.desktop.wm.preferences action-middle-click-titlebar 'tog
 gsettings set org.gnome.desktop.wm.preferences auto-raise true
 gsettings set org.gnome.desktop.wm.preferences resize-with-right-button true
 gsettings set org.gnome.desktop.wm.preferences button-layout "appmenu:minimize,maximize,close"
+gsettings set org.gnome.desktop.wm.preferences num-workspaces 1
+gsettings set org.gnome.desktop.wm.preferences titlebar-font 'Fira Sans Medium 11'
 
 gsettings set org.gnome.settings-daemon.plugins.media-keys home "<Super>e"
 gsettings set org.gnome.settings-daemon.plugins.media-keys email ""
@@ -96,8 +100,13 @@ gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/or
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom5/ command "rofi -show combi"
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom5/ name "rofi combi"
 
+gsettings set org.gnome.settings-daemon.plugins.color night-light-enabled true
 gsettings set org.gnome.settings-daemon.plugins.color night-light-temperature 3500
 
+gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type 'nothing'
+gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-battery-type 'nothing'
+
+gsettings set org.gnome.settings-daemon.plugins.xsettings antialiasing 'rgba'
 gsettings set org.gnome.settings-daemon.plugins.xsettings overrides "{'Gtk/ShellShowsAppMenu': <1>, 'Gtk/EnablePrimaryPaste': <1>, 'Gtk/ButtonImages': <1>, 'Gtk/MenuImages': <1>}"
 
 gsettings set org.gnome.mutter center-new-windows true
@@ -138,3 +147,8 @@ gsettings set org.gnome.Terminal.Legacy.Settings headerbar false
 
 gsettings set org.gnome.shell.overrides edge-tiling false
 gsettings set org.gnome.shell.overrides dynamic-workspaces false
+
+gsettings set org.freedesktop.Tracker.Miner.Files enable-monitors false
+
+gsettings set org.gtk.Settings.FileChooser sort-directories-first true
+gsettings set org.gtk.Settings.FileChooser startup-mode 'cwd'
