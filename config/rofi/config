@@ -7,7 +7,6 @@ rofi.display-combi:  :
 rofi.display-window: win
 rofi.display-run:    run
 rofi.lines:          20
-rofi.matching:       fuzzy
 rofi.terminal:       gnome-terminal
 rofi.kb-cancel:      Escape,Control+c,Super+space
 rofi.font:           Source Code Pro 11
