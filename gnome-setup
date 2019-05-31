@@ -57,10 +57,12 @@ gsettings set org.gnome.desktop.wm.keybindings move-to-monitor-down "[]"
 gsettings set org.gnome.desktop.wm.keybindings move-to-monitor-up "[]"
 gsettings set org.gnome.desktop.wm.keybindings show-desktop "['<Super>d']"
 gsettings set org.gnome.desktop.wm.keybindings switch-input-source "['<Super><Alt>Space']"
+gsettings set org.gnome.desktop.wm.keybindings switch-applications "[]"
+gsettings set org.gnome.desktop.wm.keybindings switch-applications-backward "[]"
 gsettings set org.gnome.desktop.wm.keybindings switch-windows "['<Alt>Tab', '<Super>Tab']"
 gsettings set org.gnome.desktop.wm.keybindings switch-windows-backward "['<Shift><Alt>Tab', '<Shift><Super>Tab']"
 gsettings set org.gnome.desktop.wm.keybindings toggle-fullscreen "['<Alt>F11']"
-gsettings set org.gnome.desktop.wm.keybindings toggle-shaded "['<Control><Alt>s']"
+gsettings set org.gnome.desktop.wm.keybindings toggle-shaded "[]"
 
 gsettings set org.gnome.desktop.wm.preferences action-double-click-titlebar 'toggle-maximize'
 gsettings set org.gnome.desktop.wm.preferences action-middle-click-titlebar 'toggle-maximize-vertically'
@@ -142,7 +144,6 @@ gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profi
 gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:17a98387-24ac-4f9f-a4fb-2eae7fc08550/ scrollback-unlimited true
 gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:17a98387-24ac-4f9f-a4fb-2eae7fc08550/ scrollbar-policy "never"
 gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:17a98387-24ac-4f9f-a4fb-2eae7fc08550/ visible-name "Default"
-
 gsettings set org.gnome.Terminal.Legacy.Settings headerbar false
 
 gsettings set org.gnome.shell.overrides edge-tiling false
