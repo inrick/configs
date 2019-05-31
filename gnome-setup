@@ -1,6 +1,4 @@
 #!/bin/sh
-gsettings set org.gnome.Evince.Default show-sidebar false
-
 # See /usr/share/X11/xkb/rules/base.lst for xkb-options
 gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'us+altgr-intl'), ('xkb', 'se')]"
 gsettings set org.gnome.desktop.input-sources xkb-options "['nodeadkeys', 'lv3:ralt_switch', 'ctrl:nocaps', 'grp:shifts_toggle']"
