@@ -2,9 +2,9 @@ umask 022
 
 export PATH=~/.bin:$PATH
 export MANPATH=$MANPATH
-export EDITOR=vim
+export EDITOR=nvim
 export PAGER=less
-export VISUAL=vim
+export VISUAL=nvim
 export BROWSER=firefox
 export MANWIDTH=80
 export QT_QPA_PLATFORMTHEME=qt5ct
