@@ -17,8 +17,7 @@
 	d = diff
 	dc = diff --cached
 	f = fetch
-	fa = fetch --all
-	fpa = fetch --prune --all
+	fa = fetch --all --prune
 	ff = merge --ff-only
 	new = log ..@{u}
 	s = status
