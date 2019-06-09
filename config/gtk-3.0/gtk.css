@@ -1,13 +1,27 @@
 scrollbar {
-  -GtkScrollbar-has-backward-stepper: false;
+  -GtkScrollbar-has-backward-stepper:           false;
   -GtkScrollbar-has-secondary-backward-stepper: true;
-  -GtkScrollbar-has-forward-stepper: true;
-  -GtkScrollbar-has-secondary-forward-stepper: false;
+  -GtkScrollbar-has-forward-stepper:            true;
+  -GtkScrollbar-has-secondary-forward-stepper:  false;
 }
 
 scrollbar button {
-  min-width: 3.5mm;
-  min-height: 3.5mm;
-  padding: 3px;
+  min-width:     3.5mm;
+  min-height:    3.5mm;
+  padding:       3px;
   border-radius: 2px;
+}
+
+window.ssd headerbar.titlebar {
+  padding-top:    3px;
+  padding-bottom: 3px;
+  min-height:     0px;
+}
+
+window.ssd headerbar.titlebar button.titlebutton {
+  padding-left:   0px;
+  padding-right:  0px;
+  padding-top:    3px;
+  padding-bottom: 3px;
+  min-height:     0px;
 }
