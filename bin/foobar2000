@@ -1,2 +1,2 @@
 #!/bin/sh
-wine ~/.foobar2000/foobar2000.exe &> /dev/null
+exec wine ~/.foobar2000/foobar2000.exe &> /dev/null
