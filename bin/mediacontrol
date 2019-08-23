@@ -6,7 +6,7 @@ usage() {
   exit 1
 }
 
-if pgrep foobar2000 2>&1 > /dev/null; then
+if pgrep foobar2000 > /dev/null 2>&1; then
   case $1 in
     playpause) wine "$FOOBAR2000" /playpause > /dev/null 2>&1;;
     next) wine "$FOOBAR2000" /next > /dev/null 2>&1;;
@@ -14,7 +14,7 @@ if pgrep foobar2000 2>&1 > /dev/null; then
     stop) wine "$FOOBAR2000" /stop > /dev/null 2>&1;;
     *) usage;;
   esac
-elif pgrep cmus 2>&1 > /dev/null; then
+elif pgrep cmus > /dev/null 2>&1; then
   case $1 in
     playpause) cmus-remote --pause;;
     next) cmus-remote --next;;
@@ -23,30 +23,39 @@ elif pgrep cmus 2>&1 > /dev/null; then
     *) usage;;
   esac
 else
+  # Fallback on whatever media player is found, if any
+  target=$(dbus-send \
+    --dest=org.freedesktop.DBus \
+    --print-reply \
+    /org/freedesktop/DBus \
+    org.freedesktop.DBus.ListNames \
+    | grep org.mpris.MediaPlayer2 \
+    | sed -e 's/.*"\(.*\)"/\1/' \
+    | head -n1)
   case $1 in
     playpause) dbus-send \
       --type=method_call \
-      --dest=org.mpris.MediaPlayer2.spotify \
+      --dest="$target" \
       /org/mpris/MediaPlayer2 \
-      org.mpris.MediaPlayer2.Player.PlayPause
+      org.mpris.MediaPlayer2.Player.PlayPause > /dev/null 2>&1
     ;;
     next) dbus-send \
       --type=method_call \
-      --dest=org.mpris.MediaPlayer2.spotify \
+      --dest="$target" \
       /org/mpris/MediaPlayer2 \
-      org.mpris.MediaPlayer2.Player.Next
+      org.mpris.MediaPlayer2.Player.Next > /dev/null 2>&1
     ;;
     prev) dbus-send \
       --type=method_call \
-      --dest=org.mpris.MediaPlayer2.spotify \
+      --dest="$target" \
       /org/mpris/MediaPlayer2 \
-      org.mpris.MediaPlayer2.Player.Previous
+      org.mpris.MediaPlayer2.Player.Previous > /dev/null 2>&1
     ;;
     stop) dbus-send \
       --type=method_call \
-      --dest=org.mpris.MediaPlayer2.spotify \
+      --dest="$target" \
       /org/mpris/MediaPlayer2 \
-      org.mpris.MediaPlayer2.Player.Stop
+      org.mpris.MediaPlayer2.Player.Stop > /dev/null 2>&1
     ;;
     *) usage;;
   esac
