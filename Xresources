@@ -10,31 +10,12 @@ Xft.rgba:      rgb
 ! disable 'New Login' button in xscreensaver
 xscreensaver.newLoginCommand:
 
-! Solarized
-#define S_base03  #002b36
-#define S_base02  #073642
-#define S_base01  #586e75
-#define S_base00  #657b83
-#define S_base0   #839496
-#define S_base1   #93a1a1
-#define S_base2   #eee8d5
-#define S_base3   #fdf6e3
-#define S_yellow  #b58900
-#define S_orange  #cb4b16
-#define S_red     #dc322f
-#define S_magenta #d33682
-#define S_violet  #6c71c4
-#define S_blue    #268bd2
-#define S_cyan    #2aa198
-#define S_green   #859900
-
 URxvt.title:           Terminal
 URxvt.termName:        xterm-256color
 URxvt.geometry:        84x26
 URxvt.font:            xft:Source Code Pro:size=11,\
                        xft:APL385 Unicode,\
                        xft:Ubuntu Mono
-URxvt.boldFont:
 !URxvt.letterSpace:     0
 URxvt.scrollBar:       false
 URxvt.scrollBar_right: true
@@ -55,33 +36,41 @@ URxvt.keysym.Shift-Control-V: eval:paste_clipboard
 URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
 URxvt.keysym.Shift-Control-N: new-window:new-window
 
-URxvt.background:             S_base3
-URxvt.foreground:             S_base00
-!URxvt.fadeColor:              S_base3
-!URxvt.cursorColor:            S_base01
-!URxvt.pointerColorBackground: S_base1
-!URxvt.pointerColorForeground: S_base01
-! black dark/light
-URxvt.color0:                 S_base02
-URxvt.color8:                 S_base03
-! red dark/light
-URxvt.color1:                 S_red
-URxvt.color9:                 S_orange
-! green dark/light
-URxvt.color2:                 S_green
-URxvt.color10:                S_base01
-! yellow dark/light
-URxvt.color3:                 S_yellow
-URxvt.color11:                S_base00
-! blue dark/light
-URxvt.color4:                 S_blue
-URxvt.color12:                S_base0
-! magenta dark/light
-URxvt.color5:                 S_magenta
-URxvt.color13:                S_violet
-! cyan dark/light
-URxvt.color6:                 S_cyan
-URxvt.color14:                S_base1
-! white dark/light
-URxvt.color7:                 S_base2
-URxvt.color15:                S_base3
+! Gruvbox palette
+#define mybasefg #000000
+#define mybasebg #f9f5d7
+#define mybase00 #1d2021
+#define mybase01 #9d0006
+#define mybase02 #79740e
+#define mybase03 #b57614
+#define mybase04 #076678
+#define mybase05 #8f3f71
+#define mybase06 #427b58
+#define mybase07 #ebdbb2
+#define mybase08 #504945
+#define mybase09 #cc241d
+#define mybase10 #98971a
+#define mybase11 #d79921
+#define mybase12 #458588
+#define mybase13 #b16286
+#define mybase14 #689d6a
+#define mybase15 #928374
+
+URxvt.background: mybasebg
+URxvt.foreground: mybasefg
+URxvt.color0:     mybase00
+URxvt.color1:     mybase01
+URxvt.color2:     mybase02
+URxvt.color3:     mybase03
+URxvt.color4:     mybase04
+URxvt.color5:     mybase05
+URxvt.color6:     mybase06
+URxvt.color7:     mybase07
+URxvt.color8:     mybase08
+URxvt.color9:     mybase09
+URxvt.color10:    mybase10
+URxvt.color11:    mybase11
+URxvt.color12:    mybase12
+URxvt.color13:    mybase13
+URxvt.color14:    mybase14
+URxvt.color15:    mybase15
