@@ -74,3 +74,25 @@ URxvt.color12:    mybase12
 URxvt.color13:    mybase13
 URxvt.color14:    mybase14
 URxvt.color15:    mybase15
+
+XTerm*geometry: 84x26
+XTerm*font:     xft:Source Code Pro:size=11
+
+XTerm*background: mybasebg
+XTerm*foreground: mybasefg
+XTerm*color0:     mybase00
+XTerm*color1:     mybase01
+XTerm*color2:     mybase02
+XTerm*color3:     mybase03
+XTerm*color4:     mybase04
+XTerm*color5:     mybase05
+XTerm*color6:     mybase06
+XTerm*color7:     mybase07
+XTerm*color8:     mybase08
+XTerm*color9:     mybase09
+XTerm*color10:    mybase10
+XTerm*color11:    mybase11
+XTerm*color12:    mybase12
+XTerm*color13:    mybase13
+XTerm*color14:    mybase14
+XTerm*color15:    mybase15
