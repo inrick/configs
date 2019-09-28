@@ -5,8 +5,8 @@ gsettings set org.gnome.desktop.input-sources xkb-options "['nodeadkeys', 'lv3:r
 
 gsettings set org.gnome.desktop.background color-shading-type 'solid'
 gsettings set org.gnome.desktop.background picture-options 'none'
-gsettings set org.gnome.desktop.background primary-color '#336699'
-gsettings set org.gnome.desktop.background secondary-color '#336699'
+gsettings set org.gnome.desktop.background primary-color '#1e629b'
+gsettings set org.gnome.desktop.background secondary-color '#1e629b'
 
 gsettings set org.gnome.desktop.interface clock-show-date true
 gsettings set org.gnome.desktop.interface cursor-blink false
