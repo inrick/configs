@@ -19,6 +19,7 @@ files=(
   local/share/applications/custom/dolphin.desktop
   local/share/applications/custom/foobar2000.desktop
   local/share/applications/custom/okular.desktop
+  local/share/applications/custom/Ripcord.desktop
   local/share/file-manager/actions/add_to_foobar2000.desktop
   local/share/file-manager/actions/send_to_foobar2000.desktop
   local/share/icons/foobar2000.png

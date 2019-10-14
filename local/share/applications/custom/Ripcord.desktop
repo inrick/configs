@@ -1,0 +1,10 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Name=Ripcord
+Comment=Chat client
+Exec=Ripcord.AppImage
+Terminal=false
+Icon=Ripcord_Icon
+Type=Application
+Categories=Network;InstantMessaging;
+StartupWMClass=Ripcord
