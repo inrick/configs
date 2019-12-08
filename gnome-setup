@@ -15,7 +15,7 @@ gsettings set org.gnome.desktop.interface can-change-accels true
 gsettings set org.gnome.desktop.interface enable-animations false
 gsettings set org.gnome.desktop.interface font-name 'Fira Sans 11'
 gsettings set org.gnome.desktop.interface document-font-name 'Fira Sans 11'
-gsettings set org.gnome.desktop.interface monospace-font-name 'Source Code Pro 11'
+gsettings set org.gnome.desktop.interface monospace-font-name 'Source Code Pro Medium 11'
 gsettings set org.gnome.desktop.interface text-scaling-factor 1
 
 gsettings set org.gnome.desktop.lockdown disable-user-switching true
