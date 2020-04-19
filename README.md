@@ -1,9 +1,18 @@
-# Install
+Instructions
+------------
 
-Run `./setup install` to symlink config files to home. Run `./setup remove` to
-remove created symlinks. Setup script will not overwrite existing config files
-and will only remove symlinks pointing to these files.
+The setup script will only remove files that are linked to this path and will
+only install files that do not already exist, meaning it is always safe to run:
 
-Run `./gnome-setup` to configure GNOME.
+  * run `./setup install` to symlink config files to home,
 
-Remember to also configure [vim](https://github.com/inrick/Vim-config/).
+  * run `./setup remove` to remove created symlinks.
+
+
+Misc.
+-----
+
+GNOME can be configured by running `./gnome-setup`, though note that this will
+overwrite existing GNOME settings.
+
+Remember to also [configure vim](https://github.com/inrick/Vim-config/).
