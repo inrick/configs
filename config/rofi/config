@@ -9,7 +9,7 @@ rofi.display-run:    run
 rofi.lines:          20
 rofi.terminal:       gnome-terminal
 rofi.kb-cancel:      Escape,Control+c,Super+space
-rofi.font:           Source Code Pro 11
+rofi.font:           Inconsolata Medium 13
 
 !                  bg       fg       bgalt    hlbg     hlfg
 rofi.color-normal: #f9f5d7, #000000, #f9f5d7, #504945, #f9f5d7
