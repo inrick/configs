@@ -1,0 +1,6 @@
+set scrolloff 3
+
+# Note that ^H is <bs>
+map <bs>    :set hidden!
+map <enter> $xdg-open "$f"
+map o       $xdg-open .

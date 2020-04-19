@@ -13,6 +13,7 @@ files=(
   bin/rofi_run_custom_list
   config/autostart/xresources.desktop
   config/gtk-3.0/gtk.css
+  config/lf/lfrc
   config/rofi/config
   config/Thunar/uca.xml
   local/share/applications/custom/ark.desktop
