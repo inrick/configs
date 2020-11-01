@@ -4,7 +4,8 @@ gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'us+altgr-intl')
 gsettings set org.gnome.desktop.input-sources xkb-options "['nodeadkeys', 'lv3:ralt_switch', 'ctrl:nocaps', 'grp:shifts_toggle']"
 
 gsettings set org.gnome.desktop.background color-shading-type 'solid'
-gsettings set org.gnome.desktop.background picture-options 'none'
+gsettings set org.gnome.desktop.background picture-options 'zoom'
+gsettings set org.gnome.desktop.background picture-uri "$HOME/Pictures/Backgrounds/Waves.jpg"
 gsettings set org.gnome.desktop.background primary-color '#1e629b'
 gsettings set org.gnome.desktop.background secondary-color '#1e629b'
 
@@ -28,11 +29,11 @@ gsettings set org.gnome.desktop.peripherals.keyboard delay 300
 gsettings set org.gnome.desktop.peripherals.keyboard repeat-interval 30
 gsettings set org.gnome.desktop.screensaver user-switch-enabled false
 gsettings set org.gnome.desktop.search-providers disable-external true
-gsettings set org.gnome.desktop.session idle-delay 600
+gsettings set org.gnome.desktop.session idle-delay 1800
 
 gsettings set org.gnome.desktop.wm.keybindings close "['<Super>q']"
-gsettings set org.gnome.desktop.wm.keybindings cycle-windows "['<Control>Up']"
-gsettings set org.gnome.desktop.wm.keybindings cycle-windows-backward "['<Control>Down']"
+gsettings set org.gnome.desktop.wm.keybindings cycle-windows "[]"
+gsettings set org.gnome.desktop.wm.keybindings cycle-windows-backward "[]"
 gsettings set org.gnome.desktop.wm.keybindings maximize "['<Super>Up']"
 gsettings set org.gnome.desktop.wm.keybindings maximize-vertically "['<Super><Alt>Up']"
 gsettings set org.gnome.desktop.wm.keybindings minimize "['<Super>h']"
@@ -45,16 +46,16 @@ gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-6 "[]"
 gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-7 "[]"
 gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-8 "[]"
 gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-9 "[]"
-gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-down "[]"
-gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-up "[]"
-gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-down "[]"
-gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-up "[]"
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-down "['<Control>Down']"
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-up "['<Control>Up']"
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-down "['<Control><Shift>Down']"
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-up "['<Control><Shift>Up']"
 gsettings set org.gnome.desktop.wm.keybindings move-to-monitor-left "[]"
 gsettings set org.gnome.desktop.wm.keybindings move-to-monitor-right "[]"
 gsettings set org.gnome.desktop.wm.keybindings move-to-monitor-down "[]"
 gsettings set org.gnome.desktop.wm.keybindings move-to-monitor-up "[]"
 gsettings set org.gnome.desktop.wm.keybindings show-desktop "['<Super>d']"
-gsettings set org.gnome.desktop.wm.keybindings switch-input-source "['<Super><Alt>Space']"
+gsettings set org.gnome.desktop.wm.keybindings switch-input-source "['<Super>k']"
 gsettings set org.gnome.desktop.wm.keybindings switch-applications "[]"
 gsettings set org.gnome.desktop.wm.keybindings switch-applications-backward "[]"
 gsettings set org.gnome.desktop.wm.keybindings switch-windows "['<Alt>Tab', '<Super>Tab']"
@@ -79,8 +80,9 @@ gsettings set org.gnome.shell.keybindings switch-to-application-6 "[]"
 gsettings set org.gnome.shell.keybindings switch-to-application-7 "[]"
 gsettings set org.gnome.shell.keybindings switch-to-application-8 "[]"
 gsettings set org.gnome.shell.keybindings switch-to-application-9 "[]"
-gsettings set org.gnome.shell.overrides edge-tiling false
-gsettings set org.gnome.shell.overrides dynamic-workspaces false
+
+gsettings set org.gnome.mutter.keybindings toggle-tiled-left "['<Super>Left']"
+gsettings set org.gnome.mutter.keybindings toggle-tiled-right "['<Super>Right']"
 
 gsettings set org.gnome.settings-daemon.plugins.media-keys home "['<Super>e']"
 gsettings set org.gnome.settings-daemon.plugins.media-keys email "['']"
@@ -101,13 +103,13 @@ gsettings set org.gnome.settings-daemon.plugins.media-keys custom-keybindings "[
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ binding ""
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ command "fb2kshoworhide"
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ name "foobar2000 activate"
-gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/ binding "AudioPlay"
+gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/ binding "<Super>x"
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/ command "mediacontrol playpause"
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/ name "Media player play/pause"
-gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/ binding "AudioNext"
+gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/ binding "<Super>v"
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/ command "mediacontrol next"
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/ name "Media player next"
-gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/ binding "AudioPrev"
+gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/ binding "<Super>c"
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/ command "mediacontrol prev"
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/ name "Media player prev"
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4/ binding "<Super>Return"
@@ -129,12 +131,12 @@ gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-battery-typ
 gsettings set org.gnome.settings-daemon.plugins.xsettings antialiasing 'rgba'
 gsettings set org.gnome.settings-daemon.plugins.xsettings overrides "{'Gtk/ShellShowsAppMenu': <1>, 'Gtk/EnablePrimaryPaste': <1>, 'Gtk/ButtonImages': <1>, 'Gtk/MenuImages': <1>}"
 
+gsettings set org.gnome.shell.overrides dynamic-workspaces true
+gsettings set org.gnome.shell.overrides edge-tiling false
 gsettings set org.gnome.mutter center-new-windows true
-gsettings set org.gnome.mutter dynamic-workspaces false
+gsettings set org.gnome.mutter dynamic-workspaces true
 gsettings set org.gnome.mutter edge-tiling false
 gsettings set org.gnome.mutter overlay-key ""
-gsettings set org.gnome.mutter.keybindings toggle-tiled-left "['<Super>Left']"
-gsettings set org.gnome.mutter.keybindings toggle-tiled-right "['<Super>Right']"
 
 gsettings set org.gnome.eog.view extrapolate false
 gsettings set org.gnome.eog.view interpolate false
@@ -147,7 +149,6 @@ gsettings set org.gnome.gnome-system-monitor solaris-mode false
 
 gsettings set org.gnome.Terminal.ProfilesList default "17a98387-24ac-4f9f-a4fb-2eae7fc08550"
 gsettings set org.gnome.Terminal.ProfilesList list "['17a98387-24ac-4f9f-a4fb-2eae7fc08550']"
-gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:17a98387-24ac-4f9f-a4fb-2eae7fc08550/ allow-bold true
 gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:17a98387-24ac-4f9f-a4fb-2eae7fc08550/ background-color "rgb(249,245,215)"
 gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:17a98387-24ac-4f9f-a4fb-2eae7fc08550/ bold-color "rgb(100,99,79)"
 gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:17a98387-24ac-4f9f-a4fb-2eae7fc08550/ bold-color-same-as-fg true
