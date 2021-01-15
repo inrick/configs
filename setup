@@ -12,6 +12,7 @@ files=(
   bin/mediacontrol
   bin/rofi_run_custom_list
   config/autostart/xresources.desktop
+  config/fontconfig/conf.d/99-pxplus-disable-hint.conf
   config/gtk-3.0/gtk.css
   config/lf/lfrc
   config/rofi/config
