@@ -7,6 +7,7 @@ map z goBack
 map x goForward
 map t createTab
 map w removeTab
+map D duplicateTab
 map T restoreTab
 map 1 previousTab
 map 2 nextTab
