@@ -13,7 +13,7 @@ gsettings set org.gnome.desktop.interface clock-show-date true
 gsettings set org.gnome.desktop.interface cursor-blink false
 gsettings set org.gnome.desktop.interface cursor-theme 'cur9'
 gsettings set org.gnome.desktop.interface can-change-accels true
-gsettings set org.gnome.desktop.interface enable-animations false
+gsettings set org.gnome.desktop.interface enable-animations true
 gsettings set org.gnome.desktop.interface font-name 'Fira Sans 11'
 gsettings set org.gnome.desktop.interface document-font-name 'Fira Sans 11'
 gsettings set org.gnome.desktop.interface monospace-font-name 'Inconsolata Medium 13'
