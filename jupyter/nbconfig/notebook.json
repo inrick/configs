@@ -1,0 +1,21 @@
+{
+  "Notebook": {
+    "Header": false,
+    "Toolbar": true
+  },
+  "keys": {
+    "command": {
+      "unbind": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6"
+      ]
+    }
+  },
+  "load_extensions": {
+    "jupyter-js-widgets/extension": true
+  }
+}
