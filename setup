@@ -15,6 +15,7 @@ files=(
   config/fontconfig/conf.d/99-pxplus-disable-hint.conf
   config/gtk-3.0/gtk.css
   config/lf/lfrc
+  config/mc/mc.keymap
   config/rofi/config
   config/Thunar/uca.xml
   local/share/applications/custom/ark.desktop

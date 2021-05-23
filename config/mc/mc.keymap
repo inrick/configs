@@ -1,0 +1,15 @@
+# Compare /etc/mc/mc.keymap
+#
+[filemanager]
+Delete = f8; shift-delete
+PanelQuickView = ctrl-q
+ShowHidden = alt-dot; ctrl-h
+
+[filemanager:xmap]
+PanelQuickView = q; ctrl-q
+
+[input]
+Backspace = backspace
+
+[editor]
+Backspace = backspace
