@@ -40,10 +40,13 @@ stty -ixon
 case "$(uname)" in
   Linux)
     alias ls='ls -F --color=auto --group-directories-first'
-    alias grep='grep --color=auto';;
+    alias grep='grep --color=always'
+    alias pacman='pacman --color=always'
+    ;;
   FreeBSD)
     alias ls='ls -FG'
-    alias grep='grep --color=auto';;
+    alias grep='grep --color=always'
+    ;;
   OpenBSD)
     alias ls='ls -F';;
 esac
@@ -100,6 +103,7 @@ export LESS_TERMCAP_so=$'\e[7;32m'  # start standout (e.g. info box)
 export LESS_TERMCAP_me=$'\e[0m'     # end bold/blink/underline
 export LESS_TERMCAP_se=$'\e[0m'     # end standout
 export LESS_TERMCAP_ue=$'\e[0m'     # end underline
+export LESS=R                       # interpret ANSI color escape sequences
 
 if [[ -f ~/.zshrc_local ]]; then
   source ~/.zshrc_local
