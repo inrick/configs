@@ -1,8 +1,12 @@
 set scrolloff 3
 set icons
 set info size
+set ratios 1:6:3
 
 # Note that ^H is <backspace>
 map <backspace> :set hidden!
 map <enter>     $xdg-open "$f"
 map o           $xdg-open .
+
+# mc inspired bindings
+map <f-8>       :delete
