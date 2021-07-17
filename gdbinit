@@ -10,7 +10,7 @@ set history filename ~/.gdb_history
 set history save
 set disassembly-flavor intel
 
-tui enable
+#tui enable
 tui new-layout 1 {-horizontal src 2 {regs 1 asm 1} 1} 1 status 0 cmd 1
 tui new-layout 2 regs 1 asm 1 status 0 cmd 1
-layout 1
+#layout 1
