@@ -11,6 +11,7 @@ files=(
   bin/foobar2000
   bin/mediacontrol
   bin/rofi_run_custom_list
+  bin/xinput_refresh
   config/autostart/xresources.desktop
   config/fontconfig/conf.d/99-pxplus-disable-hint.conf
   config/gtk-3.0/gtk.css

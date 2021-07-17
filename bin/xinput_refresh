@@ -1,0 +1,10 @@
+#!/bin/sh
+xset r rate 300 30
+setxkbmap \
+  -layout 'us,se' \
+  -variant 'altgr-intl,' \
+  -option 'nodeadkeys' \
+  -option 'lv3:ralt_switch' \
+  -option 'ctrl:nocaps'
+
+xinput set-button-map "Kensington Slimblade Trackball" 1 8 3 4 5 6 7 2
