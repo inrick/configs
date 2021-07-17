@@ -42,6 +42,8 @@ case "$(uname)" in
     alias ls='ls -F --color=auto --group-directories-first'
     alias grep='grep --color=always'
     alias pacman='pacman --color=always'
+    alias pbcopy='xsel --input --clipboard'
+    alias pbpaste='xsel --output --clipboard'
     ;;
   FreeBSD)
     alias ls='ls -FG'
