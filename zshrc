@@ -61,8 +61,6 @@ alias hd='hexdump -C'
 alias open='xdg-open'
 alias o='xdg-open .'
 alias cdrip='whipper cd rip --track-template="%A/%d (%y)/%t. %n" --disc-template="%A/%d (%y)/%d"'
-alias kona='rlwrap $HOME/.builds/kona/k'
-alias k='rlwrap $HOME/.bin/k'
 
 alias -s gz=tar xvfz
 alias -s bz2=tar xvfj
