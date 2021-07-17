@@ -17,5 +17,6 @@ CopyTextAsHTML=false
 TextEditorCmd=6
 
 [Scrolling]
+HighlightScrolledLines=false
 HistoryMode=2
 ScrollBarPosition=2
