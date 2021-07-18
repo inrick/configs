@@ -6,6 +6,7 @@ readonly TARGET=$HOME
 
 typeset -a files
 files=(
+  bin/chromium-default
   bin/fb2kadd
   bin/fb2kshoworhide
   bin/foobar2000
