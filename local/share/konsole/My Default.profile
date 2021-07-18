@@ -8,7 +8,7 @@ Name=My Default
 Parent=FALLBACK/
 ShowTerminalSizeHint=false
 TerminalColumns=84
-TerminalMargin=0
+TerminalMargin=1
 TerminalRows=26
 
 [Interaction Options]
