@@ -22,6 +22,7 @@ files=(
   config/rofi/config
   config/Thunar/uca.xml
   local/share/applications/custom/ark.desktop
+  local/share/applications/custom/chromium-default.desktop
   local/share/applications/custom/dolphin.desktop
   local/share/applications/custom/foobar2000.desktop
   local/share/applications/custom/okular.desktop
