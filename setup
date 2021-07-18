@@ -32,6 +32,7 @@ files=(
   local/share/icons/foobar2000.png
   "local/share/konsole/My Default.profile"
   "local/share/konsole/My Gruvbox.colorscheme"
+  "local/share/konsole/My XFree.keytab"
   local/share/kservices5/ServiceMenus/foobar2000.desktop
   jupyter/nbconfig/notebook.json
   jupyter/jupyter_qtconsole_config.py

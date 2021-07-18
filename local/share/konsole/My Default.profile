@@ -16,6 +16,9 @@ AutoCopySelectedText=true
 CopyTextAsHTML=false
 TextEditorCmd=6
 
+[Keyboard]
+KeyBindings=My XFree
+
 [Scrolling]
 HighlightScrolledLines=false
 HistoryMode=2
