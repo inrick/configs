@@ -23,15 +23,19 @@ elif pgrep cmus > /dev/null 2>&1; then
     *) usage;;
   esac
 else
-  # Fallback on whatever media player is found, if any
-  target=$(dbus-send \
+  candidates=$(dbus-send \
     --dest=org.freedesktop.DBus \
     --print-reply \
     /org/freedesktop/DBus \
     org.freedesktop.DBus.ListNames \
     | grep org.mpris.MediaPlayer2 \
-    | sed -e 's/.*"\(.*\)"/\1/' \
-    | head -n1)
+    | sed -e 's/.*"\(.*\)"/\1/')
+  # First see if Spotify is running
+  target=$(echo "$candidates" | grep spotify | head -n1)
+  if [ -z "$target" ]; then
+    # Otherwise fallback on whatever media player is found, if any
+    target=$(echo $candidates | head -n1)
+  fi
   case $1 in
     playpause) dbus-send \
       --type=method_call \
