@@ -2,8 +2,8 @@
 configuration {
 	modi: "window,run,combi,usr:rofi_run_custom_list";
 	lines: 30;
-	font: "Inconsolata Medium 13";
-	terminal: "gnome-terminal";
+	font: "Source Code Pro Medium 11";
+	terminal: "konsole";
 	combi-modi: "window,usr,run";
 	window-format: "{L} {O} {L} {c} {t}";
 	color-normal: "#f9f5d7, #000000, #f9f5d7, #504945, #f9f5d7";
