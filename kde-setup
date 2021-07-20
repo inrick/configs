@@ -148,6 +148,8 @@ kwriteconfig5 --file kscreenlockerrc --group Daemon --key LockGrace 2
 kwriteconfig5 --file kscreenlockerrc --group Daemon --key Timeout 15
 kwriteconfig5 --file kscreenlockerrc --group Greeter --group Wallpaper --group org.kde.image --group General --key Image ~/"Pictures/Backgrounds/apple/Yosemite 2.jpg"
 
+kwriteconfig5 --file ksmserverrc --group General --key loginMode emptySession
+
 kwriteconfig5 --file kwinrc --group Effect-DesktopGrid --key LayoutMode 1
 kwriteconfig5 --file kwinrc --group Effect-PresentWindows --key LayoutMode 2
 kwriteconfig5 --file kwinrc --group NightColor --key Active true
