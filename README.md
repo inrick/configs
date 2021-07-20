@@ -15,4 +15,7 @@ Misc.
 GNOME can be configured by running `./gnome-setup`, though note that this will
 overwrite existing GNOME settings.
 
+KDE can be (partially) configured by running `./kde-setup`, but, again, note
+that existing settings will be overwritten.
+
 Remember to also [configure vim](https://github.com/inrick/Vim-config/).

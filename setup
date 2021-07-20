@@ -19,8 +19,10 @@ files=(
   config/gtk-3.0/gtk.css
   config/lf/lfrc
   config/mc/mc.keymap
+  config/plasma-workspace/env/myenv.sh
   config/rofi/config.rasi
   config/Thunar/uca.xml
+  config/khotkeysrc
   local/share/applications/custom/ark.desktop
   local/share/applications/custom/chromium-default.desktop
   local/share/applications/custom/dolphin.desktop

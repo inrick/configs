@@ -8,6 +8,7 @@ export VISUAL=nvim
 export BROWSER=chromium-default
 export MANWIDTH=80
 export QT_PLUGIN_PATH=~/.qtplugins:$QT_PLUGIN_PATH
-export QT_QPA_PLATFORMTHEME=qt5ct
+# Disable QT_QPA_PLATFORMTHEME when running KDE
+#export QT_QPA_PLATFORMTHEME=qt5ct
 export WINEDLLOVERRIDES="mscoree=d;mshtml=d"
 export GTK_OVERLAY_SCROLLING=0

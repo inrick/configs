@@ -1,0 +1,189 @@
+#!/bin/sh
+
+kwriteconfig5 --file breezerc --group Common --key OutlineCloseButton false
+kwriteconfig5 --file breezerc --group Windeco --key ButtonSize ButtonSmall
+
+kwriteconfig5 --file gwenviewrc --group SideBar --key "IsVisible ViewMode" false
+
+kwriteconfig5 --file kcminputrc --group Keyboard --key KeyRepeat repeat
+kwriteconfig5 --file kcminputrc --group Keyboard --key NumLock 2
+kwriteconfig5 --file kcminputrc --group Keyboard --key RepeatDelay 300
+kwriteconfig5 --file kcminputrc --group Keyboard --key RepeatRate 30
+kwriteconfig5 --file kcminputrc --group Mouse --key XLbInptPointerAcceleration 0.4
+kwriteconfig5 --file kcminputrc --group Mouse --key cursorTheme OSX-ElCap
+
+kwriteconfig5 --file kcookiejarrc --group "Cookie Policy" --key CookieGlobalAdvice Reject
+
+kwriteconfig5 --file kded5rc --group Module-device_automounter --key autoload false
+
+kwriteconfig5 --file kdeglobals --group General --key "BrowserApplication" "custom-chromium-default.desktop"
+kwriteconfig5 --file kdeglobals --group General --key "ColorScheme" "Breeze"
+kwriteconfig5 --file kdeglobals --group General --key "Name" "Breeze Light"
+kwriteconfig5 --file kdeglobals --group General --key "UseSystemBell" "true"
+kwriteconfig5 --file kdeglobals --group General --key "XftHintStyle" "hintslight"
+kwriteconfig5 --file kdeglobals --group General --key "XftSubPixel" "rgb"
+kwriteconfig5 --file kdeglobals --group General --key "fixed" "Source Code Pro,11,-1,5,57,0,0,0,0,0,Medium"
+kwriteconfig5 --file kdeglobals --group General --key "font" "Fira Sans,11,-1,5,50,0,0,0,0,0"
+kwriteconfig5 --file kdeglobals --group General --key "menuFont" "Fira Sans,11,-1,5,50,0,0,0,0,0"
+kwriteconfig5 --file kdeglobals --group General --key "shadeSortColumn" "true"
+kwriteconfig5 --file kdeglobals --group General --key "smallestReadableFont" "Fira Sans,9,-1,5,50,0,0,0,0,0"
+kwriteconfig5 --file kdeglobals --group General --key "toolBarFont" "Fira Sans,11,-1,5,51,0,0,0,0,0"
+kwriteconfig5 --file kdeglobals --group General --key "widgetStyle" "Breeze"
+kwriteconfig5 --file kdeglobals --group Icons --key "Theme" "Papirus"
+kwriteconfig5 --file kdeglobals --group KDE --key "AnimationDurationFactor" "0.25"
+kwriteconfig5 --file kdeglobals --group KDE --key "ColorScheme" "BreezeLight"
+kwriteconfig5 --file kdeglobals --group KDE --key "LookAndFeelPackage" "org.kde.breezetwilight.desktop"
+kwriteconfig5 --file kdeglobals --group KDE --key "ShowDeleteCommand" "false"
+kwriteconfig5 --file kdeglobals --group KDE --key "SingleClick" "false"
+kwriteconfig5 --file kdeglobals --group KDE --key "contrast" "4"
+kwriteconfig5 --file kdeglobals --group KDE --key "widgetStyle" "phantom"
+
+# TODO: just check in the entire file?
+kwriteconfig5 --file kglobalshortcutsrc --group "KDE Keyboard Layout Switcher" --key "Switch to Next Keyboard Layout" "Meta+K,none,Switch to Next Keyboard Layout"
+kwriteconfig5 --file kglobalshortcutsrc --group khotkeys --key "_k_friendly_name" "Custom Shortcuts Service"
+kwriteconfig5 --file kglobalshortcutsrc --group khotkeys --key "{71c5b0ba-d5c8-423f-86bd-140acf9b5d08}" "Meta+X,none,media play/pause"
+kwriteconfig5 --file kglobalshortcutsrc --group khotkeys --key "{9724ca69-dc49-4a68-9de0-c41a3663f914}" "Meta+C,none,media prev"
+kwriteconfig5 --file kglobalshortcutsrc --group khotkeys --key "{fb0b5389-b5a1-49d9-b5c0-667128436871}" "Meta+V,none,media next"
+kwriteconfig5 --file kglobalshortcutsrc --group khotkeys --key "{d3dd75a2-e2a2-4d5f-9387-1b9daf602466}" "Meta+Space,none,rofi"
+kwriteconfig5 --file kglobalshortcutsrc --group khotkeys --key "{e58b2b28-5cf8-4743-8089-41d39062408b}" "Meta+Return,none,Launch Konsole"
+kwriteconfig5 --file kglobalshortcutsrc --group kwin --key "MoveMouseToCenter" "none,Meta+F6,Move Mouse to Center"
+kwriteconfig5 --file kglobalshortcutsrc --group kwin --key "MoveMouseToFocus" "none,Meta+F5,Move Mouse to Focus"
+kwriteconfig5 --file kglobalshortcutsrc --group kwin --key "MoveZoomDown" "none,Meta+Ctrl+Down,Move Down"
+kwriteconfig5 --file kglobalshortcutsrc --group kwin --key "MoveZoomLeft" "none,Meta+Ctrl+Left,Move Left"
+kwriteconfig5 --file kglobalshortcutsrc --group kwin --key "MoveZoomRight" "none,Meta+Ctrl+Right,Move Right"
+kwriteconfig5 --file kglobalshortcutsrc --group kwin --key "MoveZoomUp" "none,Meta+Ctrl+Up,Move Up"
+kwriteconfig5 --file kglobalshortcutsrc --group kwin --key "Suspend Compositing" "none,Alt+Shift+F12,Suspend Compositing"
+kwriteconfig5 --file kglobalshortcutsrc --group kwin --key "Switch One Desktop Down" "none,Meta+Ctrl+Down,Switch One Desktop Down"
+kwriteconfig5 --file kglobalshortcutsrc --group kwin --key "Switch One Desktop Up" "none,Meta+Ctrl+Up,Switch One Desktop Up"
+kwriteconfig5 --file kglobalshortcutsrc --group kwin --key "Switch One Desktop to the Left" "Ctrl+Up,Meta+Ctrl+Left,Switch One Desktop to the Left"
+kwriteconfig5 --file kglobalshortcutsrc --group kwin --key "Switch One Desktop to the Right" "Ctrl+Down,Meta+Ctrl+Right,Switch One Desktop to the Right"
+kwriteconfig5 --file kglobalshortcutsrc --group kwin --key "Switch Window Down" "none,Meta+Alt+Down,Switch to Window Below"
+kwriteconfig5 --file kglobalshortcutsrc --group kwin --key "Switch Window Left" "none,Meta+Alt+Left,Switch to Window to the Left"
+kwriteconfig5 --file kglobalshortcutsrc --group kwin --key "Switch Window Right" "none,Meta+Alt+Right,Switch to Window to the Right"
+kwriteconfig5 --file kglobalshortcutsrc --group kwin --key "Switch Window Up" "none,Meta+Alt+Up,Switch to Window Above"
+kwriteconfig5 --file kglobalshortcutsrc --group kwin --key "Switch to Next Desktop" "none,none,Switch to Next Desktop"
+kwriteconfig5 --file kglobalshortcutsrc --group kwin --key "Switch to Next Screen" "none,none,Switch to Next Screen"
+kwriteconfig5 --file kglobalshortcutsrc --group kwin --key "Switch to Previous Desktop" "none,none,Switch to Previous Desktop"
+kwriteconfig5 --file kglobalshortcutsrc --group kwin --key "Switch to Previous Screen" "none,none,Switch to Previous Screen"
+kwriteconfig5 --file kglobalshortcutsrc --group kwin --key "Switch to Desktop 1" "none,Ctrl+F1,Switch to Desktop 1"
+kwriteconfig5 --file kglobalshortcutsrc --group kwin --key "Switch to Desktop 2" "none,Ctrl+F2,Switch to Desktop 2"
+kwriteconfig5 --file kglobalshortcutsrc --group kwin --key "Switch to Desktop 3" "none,Ctrl+F3,Switch to Desktop 3"
+kwriteconfig5 --file kglobalshortcutsrc --group kwin --key "Switch to Desktop 4" "none,Ctrl+F4,Switch to Desktop 4"
+kwriteconfig5 --file kglobalshortcutsrc --group kwin --key "Switch to Desktop 5" "none,none,Switch to Desktop 5"
+kwriteconfig5 --file kglobalshortcutsrc --group kwin --key "Switch to Desktop 6" "none,none,Switch to Desktop 6"
+kwriteconfig5 --file kglobalshortcutsrc --group kwin --key "Switch to Desktop 7" "none,none,Switch to Desktop 7"
+kwriteconfig5 --file kglobalshortcutsrc --group kwin --key "Switch to Desktop 8" "none,none,Switch to Desktop 8"
+kwriteconfig5 --file kglobalshortcutsrc --group kwin --key "Switch to Desktop 9" "none,none,Switch to Desktop 9"
+kwriteconfig5 --file kglobalshortcutsrc --group kwin --key "Switch to Desktop 10" "none,none,Switch to Desktop 10"
+kwriteconfig5 --file kglobalshortcutsrc --group kwin --key "Switch to Desktop 11" "none,none,Switch to Desktop 11"
+kwriteconfig5 --file kglobalshortcutsrc --group kwin --key "Switch to Desktop 12" "none,none,Switch to Desktop 12"
+kwriteconfig5 --file kglobalshortcutsrc --group kwin --key "Switch to Desktop 13" "none,none,Switch to Desktop 13"
+kwriteconfig5 --file kglobalshortcutsrc --group kwin --key "Switch to Desktop 14" "none,none,Switch to Desktop 14"
+kwriteconfig5 --file kglobalshortcutsrc --group kwin --key "Switch to Desktop 15" "none,none,Switch to Desktop 15"
+kwriteconfig5 --file kglobalshortcutsrc --group kwin --key "Switch to Desktop 16" "none,none,Switch to Desktop 16"
+kwriteconfig5 --file kglobalshortcutsrc --group kwin --key "Switch to Desktop 17" "none,none,Switch to Desktop 17"
+kwriteconfig5 --file kglobalshortcutsrc --group kwin --key "Switch to Desktop 18" "none,none,Switch to Desktop 18"
+kwriteconfig5 --file kglobalshortcutsrc --group kwin --key "Switch to Desktop 19" "none,none,Switch to Desktop 19"
+kwriteconfig5 --file kglobalshortcutsrc --group kwin --key "Switch to Desktop 20" "none,none,Switch to Desktop 20"
+kwriteconfig5 --file kglobalshortcutsrc --group kwin --key "Walk Through Desktop List" "none,none,Walk Through Desktop List"
+kwriteconfig5 --file kglobalshortcutsrc --group kwin --key "Walk Through Desktop List (Reverse)" "none,none,Walk Through Desktop List (Reverse)"
+kwriteconfig5 --file kglobalshortcutsrc --group kwin --key "Walk Through Desktops" "none,none,Walk Through Desktops"
+kwriteconfig5 --file kglobalshortcutsrc --group kwin --key "Walk Through Desktops (Reverse)" "none,none,Walk Through Desktops (Reverse)"
+#kwriteconfig5 --file kglobalshortcutsrc --group kwin --key "Walk Through Windows" "Alt+Tab"$'\t'"Meta+Tab,Alt+Tab,Walk Through Windows"
+#kwriteconfig5 --file kglobalshortcutsrc --group kwin --key "Walk Through Windows (Reverse)" "Alt+Shift+Backtab"$'\t'"Meta+Shift+Tab,Alt+Shift+Backtab,Walk Through Windows (Reverse)"
+kwriteconfig5 --file kglobalshortcutsrc --group kwin --key "Walk Through Windows" "Meta+Tab,Alt+Tab,Walk Through Windows"
+kwriteconfig5 --file kglobalshortcutsrc --group kwin --key "Walk Through Windows (Reverse)" "Meta+Shift+Tab,Alt+Shift+Backtab,Walk Through Windows (Reverse)"
+kwriteconfig5 --file kglobalshortcutsrc --group kwin --key "Walk Through Windows Alternative" "none,none,Walk Through Windows Alternative"
+kwriteconfig5 --file kglobalshortcutsrc --group kwin --key "Walk Through Windows Alternative (Reverse)" "none,none,Walk Through Windows Alternative (Reverse)"
+kwriteconfig5 --file kglobalshortcutsrc --group kwin --key "Walk Through Windows of Current Application" "none,Alt+\`,Walk Through Windows of Current Application"
+kwriteconfig5 --file kglobalshortcutsrc --group kwin --key "Walk Through Windows of Current Application (Reverse)" "none,Alt+~,Walk Through Windows of Current Application (Reverse)"
+kwriteconfig5 --file kglobalshortcutsrc --group kwin --key "Walk Through Windows of Current Application Alternative" "none,none,Walk Through Windows of Current Application Alternative"
+kwriteconfig5 --file kglobalshortcutsrc --group kwin --key "Walk Through Windows of Current Application Alternative (Reverse)" "none,none,Walk Through Windows of Current Application Alternative (Reverse)"
+kwriteconfig5 --file kglobalshortcutsrc --group kwin --key "Window Close" "Alt+F4"$'\t'"Meta+Q,Alt+F4,Close Window"
+kwriteconfig5 --file kglobalshortcutsrc --group kwin --key "Window Maximize" "Meta+Up,Meta+PgUp,Maximize Window"
+kwriteconfig5 --file kglobalshortcutsrc --group kwin --key "Window Maximize Horizontal" "none,none,Maximize Window Horizontally"
+kwriteconfig5 --file kglobalshortcutsrc --group kwin --key "Window Maximize Vertical" "Meta+Alt+Up,none,Maximize Window Vertically"
+kwriteconfig5 --file kglobalshortcutsrc --group kwin --key "Window Minimize" "Meta+H,Meta+PgDown,Minimize Window"
+kwriteconfig5 --file kglobalshortcutsrc --group kwin --key "Window One Desktop Down" "none,Meta+Ctrl+Shift+Down,Window One Desktop Down"
+kwriteconfig5 --file kglobalshortcutsrc --group kwin --key "Window One Desktop Up" "none,Meta+Ctrl+Shift+Up,Window One Desktop Up"
+kwriteconfig5 --file kglobalshortcutsrc --group kwin --key "Window One Desktop to the Left" "Ctrl+Shift+Up,Meta+Ctrl+Shift+Left,Window One Desktop to the Left"
+kwriteconfig5 --file kglobalshortcutsrc --group kwin --key "Window One Desktop to the Right" "Ctrl+Shift+Down,Meta+Ctrl+Shift+Right,Window One Desktop to the Right"
+kwriteconfig5 --file kglobalshortcutsrc --group kwin --key "Window Quick Tile Bottom" "none,Meta+Down,Quick Tile Window to the Bottom"
+kwriteconfig5 --file kglobalshortcutsrc --group kwin --key "Window Quick Tile Bottom Left" "none,none,Quick Tile Window to the Bottom Left"
+kwriteconfig5 --file kglobalshortcutsrc --group kwin --key "Window Quick Tile Bottom Right" "none,none,Quick Tile Window to the Bottom Right"
+kwriteconfig5 --file kglobalshortcutsrc --group kwin --key "Window Quick Tile Left" "Meta+Left,Meta+Left,Quick Tile Window to the Left"
+kwriteconfig5 --file kglobalshortcutsrc --group kwin --key "Window Quick Tile Right" "Meta+Right,Meta+Right,Quick Tile Window to the Right"
+kwriteconfig5 --file kglobalshortcutsrc --group kwin --key "Window Quick Tile Top" "none,Meta+Up,Quick Tile Window to the Top"
+kwriteconfig5 --file kglobalshortcutsrc --group kwin --key "Window Quick Tile Top Left" "none,none,Quick Tile Window to the Top Left"
+kwriteconfig5 --file kglobalshortcutsrc --group kwin --key "Window Quick Tile Top Right" "none,none,Quick Tile Window to the Top Right"
+kwriteconfig5 --file kglobalshortcutsrc --group kwin --key "view_actual_size" "none,Meta+0,Actual Size"
+kwriteconfig5 --file kglobalshortcutsrc --group kwin --key "view_zoom_in=none,Meta+" ",Zoom In"
+kwriteconfig5 --file kglobalshortcutsrc --group kwin --key "view_zoom_out" "none,Meta+-,Zoom Out"
+kwriteconfig5 --file kglobalshortcutsrc --group plasmashell --key "clipboard_action" "none,Ctrl+Alt+X,Enable Clipboard Actions"
+kwriteconfig5 --file kglobalshortcutsrc --group plasmashell --key "manage activities" "none,Meta+Q,Show Activity Switcher"
+kwriteconfig5 --file kglobalshortcutsrc --group plasmashell --key "next activity" "none,Meta+Tab,Walk through activities"
+kwriteconfig5 --file kglobalshortcutsrc --group plasmashell --key "previous activity" "none,Meta+Shift+Tab,Walk through activities (Reverse)"
+kwriteconfig5 --file kglobalshortcutsrc --group plasmashell --key "repeat_action" "none,Ctrl+Alt+R,Manually Invoke Action on Current Clipboard"
+kwriteconfig5 --file kglobalshortcutsrc --group plasmashell --key "show dashboard" "none,Ctrl+F12,Show Desktop"
+kwriteconfig5 --file kglobalshortcutsrc --group plasmashell --key "show-on-mouse-pos" "none,Meta+V,Open Klipper at Mouse Position"
+kwriteconfig5 --file kglobalshortcutsrc --group plasmashell --key "stop current activity" "none,Meta+S,Stop Current Activity"
+
+# Too much hassle to sync with the panel configuration
+#kwriteconfig5 --file kglobalshortcutsrc --group plasmashell --key "activate widget 83" "Meta+M,none,Activate Digital Clock Widget"
+#kwriteconfig5 --file kglobalshortcutsrc --group plasmashell --key "activate widget 84" "Alt+F1,none,Activate Application Menu Widget"
+
+kwriteconfig5 --file klaunchrc --group BusyCursorSettings --key Bouncing false
+kwriteconfig5 --file klaunchrc --group FeedbackStyle --key BusyCursor false
+
+kwriteconfig5 --file klipperrc --group General --key KeepClipboardContents false
+kwriteconfig5 --file klipperrc --group General --key MaxClipItems 1
+
+kwriteconfig5 --file konsolerc --group "Desktop Entry" --key DefaultProfile "My Default.profile"
+kwriteconfig5 --file konsolerc --group KonsoleWindow --key SaveGeometryOnExit false
+kwriteconfig5 --file konsolerc --group MainWindow --key MenuBar disabled
+kwriteconfig5 --file konsolerc --group MainWindow --key StatusBar disabled
+kwriteconfig5 --file konsolerc --group MainWindow --key ToolBarsMovable disabled
+
+kwriteconfig5 --file kscreenlockerrc --group Daemon --key LockGrace 2
+kwriteconfig5 --file kscreenlockerrc --group Daemon --key Timeout 15
+kwriteconfig5 --file kscreenlockerrc --group Greeter --group Wallpaper --group org.kde.image --group General --key Image ~/"Pictures/Backgrounds/apple/Yosemite 2.jpg"
+
+kwriteconfig5 --file kwinrc --group Effect-DesktopGrid --key LayoutMode 1
+kwriteconfig5 --file kwinrc --group Effect-PresentWindows --key LayoutMode 2
+kwriteconfig5 --file kwinrc --group NightColor --key Active true
+kwriteconfig5 --file kwinrc --group NightColor --key Mode Times
+kwriteconfig5 --file kwinrc --group NightColor --key NightTemperature 3500
+kwriteconfig5 --file kwinrc --group Plugins --key blurEnabled false
+kwriteconfig5 --file kwinrc --group Plugins --key contractEnabled false
+kwriteconfig5 --file kwinrc --group Plugins --key kwin4_effect_translucencyEnabled false
+kwriteconfig5 --file kwinrc --group Plugins --key kwin4_effect_windowapertureEnabled false
+kwriteconfig5 --file kwinrc --group Plugins --key zoomEnabled false
+kwriteconfig5 --file kwinrc --group TabBox --key DelayTime 0
+kwriteconfig5 --file kwinrc --group TabBox --key LayoutName compact
+kwriteconfig5 --file kwinrc --group Windows --key DelayFocusInterval 0
+kwriteconfig5 --file kwinrc --group Windows --key Placement Centered
+kwriteconfig5 --file kwinrc --group org.kde.kdecoration2 --key ButtonsOnLeft M
+
+kwriteconfig5 --file kxkbrc --group Layout --key "DisplayNames" ","
+kwriteconfig5 --file kxkbrc --group Layout --key "LayoutList" "us,se"
+kwriteconfig5 --file kxkbrc --group Layout --key "LayoutLoopCount" -- "-1"
+kwriteconfig5 --file kxkbrc --group Layout --key "Model" "pc86"
+kwriteconfig5 --file kxkbrc --group Layout --key "Options" "nodeadkeys,lv3:ralt_switch,ctrl:nocaps"
+kwriteconfig5 --file kxkbrc --group Layout --key "ResetOldOptions" "false"
+kwriteconfig5 --file kxkbrc --group Layout --key "SwitchMode" "Window"
+kwriteconfig5 --file kxkbrc --group Layout --key "Use" "true"
+kwriteconfig5 --file kxkbrc --group Layout --key "VariantList" "altgr-intl,"
+
+kwriteconfig5 --file plasma-localerc --group Formats --key "LANG" "en_US.UTF-8"
+kwriteconfig5 --file plasma-localerc --group Formats --key "LC_ALL" "en_US.UTF-8"
+kwriteconfig5 --file plasma-localerc --group Formats --key "LC_COLLATE" "sv_SE.UTF-8"
+kwriteconfig5 --file plasma-localerc --group Formats --key "LC_MEASUREMENT" "sv_SE.UTF-8"
+kwriteconfig5 --file plasma-localerc --group Formats --key "LC_MONETARY" "sv_SE.UTF-8"
+kwriteconfig5 --file plasma-localerc --group Formats --key "LC_NUMERIC" "sv_SE.UTF-8"
+kwriteconfig5 --file plasma-localerc --group Formats --key "LC_TIME" "sv_SE.UTF-8"
+kwriteconfig5 --file plasma-localerc --group Formats --key "useDetailed" "true"
+
+kwriteconfig5 --file plasmarc --group Wallpapers --key usersWallpapers ~/"Pictures/Backgrounds/apple/Yosemite 3.jpg"
+
+qdbus org.kde.KWin /KWin reconfigure
+kquitapp5 kglobalaccel && sleep 1s && kstart5 kglobalaccel5 &
