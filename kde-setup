@@ -175,7 +175,6 @@ kwriteconfig5 --file kxkbrc --group Layout --key "Use" "true"
 kwriteconfig5 --file kxkbrc --group Layout --key "VariantList" "altgr-intl,"
 
 kwriteconfig5 --file plasma-localerc --group Formats --key "LANG" "en_US.UTF-8"
-kwriteconfig5 --file plasma-localerc --group Formats --key "LC_ALL" "en_US.UTF-8"
 kwriteconfig5 --file plasma-localerc --group Formats --key "LC_COLLATE" "sv_SE.UTF-8"
 kwriteconfig5 --file plasma-localerc --group Formats --key "LC_MEASUREMENT" "sv_SE.UTF-8"
 kwriteconfig5 --file plasma-localerc --group Formats --key "LC_MONETARY" "sv_SE.UTF-8"
