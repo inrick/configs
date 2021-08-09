@@ -37,6 +37,7 @@ kwriteconfig5 --file kdeglobals --group KDE --key "ShowDeleteCommand" "false"
 kwriteconfig5 --file kdeglobals --group KDE --key "SingleClick" "false"
 kwriteconfig5 --file kdeglobals --group KDE --key "contrast" "4"
 kwriteconfig5 --file kdeglobals --group KDE --key "widgetStyle" "phantom"
+kwriteconfig5 --file kdeglobals --group WM --key "activeFont" "Fira Sans,11,-1,5,57,0,0,0,0,0,Medium"
 
 # TODO: just check in the entire file?
 kwriteconfig5 --file kglobalshortcutsrc --group "KDE Keyboard Layout Switcher" --key "Switch to Next Keyboard Layout" "Meta+K,none,Switch to Next Keyboard Layout"
