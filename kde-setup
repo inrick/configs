@@ -16,6 +16,7 @@ kwriteconfig5 --file kcookiejarrc --group "Cookie Policy" --key CookieGlobalAdvi
 
 kwriteconfig5 --file kded5rc --group Module-device_automounter --key autoload false
 
+kwriteconfig5 --file kdeglobals --group General --key "AllowKDEAppsToRememberWindowPositions" "false"
 kwriteconfig5 --file kdeglobals --group General --key "BrowserApplication" "custom-chromium-default.desktop"
 kwriteconfig5 --file kdeglobals --group General --key "ColorScheme" "Breeze"
 kwriteconfig5 --file kdeglobals --group General --key "Name" "Breeze Light"
@@ -162,7 +163,7 @@ kwriteconfig5 --file kwinrc --group Plugins --key kwin4_effect_translucencyEnabl
 kwriteconfig5 --file kwinrc --group Plugins --key kwin4_effect_windowapertureEnabled false
 kwriteconfig5 --file kwinrc --group Plugins --key zoomEnabled false
 kwriteconfig5 --file kwinrc --group TabBox --key DelayTime 0
-kwriteconfig5 --file kwinrc --group TabBox --key LayoutName compact
+kwriteconfig5 --file kwinrc --group TabBox --key LayoutName big_icons
 kwriteconfig5 --file kwinrc --group Windows --key DelayFocusInterval 0
 kwriteconfig5 --file kwinrc --group Windows --key Placement Centered
 kwriteconfig5 --file kwinrc --group org.kde.kdecoration2 --key ButtonsOnLeft M
