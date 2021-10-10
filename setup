@@ -21,6 +21,7 @@ files=(
   config/mc/mc.keymap
   config/plasma-workspace/env/myenv.sh
   config/rofi/config.rasi
+  config/rofi/theme.rasi
   config/Thunar/uca.xml
   config/khotkeysrc
   local/share/applications/custom/ark.desktop

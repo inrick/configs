@@ -1,17 +1,13 @@
 /* rofi -dump-config */
 configuration {
 	modi: "window,run,combi,usr:rofi_run_custom_list";
-	lines: 30;
 	font: "Source Code Pro Medium 11";
 	terminal: "konsole";
 	combi-modi: "window,usr,run";
 	window-format: "{L} {O} {L} {c} {t}";
-	color-normal: "#f9f5d7, #000000, #f9f5d7, #504945, #f9f5d7";
-	color-urgent: "#9d0006, #000000, #9d0006, #504945, #000000";
-	color-active: "#ebdbb2, #000000, #ebdbb2, #504945, #f9f5d7";
-	color-window: "#f9f5d7, #504945, #f9f5d7";
 	display-window: "win";
 	display-run: "run";
 	display-combi: ":";
 	kb-cancel: "Escape,Control+c,Super+space";
+	theme: "~/.config/rofi/theme.rasi";
 }
