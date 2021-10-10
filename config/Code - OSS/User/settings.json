@@ -1,0 +1,101 @@
+{
+    "telemetry.enableCrashReporter": false,
+    "telemetry.enableTelemetry": false,
+    "telemetry.telemetryLevel": "off",
+
+    "editor.fontFamily": "'Source Code Pro Medium'",
+    "editor.tabSize": 2,
+    "editor.cursorStyle": "block",
+    "editor.occurrencesHighlight": false,
+    "editor.renderLineHighlight": "none",
+    "editor.lineNumbers": "off",
+    "editor.renderFinalNewline": false,
+    "editor.overviewRulerBorder": true,
+    "editor.hideCursorInOverviewRuler": true,
+    "editor.scrollbar.vertical": "auto",
+    "files.insertFinalNewline": true,
+    "editor.accessibilitySupport": "off",
+    "editor.fontSize": 15,
+    "editor.cursorBlinking": "solid",
+    "editor.minimap.enabled": false,
+    "editor.renderIndentGuides": false,
+    "editor.renderWhitespace": "none",
+    "debug.console.fontSize": 16,
+    "markdown.preview.fontSize": 16,
+    "terminal.integrated.fontSize": 16,
+    "workbench.colorTheme": "Gruvbox Light Hard",
+
+    "vim.statusBarColorControl": false,
+    "vim.cursorStylePerMode.normal": "block",
+    "vim.cursorStylePerMode.insert": "line",
+    "vim.cursorStylePerMode.replace": "underline",
+    "vim.cursorStylePerMode.visual": "block",
+    "vim.cursorStylePerMode.visualblock": "block",
+    "vim.cursorStylePerMode.visualline": "block",
+    "vim.normalModeKeyBindings": [],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": ["<bs>"],
+            "commands": [
+                ":nohlsearch"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "w"
+            ],
+            "commands": [
+                "workbench.action.files.save"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "l"
+            ],
+            "commands": [
+                "workbench.action.findInFiles"
+            ]
+        },
+        {
+            "before": ["<up>"],
+            "after": ["<C-y>"]
+        },
+        {
+            "before": ["<down>"],
+            "after": ["<C-e>"]
+        },
+        {
+            "before": [
+                "Q"
+            ],
+            "after": [
+                "g", "q", "i", "p"
+            ]
+        }
+    ],
+    "vim.visualModeKeyBindings": [
+        {
+            "before": [
+                "Q"
+            ],
+            "after": [
+                "g", "q"
+            ]
+        }
+    ],
+    "vim.leader": ",",
+    "vim.hlsearch": true,
+    "vim.surround": true,
+    "vim.useSystemClipboard": true,
+    "vim.useCtrlKeys": true,
+    "vim.incsearch": true,
+
+    "go.formatTool": "goimports",
+    "go.useLanguageServer": true,
+
+    "lldb.launch.initCommands": [
+        "settings set target.x86-disassembly-flavor intel",
+    ],
+}

@@ -13,6 +13,7 @@ files=(
   bin/mediacontrol
   bin/rofi_run_custom_list
   bin/xinput_refresh
+  "config/Code - OSS/User/settings.json"
   config/autostart/xresources.desktop
   config/fontconfig/conf.d/99-noto-color-emoji.conf
   config/fontconfig/conf.d/99-pxplus-disable-hint.conf
