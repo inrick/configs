@@ -141,6 +141,7 @@ kwriteconfig5 --file klipperrc --group General --key KeepClipboardContents false
 kwriteconfig5 --file klipperrc --group General --key MaxClipItems 1
 
 kwriteconfig5 --file konsolerc --group "Desktop Entry" --key DefaultProfile "My Default.profile"
+kwriteconfig5 --file konsolerc --group KonsoleWindow --key ShowMenuBarByDefault false
 kwriteconfig5 --file konsolerc --group KonsoleWindow --key SaveGeometryOnExit false
 kwriteconfig5 --file konsolerc --group MainWindow --key MenuBar disabled
 kwriteconfig5 --file konsolerc --group MainWindow --key StatusBar disabled
