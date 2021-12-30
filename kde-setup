@@ -17,7 +17,7 @@ kwriteconfig5 --file kcookiejarrc --group "Cookie Policy" --key CookieGlobalAdvi
 kwriteconfig5 --file kded5rc --group Module-device_automounter --key autoload false
 
 kwriteconfig5 --file kdeglobals --group General --key "AllowKDEAppsToRememberWindowPositions" "false"
-kwriteconfig5 --file kdeglobals --group General --key "BrowserApplication" "custom-chromium-default.desktop"
+kwriteconfig5 --file kdeglobals --group General --key "BrowserApplication" "custom-firefox-default.desktop"
 kwriteconfig5 --file kdeglobals --group General --key "ColorScheme" "Breeze"
 kwriteconfig5 --file kdeglobals --group General --key "Name" "Breeze Light"
 kwriteconfig5 --file kdeglobals --group General --key "UseSystemBell" "true"

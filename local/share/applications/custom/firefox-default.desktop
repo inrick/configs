@@ -1,0 +1,24 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Version=1.0
+Name=Firefox Default
+Exec=firefox-default %u
+Icon=firefox
+StartupNotify=true
+StartupWMClass=firefox
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+Categories=Network;WebBrowser;
+Actions=new-window;new-private-window;
+MimeType=text/html;text/xml;application/xhtml+xml;x-scheme-handler/http;x-scheme-handler/https;application/x-xpinstall;application/pdf;application/json;
+
+[Desktop Action new-window]
+Name=New Window
+Name[sv]=Nytt fönster
+Exec=firefox-default --new-window %u
+
+[Desktop Action new-private-window]
+Name=New Private Window
+Name[sv]=Nytt privat fönster
+Exec=firefox-default --private-window %u
