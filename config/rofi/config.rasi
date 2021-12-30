@@ -9,5 +9,6 @@ configuration {
 	display-run: "run";
 	display-combi: ":";
 	kb-cancel: "Escape,Control+c,Super+space";
-	theme: "~/.config/rofi/theme.rasi";
 }
+
+@theme "~/.config/rofi/theme.rasi"
