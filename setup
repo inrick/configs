@@ -40,6 +40,7 @@ files=(
   "local/share/konsole/My Gruvbox.colorscheme"
   "local/share/konsole/My XFree.keytab"
   local/share/kservices5/ServiceMenus/foobar2000.desktop
+  local/share/mc/skins/spring.ini
   jupyter/nbconfig/notebook.json
   jupyter/jupyter_qtconsole_config.py
   jupyter/qtconsole.css
