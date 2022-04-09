@@ -2,6 +2,8 @@
 	defaultBranch = main
 [push]
 	default = simple
+[pull]
+	rebase = true
 [core]
 	editor = nvim
 	pager = less
@@ -24,4 +26,5 @@
 	fa = fetch --all --prune
 	ff = merge --ff-only
 	new = log ..@{u}
+	p = pull --all --prune
 	s = status
