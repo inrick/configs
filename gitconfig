@@ -4,6 +4,8 @@
 	default = simple
 [pull]
 	rebase = true
+[rebase]
+	autostash = true
 [core]
 	editor = nvim
 	pager = less
