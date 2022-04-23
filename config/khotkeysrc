@@ -142,7 +142,7 @@ Type=SIMPLE_ACTION_DATA
 ActionsCount=1
 
 [Data_2_5Actions0]
-CommandURL=konsole
+CommandURL=kitty
 Type=COMMAND_URL
 
 [Data_2_5Conditions]

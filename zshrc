@@ -65,6 +65,12 @@ alias open='xdg-open'
 alias o='xdg-open .'
 alias cdrip='whipper cd rip --track-template="%A/%d (%y)/%t. %n" --disc-template="%A/%d (%y)/%d"'
 
+if [[ $TERM == 'xterm-kitty' ]]; then
+  alias icat='kitty +kitten icat'
+  alias kssh='kitty +kitten ssh'
+  alias rg='kitty +kitten hyperlinked_grep'
+fi
+
 night() {
   if [[ -z "$1" ]]; then
     gsettings get org.gnome.settings-daemon.plugins.color night-light-temperature

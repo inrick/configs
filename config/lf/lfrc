@@ -17,3 +17,10 @@ map o           $xdg-open .
 # mc inspired bindings
 map <c-s>       search
 map <f-8>       :delete
+
+# Set window title on directory change, taken from
+# https://github.com/gokcehan/lf/wiki/Tips#show-current-directory-in-window-title
+cmd on-cd &{{
+  printf "\033]0; $(pwd | sed "s|$HOME|~|")\007" > /dev/tty
+}}
+on-cd
