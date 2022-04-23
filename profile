@@ -5,7 +5,7 @@ export MANPATH=$MANPATH
 export EDITOR=nvim
 export PAGER=less
 export VISUAL=nvim
-export BROWSER=firefox-default
+export BROWSER=chromium-default
 export MANWIDTH=80
 export QT_PLUGIN_PATH=~/.qtplugins:$QT_PLUGIN_PATH
 # Disable QT_QPA_PLATFORMTHEME when running KDE

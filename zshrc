@@ -65,10 +65,6 @@ alias open='xdg-open'
 alias o='xdg-open .'
 alias cdrip='whipper cd rip --track-template="%A/%d (%y)/%t. %n" --disc-template="%A/%d (%y)/%d"'
 
-alias -s gz=tar xvfz
-alias -s bz2=tar xvfj
-alias -s txt=$EDITOR
-
 night() {
   if [[ -z "$1" ]]; then
     gsettings get org.gnome.settings-daemon.plugins.color night-light-temperature
@@ -105,7 +101,7 @@ export LESS_TERMCAP_so=$'\e[7;32m'  # start standout (e.g. info box)
 export LESS_TERMCAP_me=$'\e[0m'     # end bold/blink/underline
 export LESS_TERMCAP_se=$'\e[0m'     # end standout
 export LESS_TERMCAP_ue=$'\e[0m'     # end underline
-export LESS=R                       # interpret ANSI color escape sequences
+export LESS=iR                      # ignore case and interpret ANSI color escape sequences
 
 if [[ -f ~/.zshrc_local ]]; then
   source ~/.zshrc_local
