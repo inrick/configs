@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+if [[ $(xdotool getwindowfocus getwindowclassname) == "kitty" ]]; then
+  # Since this script is bound to super+enter, send a key combination to kitty
+  # that uses the "super" modifier, so that we don't need --clearmodifiers
+  # which causes issues (it removes then retriggers the active modifiers, in
+  # practise causing a "super" keypress and triggering the global menu).
+  xdotool key --delay 30 "super+t"
+else
+  kitty_win=$(xdotool search --classname kitty | head -n1)
+  if [[ -n "$kitty_win" ]]; then
+    xdotool windowactivate --sync "$kitty_win"
+  else
+    exec kitty
+  fi
+fi

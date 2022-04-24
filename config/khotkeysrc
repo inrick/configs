@@ -135,14 +135,14 @@ Uuid={9724ca69-dc49-4a68-9de0-c41a3663f914}
 [Data_2_5]
 Comment=Comment
 Enabled=true
-Name=Launch terminal
+Name=Launch/focus terminal
 Type=SIMPLE_ACTION_DATA
 
 [Data_2_5Actions]
 ActionsCount=1
 
 [Data_2_5Actions0]
-CommandURL=kitty
+CommandURL=kitty-activate
 Type=COMMAND_URL
 
 [Data_2_5Conditions]

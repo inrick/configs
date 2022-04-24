@@ -11,6 +11,7 @@ files=(
   bin/fb2kshoworhide
   bin/firefox-default
   bin/foobar2000
+  bin/kitty-activate
   bin/mediacontrol
   bin/rofi_run_custom_list
   bin/xinput_refresh
