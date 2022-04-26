@@ -17,6 +17,7 @@ files=(
   bin/xinput_refresh
   "config/Code - OSS/User/settings.json"
   config/autostart/xresources.desktop
+  config/bat/config
   config/fontconfig/conf.d/99-noto-color-emoji.conf
   config/fontconfig/conf.d/99-pxplus-disable-hint.conf
   config/gtk-3.0/gtk.css
@@ -25,6 +26,7 @@ files=(
   config/lf/lfrc
   config/mc/mc.keymap
   config/plasma-workspace/env/myenv.sh
+  config/ranger/rc.conf
   config/rofi/config.rasi
   config/rofi/theme.rasi
   config/Thunar/uca.xml
