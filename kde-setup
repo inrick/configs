@@ -43,9 +43,9 @@ kwriteconfig5 --file kdeglobals --group WM --key "activeFont" "Fira Sans,11,-1,5
 # TODO: just check in the entire file?
 kwriteconfig5 --file kglobalshortcutsrc --group "KDE Keyboard Layout Switcher" --key "Switch to Next Keyboard Layout" "Meta+K,none,Switch to Next Keyboard Layout"
 kwriteconfig5 --file kglobalshortcutsrc --group khotkeys --key "_k_friendly_name" "Custom Shortcuts Service"
-kwriteconfig5 --file kglobalshortcutsrc --group khotkeys --key "{71c5b0ba-d5c8-423f-86bd-140acf9b5d08}" "Meta+X,none,media play/pause"
-kwriteconfig5 --file kglobalshortcutsrc --group khotkeys --key "{9724ca69-dc49-4a68-9de0-c41a3663f914}" "Meta+C,none,media prev"
-kwriteconfig5 --file kglobalshortcutsrc --group khotkeys --key "{fb0b5389-b5a1-49d9-b5c0-667128436871}" "Meta+V,none,media next"
+kwriteconfig5 --file kglobalshortcutsrc --group khotkeys --key "{71c5b0ba-d5c8-423f-86bd-140acf9b5d08}" "Meta+Ctrl+X,none,media play/pause"
+kwriteconfig5 --file kglobalshortcutsrc --group khotkeys --key "{9724ca69-dc49-4a68-9de0-c41a3663f914}" "Meta+Ctrl+C,none,media prev"
+kwriteconfig5 --file kglobalshortcutsrc --group khotkeys --key "{fb0b5389-b5a1-49d9-b5c0-667128436871}" "Meta+Ctrl+V,none,media next"
 kwriteconfig5 --file kglobalshortcutsrc --group khotkeys --key "{d3dd75a2-e2a2-4d5f-9387-1b9daf602466}" "Meta+Space,none,rofi"
 kwriteconfig5 --file kglobalshortcutsrc --group khotkeys --key "{e58b2b28-5cf8-4743-8089-41d39062408b}" "Meta+Return,none,Launch kitty"
 kwriteconfig5 --file kglobalshortcutsrc --group kwin --key "MoveMouseToCenter" "none,Meta+F6,Move Mouse to Center"

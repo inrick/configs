@@ -76,7 +76,7 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_2_2Triggers0]
-Key=Meta+X
+Key=Meta+Ctrl+X
 Type=SHORTCUT
 Uuid={71c5b0ba-d5c8-423f-86bd-140acf9b5d08}
 
@@ -102,7 +102,7 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_2_3Triggers0]
-Key=Meta+V
+Key=Meta+Ctrl+V
 Type=SHORTCUT
 Uuid={fb0b5389-b5a1-49d9-b5c0-667128436871}
 
@@ -128,7 +128,7 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_2_4Triggers0]
-Key=Meta+C
+Key=Meta+Ctrl+C
 Type=SHORTCUT
 Uuid={9724ca69-dc49-4a68-9de0-c41a3663f914}
 
