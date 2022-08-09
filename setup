@@ -15,6 +15,7 @@ files=(
   bin/mediacontrol
   bin/rofi_run_custom_list
   bin/xinput_refresh
+  "config/Code - OSS/User/keybindings.json"
   "config/Code - OSS/User/settings.json"
   config/autostart/xresources.desktop
   config/bat/config

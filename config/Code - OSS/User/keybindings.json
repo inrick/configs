@@ -1,0 +1,10 @@
+[
+  {
+    "key": "ctrl+q",
+    "command": "workbench.action.closeActiveEditor"
+  },
+  {
+    "key": "f4",
+    "command": "workbench.action.toggleSidebarVisibility"
+  },
+]
