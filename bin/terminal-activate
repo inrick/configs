@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+if [[ $(xdotool getwindowfocus getwindowclassname) == "Gnome-terminal" ]]; then
+  # Since this script is bound to super+enter, send a key combination to the
+  # terminal that uses the "super" modifier, so that we don't need
+  # --clearmodifiers which causes issues (it removes then retriggers the active
+  # modifiers, in practise causing a "super" keypress and triggering the global
+  # menu).
+  xdotool key --delay 30 "super+t"
+else
+  term_win=$(xdotool search --class 'Gnome-terminal$' | head -n1)
+  if [[ -n "$term_win" ]]; then
+    xdotool windowactivate --sync "$term_win"
+  else
+    exec gnome-terminal
+  fi
+fi
