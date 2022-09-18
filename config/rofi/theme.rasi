@@ -2,6 +2,9 @@
 * {
   fg:                          #000000;
   bg:                          #fbf1c7;
+  /* apparently foreground/background are explicitly needed now */
+  foreground:                  var(fg);
+  background:                  var(bg);
   altbg1:                      #ebdbb2;
   altbg2:                      #504945;
   red:                         #9d0006;
