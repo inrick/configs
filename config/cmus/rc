@@ -1,0 +1,54 @@
+# Note that lib_sort only affects the sorted library view (2), not the primary tree view.
+set lib_sort=albumartist date album codec discnumber tracknumber title filename play_count
+set play_sorted=true
+set mouse=true
+set mpris=true
+set pause_on_output_change=false
+
+# status_display_program is run on every track change. Use to keep an up to
+# date album art display?
+#set status_display_program=...
+
+# Trailing whitespace is intentional on the affected entries below.
+set format_current= %a - %l -%3n. %t%= %{codec} %y 
+set format_treewin=  %l%{?y? (%y)}
+set format_treewin_artist=%a
+set format_trackwin=%3n. %t%= %-4{codec} %d 
+set format_trackwin_va=%3n. %t (%a)%= %-4{codec} %d 
+set format_trackwin_album= %l%{?y? (%y)} %= %{albumduration} 
+set format_playlist= %-21%a %-21%l %3n. %t%= %-4{codec} %y %d %{?X!=0?%3X ?    }
+set format_playlist_va= %-25%A %3n. %t (%a)%= %-4{codec} %y %d 
+
+set color_info=lightred
+set color_cmdline_bg=default
+set color_cmdline_fg=default
+set color_titleline_fg=darkgray
+set color_titleline_bg=gray
+set color_titleline_attr=bold
+set color_win_title_fg=darkgray
+set color_win_title_bg=gray
+set color_win_title_attr=bold
+set color_separator=gray
+set color_win_cur=magenta
+set color_win_cur_attr=bold
+set color_win_cur_sel_fg=magenta
+set color_win_cur_sel_bg=gray
+set color_win_cur_sel_attr=bold
+set color_win_sel_fg=darkgray
+set color_win_sel_bg=gray
+set color_win_sel_attr=bold
+set color_win_inactive_sel_fg=darkgray
+set color_win_inactive_sel_bg=default
+set color_win_inactive_sel_attr=bold
+set color_win_inactive_cur_sel_fg=magenta
+set color_win_inactive_cur_sel_bg=default
+set color_win_inactive_cur_sel_attr=bold
+
+fset _artists=filename="*/Artists/*"
+fset _podcast=filename="*/Podcast/*"
+fset _single=filename="*/Single/*"
+fset _spoken=filename="*/Spoken/*"
+fset _vgm=filename="*/VGM/*"
+fset _new=filename="*/#new/*"
+fset flac=filename="*.flac"
+fset mp3=filename="*.mp3"
