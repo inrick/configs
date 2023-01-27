@@ -11,6 +11,6 @@ else
   if [[ -n "$kitty_win" ]]; then
     xdotool windowactivate --sync "$kitty_win"
   else
-    exec kitty
+    exec kitty -T Terminal
   fi
 fi
