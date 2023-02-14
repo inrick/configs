@@ -17,7 +17,7 @@ kwriteconfig5 --file kcookiejarrc --group "Cookie Policy" --key CookieGlobalAdvi
 kwriteconfig5 --file kded5rc --group Module-device_automounter --key autoload false
 
 kwriteconfig5 --file kdeglobals --group General --key "AllowKDEAppsToRememberWindowPositions" "false"
-kwriteconfig5 --file kdeglobals --group General --key "BrowserApplication" "custom-firefox-default.desktop"
+kwriteconfig5 --file kdeglobals --group General --key "BrowserApplication" "custom-chromium-default.desktop"
 kwriteconfig5 --file kdeglobals --group General --key "ColorScheme" "Breeze"
 kwriteconfig5 --file kdeglobals --group General --key "Name" "Breeze Light"
 kwriteconfig5 --file kdeglobals --group General --key "UseSystemBell" "true"
@@ -37,7 +37,7 @@ kwriteconfig5 --file kdeglobals --group KDE --key "LookAndFeelPackage" "org.kde.
 kwriteconfig5 --file kdeglobals --group KDE --key "ShowDeleteCommand" "false"
 kwriteconfig5 --file kdeglobals --group KDE --key "SingleClick" "false"
 kwriteconfig5 --file kdeglobals --group KDE --key "contrast" "4"
-kwriteconfig5 --file kdeglobals --group KDE --key "widgetStyle" "phantom"
+kwriteconfig5 --file kdeglobals --group KDE --key "widgetStyle" "Breeze"
 kwriteconfig5 --file kdeglobals --group WM --key "activeFont" "Fira Sans,11,-1,5,57,0,0,0,0,0,Medium"
 
 # TODO: just check in the entire file?
@@ -57,8 +57,8 @@ kwriteconfig5 --file kglobalshortcutsrc --group kwin --key "MoveZoomUp" "none,Me
 kwriteconfig5 --file kglobalshortcutsrc --group kwin --key "Suspend Compositing" "none,Alt+Shift+F12,Suspend Compositing"
 kwriteconfig5 --file kglobalshortcutsrc --group kwin --key "Switch One Desktop Down" "none,Meta+Ctrl+Down,Switch One Desktop Down"
 kwriteconfig5 --file kglobalshortcutsrc --group kwin --key "Switch One Desktop Up" "none,Meta+Ctrl+Up,Switch One Desktop Up"
-kwriteconfig5 --file kglobalshortcutsrc --group kwin --key "Switch One Desktop to the Left" "Ctrl+Up,Meta+Ctrl+Left,Switch One Desktop to the Left"
-kwriteconfig5 --file kglobalshortcutsrc --group kwin --key "Switch One Desktop to the Right" "Ctrl+Down,Meta+Ctrl+Right,Switch One Desktop to the Right"
+kwriteconfig5 --file kglobalshortcutsrc --group kwin --key "Switch One Desktop to the Left" "Ctrl+Shift+Up,Meta+Ctrl+Left,Switch One Desktop to the Left"
+kwriteconfig5 --file kglobalshortcutsrc --group kwin --key "Switch One Desktop to the Right" "Ctrl+Shift+Down,Meta+Ctrl+Right,Switch One Desktop to the Right"
 kwriteconfig5 --file kglobalshortcutsrc --group kwin --key "Switch Window Down" "none,Meta+Alt+Down,Switch to Window Below"
 kwriteconfig5 --file kglobalshortcutsrc --group kwin --key "Switch Window Left" "none,Meta+Alt+Left,Switch to Window to the Left"
 kwriteconfig5 --file kglobalshortcutsrc --group kwin --key "Switch Window Right" "none,Meta+Alt+Right,Switch to Window to the Right"
@@ -108,8 +108,8 @@ kwriteconfig5 --file kglobalshortcutsrc --group kwin --key "Window Maximize Vert
 kwriteconfig5 --file kglobalshortcutsrc --group kwin --key "Window Minimize" "Meta+H,Meta+PgDown,Minimize Window"
 kwriteconfig5 --file kglobalshortcutsrc --group kwin --key "Window One Desktop Down" "none,Meta+Ctrl+Shift+Down,Window One Desktop Down"
 kwriteconfig5 --file kglobalshortcutsrc --group kwin --key "Window One Desktop Up" "none,Meta+Ctrl+Shift+Up,Window One Desktop Up"
-kwriteconfig5 --file kglobalshortcutsrc --group kwin --key "Window One Desktop to the Left" "Ctrl+Shift+Up,Meta+Ctrl+Shift+Left,Window One Desktop to the Left"
-kwriteconfig5 --file kglobalshortcutsrc --group kwin --key "Window One Desktop to the Right" "Ctrl+Shift+Down,Meta+Ctrl+Shift+Right,Window One Desktop to the Right"
+kwriteconfig5 --file kglobalshortcutsrc --group kwin --key "Window One Desktop to the Left" "Meta+Ctrl+Shift+Left,Meta+Ctrl+Shift+Left,Window One Desktop to the Left"
+kwriteconfig5 --file kglobalshortcutsrc --group kwin --key "Window One Desktop to the Right" "Meta+Ctrl+Shift+Right,Meta+Ctrl+Shift+Right,Window One Desktop to the Right"
 kwriteconfig5 --file kglobalshortcutsrc --group kwin --key "Window Quick Tile Bottom" "none,Meta+Down,Quick Tile Window to the Bottom"
 kwriteconfig5 --file kglobalshortcutsrc --group kwin --key "Window Quick Tile Bottom Left" "none,none,Quick Tile Window to the Bottom Left"
 kwriteconfig5 --file kglobalshortcutsrc --group kwin --key "Window Quick Tile Bottom Right" "none,none,Quick Tile Window to the Bottom Right"
@@ -155,6 +155,9 @@ kwriteconfig5 --file ksmserverrc --group General --key loginMode emptySession
 
 kwriteconfig5 --file kwinrc --group Effect-DesktopGrid --key LayoutMode 1
 kwriteconfig5 --file kwinrc --group Effect-PresentWindows --key LayoutMode 2
+kwriteconfig5 --file kwinrc --group Effect-desktopgrid --key DesktopLayoutMode 1
+kwriteconfig5 --file kwinrc --group Effect-overview --key LayoutMode 0
+kwriteconfig5 --file kwinrc --group Effect-windowview --key LayoutMode 0
 kwriteconfig5 --file kwinrc --group NightColor --key Active true
 kwriteconfig5 --file kwinrc --group NightColor --key Mode Times
 kwriteconfig5 --file kwinrc --group NightColor --key NightTemperature 3500
@@ -164,7 +167,7 @@ kwriteconfig5 --file kwinrc --group Plugins --key kwin4_effect_translucencyEnabl
 kwriteconfig5 --file kwinrc --group Plugins --key kwin4_effect_windowapertureEnabled false
 kwriteconfig5 --file kwinrc --group Plugins --key zoomEnabled false
 kwriteconfig5 --file kwinrc --group TabBox --key DelayTime 0
-kwriteconfig5 --file kwinrc --group TabBox --key LayoutName big_icons
+kwriteconfig5 --file kwinrc --group TabBox --key LayoutName compact
 kwriteconfig5 --file kwinrc --group Windows --key DelayFocusInterval 0
 kwriteconfig5 --file kwinrc --group Windows --key Placement Centered
 kwriteconfig5 --file kwinrc --group org.kde.kdecoration2 --key ButtonsOnLeft M
