@@ -6,7 +6,7 @@
     "editor.occurrencesHighlight": false,
     "editor.renderLineHighlight": "none",
     "editor.lineNumbers": "on",
-    "editor.renderFinalNewline": false,
+    "editor.renderFinalNewline": "off",
     "editor.overviewRulerBorder": true,
     "editor.hideCursorInOverviewRuler": true,
     "editor.scrollbar.vertical": "auto",
