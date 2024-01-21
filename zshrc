@@ -61,10 +61,12 @@ alias g='git'
 alias p='ipython'
 alias gk='gitk &> /dev/null &'
 alias hd='hexdump -C'
-alias objd='objdump -d --disassembler-options=intel'
+alias objd='objdump -d --disassembler-options=intel --disassembler-color=on'
 alias open='xdg-open'
 alias o='xdg-open .'
 alias cdrip='whipper cd rip --track-template="%A/%d (%y)/%t. %n" --disc-template="%A/%d (%y)/%d"'
+alias rg='rg --color=always'
+alias mdcat='mdcat --columns=80'
 
 if [[ $TERM == 'xterm-kitty' ]]; then
   alias icat='kitty +kitten icat'

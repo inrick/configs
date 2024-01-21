@@ -12,6 +12,7 @@ export QT_PLUGIN_PATH=~/.qtplugins:$QT_PLUGIN_PATH
 #export QT_QPA_PLATFORMTHEME=qt5ct
 export WINEDLLOVERRIDES="mscoree=d;mshtml=d"
 export GTK_OVERLAY_SCROLLING=0
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 
 # Add Go and Rust paths
 export GOPATH=~/local/go
