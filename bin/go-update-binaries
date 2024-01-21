@@ -1,0 +1,11 @@
+#!/bin/sh
+set -o errexit
+go install github.com/go-delve/delve/cmd/dlv@latest
+go install github.com/aarzilli/gdlv@latest
+go install golang.org/x/tools/gopls@latest
+go install golang.org/x/tools/cmd/goimports@latest
+go install golang.org/x/tools/cmd/stringer@latest
+go install honnef.co/go/tools/cmd/staticcheck@latest
+go install github.com/boyter/scc@latest
+go install github.com/gokcehan/lf@latest
+go install robpike.io/ivy@latest
