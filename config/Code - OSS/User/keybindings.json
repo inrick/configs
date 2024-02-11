@@ -7,4 +7,12 @@
     "key": "f4",
     "command": "workbench.action.toggleSidebarVisibility"
   },
+  {
+    "key": "ctrl+down",
+    "command": "workbench.action.nextEditor",
+  },
+  {
+    "key": "ctrl+up",
+    "command": "workbench.action.previousEditor"
+  }
 ]

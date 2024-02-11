@@ -3,7 +3,7 @@
     "editor.fontFamily": "'Source Code Pro Medium'",
     "editor.tabSize": 2,
     "editor.cursorStyle": "block",
-    "editor.occurrencesHighlight": false,
+    "editor.occurrencesHighlight": "off",
     "editor.renderLineHighlight": "none",
     "editor.lineNumbers": "on",
     "editor.renderFinalNewline": "off",
@@ -14,7 +14,7 @@
     "editor.guides.indentation": true,
     "editor.wordWrap": "on",
     "editor.inlayHints.enabled": "offUnlessPressed",
-    "editor.lightbulb.enabled": false,
+    "editor.lightbulb.enabled": "off",
     "editor.accessibilitySupport": "off",
     "editor.fontSize": 15,
     "editor.cursorBlinking": "solid",
@@ -23,13 +23,18 @@
     "debug.console.fontSize": 16,
     "markdown.preview.fontSize": 16,
     "terminal.integrated.fontSize": 16,
-    "workbench.colorTheme": "Cloud",
+    "workbench.colorTheme": "Quiet Light",
     "workbench.colorCustomizations": {
-        "editorError.foreground":   "#00000000",
+        "editorError.foreground": "#00000000",
         "editorWarning.foreground": "#00000000",
-        "editorInfo.foreground":    "#00000000"
+        "editorInfo.foreground": "#00000000",
     },
-
+    "editor.tokenColorCustomizations": {
+        "comments": {
+            "foreground": "#555555",
+            "fontStyle": "",
+        },
+    },
     "vim.statusBarColorControl": false,
     "vim.cursorStylePerMode.normal": "block",
     "vim.cursorStylePerMode.insert": "line",
@@ -42,13 +47,18 @@
         "<C-b>": true,
         "<C-f>": true,
         "<C-j>": false,
+        "<C-k>": false,
+        "<C-n>": false,
+        "<C-p>": false,
         "<C-s>": false,
         "<C-z>": false,
     },
     "vim.normalModeKeyBindings": [],
     "vim.normalModeKeyBindingsNonRecursive": [
         {
-            "before": ["<bs>"],
+            "before": [
+                "<bs>"
+            ],
             "commands": [
                 ":nohlsearch"
             ]
@@ -63,24 +73,75 @@
             ]
         },
         {
-            "before": ["<up>"],
-            "after": ["<C-y>"]
+            "before": [
+                "<up>"
+            ],
+            "after": [
+                "<C-y>"
+            ]
         },
         {
-            "before": ["<down>"],
-            "after": ["<C-e>"]
+            "before": [
+                "<down>"
+            ],
+            "after": [
+                "<C-e>"
+            ]
         },
         {
             "before": [
                 "Q"
             ],
             "after": [
-                "g", "q", "i", "p"
+                "g",
+                "q",
+                "i",
+                "p"
             ]
         },
         {
-            "before": ["<C-q>"],
-            "commands": ["workbench.action.closeActiveEditor"]
+            "before": [
+                "<C-q>"
+            ],
+            "commands": [
+                "workbench.action.closeActiveEditor"
+            ]
+        },
+        {
+            "before": [
+                "j"
+            ],
+            "after": [
+                "g",
+                "j"
+            ],
+        },
+        {
+            "before": [
+                "k"
+            ],
+            "after": [
+                "g",
+                "k"
+            ],
+        },
+        {
+            "before": [
+                "g",
+                "j"
+            ],
+            "after": [
+                "j"
+            ],
+        },
+        {
+            "before": [
+                "g",
+                "k"
+            ],
+            "after": [
+                "k"
+            ],
         },
     ],
     "vim.visualModeKeyBindings": [
@@ -89,8 +150,9 @@
                 "Q"
             ],
             "after": [
-                "g", "q"
-            ]
+                "g",
+                "q"
+            ],
         }
     ],
     "vim.leader": ",",
@@ -99,11 +161,8 @@
     "vim.useSystemClipboard": true,
     "vim.useCtrlKeys": true,
     "vim.incsearch": true,
-
     "go.formatTool": "goimports",
     "go.useLanguageServer": true,
-    "gruvboxMaterial.italicComments": false,
-    "gruvboxMaterial.lightContrast": "hard",
     "lldb.launch.initCommands": [
         "settings set target.x86-disassembly-flavor intel",
     ],
@@ -113,4 +172,9 @@
     "rust-analyzer.cargo.allFeatures": true,
     "rust-analyzer.updates.askBeforeDownload": true,
     "rust-analyzer.inlayHints.enable": false,
+    "files.watcherExclude": {
+        "**/.bloop": true,
+        "**/.metals": true,
+        "**/.ammonite": true
+    },
 }
