@@ -61,17 +61,22 @@ alias g='git'
 alias p='ipython'
 alias gk='gitk &> /dev/null &'
 alias hd='hexdump -C'
-alias objd='objdump -d --disassembler-options=intel --disassembler-color=on'
 alias open='xdg-open'
 alias o='xdg-open .'
 alias cdrip='whipper cd rip --track-template="%A/%d (%y)/%t. %n" --disc-template="%A/%d (%y)/%d"'
+alias objd='objdump -d --disassembler-options=intel --disassembler-color=on'
 alias rg='rg --color=always'
+alias ncdu='ncdu --color=off'
 alias mdcat='mdcat --columns=80'
+alias dnd='kde-inhibit --notifications'
+alias wik='cd ~/Documents/wiki && nvim source/Toplevel/TODO.rst'
 
 if [[ $TERM == 'xterm-kitty' ]]; then
   alias icat='kitty +kitten icat'
   alias kssh='kitty +kitten ssh'
   alias rg='kitty +kitten hyperlinked_grep'
+  # NOTE: the following is to get a black titlebar in GNOME.
+  # xprop -f _GTK_THEME_VARIANT 8u -set _GTK_THEME_VARIANT "dark" -name Terminal
 fi
 
 night() {
@@ -86,6 +91,14 @@ zip_epub() {
   # $1 = book_name.epub
   # mimetype has to be first in epub file and it has to be uncompressed.
   zip -Xr "$1" mimetype *
+}
+
+jsondiff() {
+  if [[ $# != 2 ]]; then
+    echo "Usage: jsondiff <file1.json> <file2.json>"
+    return 1
+  fi
+  nvim -d <(jq --sort-keys . "$1") <(jq --sort-keys . "$2")
 }
 
 # man zshmisc -> PROMPT EXPANSION
