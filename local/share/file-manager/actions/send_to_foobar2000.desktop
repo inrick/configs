@@ -3,7 +3,7 @@ Type=Action
 Name=Send to foobar2000
 ToolbarLabel=Send to foobar2000
 Tooltip=Send selected files to foobar2000
-Icon=tango_foobar2k_2
+Icon=foobar2000_tango
 Profiles=sendToFoobar;
 
 [X-Action-Profile sendToFoobar]

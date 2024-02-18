@@ -3,7 +3,7 @@ Type=Action
 Name=Add to foobar2000
 ToolbarLabel=Add to foobar2000
 Tooltip=Add selected files to foobar2000
-Icon=tango_foobar2k_2
+Icon=foobar2000_tango
 Profiles=addToFoobar;
 
 [X-Action-Profile addToFoobar]

@@ -8,11 +8,11 @@ X-KDE-Priority=TopLevel
 [Desktop Action addToFoobar]
 Name=Add to foobar2000
 Comment=Add selected files to foobar2000
-Icon=tango_foobar2k_2.png
+Icon=foobar2000_tango.png
 Exec=fb2kadd %F
 
 [Desktop Action sendToFoobar]
 Name=Send to foobar2000
 Comment=Send selected files to foobar2000
-Icon=tango_foobar2k_2.png
+Icon=foobar2000_tango.png
 Exec=fb2kadd --replace %F

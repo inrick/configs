@@ -49,6 +49,9 @@ files=(
   local/share/file-manager/actions/send_to_foobar2000.desktop
   local/share/icons/cur9
   local/share/icons/OSX-ElCap
+  local/share/icons/foobar2000_alt.png
+  local/share/icons/foobar2000_metro.png
+  local/share/icons/foobar2000_tango.png
   local/share/icons/foobar2000.png
   "local/share/konsole/My Default.profile"
   "local/share/konsole/My Gruvbox.colorscheme"

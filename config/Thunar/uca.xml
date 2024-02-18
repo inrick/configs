@@ -20,7 +20,7 @@
 	<text-files/>
 </action>
 <action>
-	<icon>tango_foobar2k_2</icon>
+	<icon>foobar2000_tango</icon>
 	<name>Add to foobar2000</name>
 	<unique-id>1523447519272687-1</unique-id>
 	<command>fb2kadd %F</command>
@@ -32,7 +32,7 @@
 	<video-files/>
 </action>
 <action>
-	<icon>tango_foobar2k_2</icon>
+	<icon>foobar2000_tango</icon>
 	<name>Send to foobar2000</name>
 	<unique-id>1523447525431621-2</unique-id>
 	<command>fb2kadd --replace %F</command>
