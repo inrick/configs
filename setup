@@ -76,9 +76,10 @@ print_usage() {
 Usage: $SCRIPT <COMMAND>
 
 COMMANDS:
-    install  Install config files to '$TARGET'.
-    remove   Remove config files from '$TARGET'.
-    help     Print this help.
+    install        Install config files to '$TARGET'.
+    remove         Remove config files from '$TARGET'.
+    install-icons  Download and install icons.
+    help           Print this help.
 
 Note that setup will only remove files that are linked to this path and
 will only install files that do not already exist, meaning it is always
@@ -148,9 +149,28 @@ remove() {
   printf "    %s\n" $removed
 }
 
+install_icons() {
+  if [[ -d ~/.local/share/icons/SE98 ]]; then
+    echo "SE98 icons are already installed; skipping."
+    return
+  fi
+  local src_url="https://github.com/nestoris/Win98SE/archive/refs/tags/v0.2.16.tar.gz"
+  echo "Downloading SE98 icons..."
+  wget -q "$src_url" || exit 1
+  echo "Extracting SE98 to ~/.local/share/icons"
+  tar -xz \
+    -f "v0.2.16.tar.gz" \
+    -C ~/.local/share/icons/ \
+    --strip-components=1 \
+    "Win98SE-0.2.16/SE98/" || exit 1
+  echo "Cleaning up downloaded archive."
+  rm "v0.2.16.tar.gz"
+}
+
 case $1 in
   install) check_src_files; install; exit 0;;
   remove) remove; exit 0;;
+  install-icons) install_icons; exit 0;;
   help|--help|-h) print_usage 0;;
 esac
 print_usage 1
