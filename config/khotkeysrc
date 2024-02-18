@@ -248,7 +248,7 @@ Type=SIMPLE_ACTION_DATA
 ActionsCount=1
 
 [Data_2_5Actions0]
-CommandURL=kitty-activate
+CommandURL=kitty -T Terminal
 Type=COMMAND_URL
 
 [Data_2_5Conditions]
