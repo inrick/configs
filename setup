@@ -45,7 +45,9 @@ files=(
   local/share/applications/custom/foobar2000.desktop
   local/share/applications/custom/okular.desktop
   local/share/applications/custom/Ripcord.desktop
+  local/share/aurorae/themes/Reactionary
   local/share/color-schemes/BreezeCustom.colors
+  local/share/color-schemes/Reactionary.colors
   local/share/file-manager/actions/add_to_foobar2000.desktop
   local/share/file-manager/actions/send_to_foobar2000.desktop
   local/share/icons/cur9
@@ -59,6 +61,7 @@ files=(
   "local/share/konsole/My XFree.keytab"
   local/share/kservices5/ServiceMenus/foobar2000.desktop
   local/share/mc/skins/spring.ini
+  local/share/plasma/desktoptheme/Reactionary
   jupyter/nbconfig/notebook.json
   jupyter/jupyter_qtconsole_config.py
   jupyter/qtconsole.css

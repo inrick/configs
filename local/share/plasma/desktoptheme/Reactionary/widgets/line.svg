@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="793.70081"
+   height="1122.5197"
+   viewBox="0 0 793.70081 1122.5197"
+   version="1.1"
+   id="svg17788"
+   inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
+   sodipodi:docname="line.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview17790"
+     pagecolor="#d1d1d1"
+     bordercolor="#6b6b6b"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     showgrid="true"
+     shape-rendering="crispEdges"
+     inkscape:zoom="24.801347"
+     inkscape:cx="267.50563"
+     inkscape:cy="711.71538"
+     inkscape:current-layer="layer1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid683"
+       originx="0"
+       originy="0"
+       spacingy="1"
+       spacingx="1"
+       units="px"
+       visible="true" />
+  </sodipodi:namedview>
+  <defs
+     id="defs17785" />
+  <style
+     id="current-color-scheme"
+     type="text/css">&#10;      .ColorScheme-Text {&#10;      }&#10;      .ColorScheme-Background{&#10;      }&#10;      .ColorScheme-Highlight{&#10;      }&#10;      .ColorScheme-ViewText {&#10;      }&#10;      .ColorScheme-ViewBackground{&#10;      }&#10;      .ColorScheme-ViewHover {&#10;      }&#10;      .ColorScheme-ViewFocus{&#10;      }&#10;      .ColorScheme-ButtonText {&#10;      }&#10;      .ColorScheme-ButtonBackground{&#10;      }&#10;      .ColorScheme-ButtonHover {&#10;      }&#10;      .ColorScheme-ButtonFocus{&#10;      }&#10;    </style>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="vertical-line">
+      <rect
+         style="fill:none;stroke-width:1.54728;stroke-opacity:0.718532"
+         id="rect1513"
+         width="3"
+         height="12"
+         x="258"
+         y="705" />
+      <rect
+         style="fill:currentColor;stroke-width:0.893323;stroke-opacity:0.718532;fill-opacity:1;opacity:0.6"
+         id="rect1675"
+         width="1"
+         height="12"
+         x="259"
+         y="705"
+         class="ColorScheme-Text" />
+    </g>
+    <use
+       x="0"
+       y="0"
+       xlink:href="#vertical-line"
+       id="horizontal-line"
+       transform="rotate(90,265.5,716.5)" />
+  </g>
+</svg>
