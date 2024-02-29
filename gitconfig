@@ -1,5 +1,6 @@
 [init]
 	defaultBranch = main
+	templatedir = ~/.git-templates
 [push]
 	default = simple
 [pull]
@@ -10,7 +11,7 @@
 	editor = nvim
 	pager = less
 [merge]
-	tool = vimdiff
+	tool = nvim -d
 [color]
 	ui = true
 [alias]
@@ -30,3 +31,4 @@
 	new = log ..@{u}
 	p = pull --all --prune
 	s = status
+	short = rev-parse --short HEAD
