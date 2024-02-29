@@ -1,7 +1,7 @@
 # /usr/include/sys/syscall.h
 # /usr/include/asm/unistd_64.h
-catch syscall 60
-catch syscall 231
+catch syscall exit
+catch syscall exit_group
 
 set print array on
 set print array-indexes on
