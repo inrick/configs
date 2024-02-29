@@ -33,6 +33,7 @@ files=(
   config/lf/lfrc
   config/mc/mc.keymap
   config/plasma-workspace/env/myenv.sh
+  config/ranger/plugins/devicons2
   config/ranger/rc.conf
   config/rofi/config.rasi
   config/rofi/theme.rasi
