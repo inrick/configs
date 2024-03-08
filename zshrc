@@ -42,8 +42,16 @@ case "$(uname)" in
     alias ls='ls -F --color=auto --group-directories-first'
     alias grep='grep --color=always'
     alias pacman='pacman --color=always'
-    alias pbcopy='xsel --input --clipboard'
-    alias pbpaste='xsel --output --clipboard'
+    case "$XDG_SESSION_TYPE" in
+    x11)
+      alias pbcopy='xsel --input --clipboard'
+      alias pbpaste='xsel --output --clipboard'
+      ;;
+    wayland)
+      alias pbcopy='wl-copy'
+      alias pbpaste='wl-paste'
+      ;;
+    esac
     ;;
   FreeBSD)
     alias ls='ls -FG'
