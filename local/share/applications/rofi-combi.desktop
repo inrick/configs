@@ -1,0 +1,7 @@
+[Desktop Entry]
+Exec=rofi -show combi
+Name=rofi -show combi
+NoDisplay=true
+StartupNotify=false
+Type=Application
+X-KDE-GlobalAccel-CommandShortcut=true

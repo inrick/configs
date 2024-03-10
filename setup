@@ -38,7 +38,7 @@ files=(
   config/rofi/config.rasi
   config/rofi/theme.rasi
   config/Thunar/uca.xml
-  config/khotkeysrc
+  config/kglobalshortcutsrc
   local/share/applications/custom/ark.desktop
   local/share/applications/custom/chromium-default.desktop
   local/share/applications/custom/dolphin.desktop
@@ -46,6 +46,11 @@ files=(
   local/share/applications/custom/foobar2000.desktop
   local/share/applications/custom/okular.desktop
   local/share/applications/custom/Ripcord.desktop
+  local/share/applications/kitty_launch.desktop
+  local/share/applications/mediacontrol-playpause.desktop
+  local/share/applications/mediacontrol-prev.desktop
+  local/share/applications/mediacontrol-next.desktop
+  local/share/applications/rofi-combi.desktop
   local/share/aurorae/themes/Reactionary
   local/share/color-schemes/BreezeCustom.colors
   local/share/color-schemes/Reactionary.colors
