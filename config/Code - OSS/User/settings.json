@@ -177,4 +177,5 @@
         "**/.metals": true,
         "**/.ammonite": true
     },
+    "window.titleBarStyle": "custom",
 }
