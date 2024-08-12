@@ -35,7 +35,7 @@ gsettings set org.gnome.desktop.peripherals.keyboard delay 300
 gsettings set org.gnome.desktop.peripherals.keyboard repeat-interval 30
 gsettings set org.gnome.desktop.screensaver user-switch-enabled false
 gsettings set org.gnome.desktop.search-providers disable-external true
-gsettings set org.gnome.desktop.session idle-delay 1800
+gsettings set org.gnome.desktop.session idle-delay 900
 
 gsettings set org.gnome.desktop.wm.keybindings close "['<Super>q']"
 gsettings set org.gnome.desktop.wm.keybindings cycle-windows "[]"
@@ -81,7 +81,7 @@ gsettings set org.gnome.desktop.wm.preferences num-workspaces 1
 gsettings set org.gnome.desktop.wm.preferences titlebar-font 'Fira Sans Medium 11'
 gsettings set org.gnome.desktop.wm.preferences visual-bell false
 
-gsettings set org.gnome.shell.keybindings focus-active-notification "[]"
+gsettings set org.gnome.shell.keybindings focus-active-notification "['<Super>n']"
 gsettings set org.gnome.shell.keybindings switch-to-application-1 "[]"
 gsettings set org.gnome.shell.keybindings switch-to-application-2 "[]"
 gsettings set org.gnome.shell.keybindings switch-to-application-3 "[]"
@@ -132,9 +132,9 @@ gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/or
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4/ binding "<Super>Return"
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4/ command "kitty -T Terminal"
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4/ name "Terminal"
-gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom5/ binding "<Super>space"
-gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom5/ command "rofi -show combi"
-gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom5/ name "rofi combi"
+gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom5/ binding ""
+gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom5/ command ""
+gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom5/ name ""
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom6/ binding "<Ctrl><Shift>Escape"
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom6/ command "gnome-system-monitor"
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom6/ name "system monitor"
@@ -152,7 +152,9 @@ gsettings set org.gnome.mutter auto-maximize false
 gsettings set org.gnome.mutter center-new-windows true
 gsettings set org.gnome.mutter dynamic-workspaces true
 gsettings set org.gnome.mutter edge-tiling false
-gsettings set org.gnome.mutter overlay-key ""
+gsettings set org.gnome.mutter locate-pointer-key "Control_R"
+gsettings set org.gnome.mutter overlay-key "Super_L"
+gsettings set org.gnome.mutter workspaces-only-on-primary true
 
 gsettings set org.gnome.eog.view extrapolate false
 gsettings set org.gnome.eog.view interpolate false
@@ -199,6 +201,7 @@ gsettings set org.gnome.Terminal.Legacy.Keybindings:/org/gnome/terminal/legacy/k
 gsettings set org.gnome.Terminal.Legacy.Keybindings:/org/gnome/terminal/legacy/keybindings/ switch-to-tab-7 'disabled'
 gsettings set org.gnome.Terminal.Legacy.Keybindings:/org/gnome/terminal/legacy/keybindings/ switch-to-tab-8 'disabled'
 gsettings set org.gnome.Terminal.Legacy.Keybindings:/org/gnome/terminal/legacy/keybindings/ switch-to-tab-9 'disabled'
+gsettings set org.gnome.Terminal.Legacy.Keybindings:/org/gnome/terminal/legacy/keybindings/ switch-to-tab-10 'disabled'
 gsettings set org.gnome.Terminal.Legacy.Settings default-show-menubar false
 gsettings set org.gnome.Terminal.Legacy.Settings headerbar false
 
