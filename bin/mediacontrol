@@ -30,11 +30,20 @@ else
     org.freedesktop.DBus.ListNames \
     | grep org.mpris.MediaPlayer2 \
     | sed -e 's/.*"\(.*\)"/\1/')
-  # First see if Spotify is running
-  target=$(echo "$candidates" | grep spotify | head -n1)
+  # First see if a preferred media player is running
+  target=
+  for player in "fooyin" "spotify"; do
+    target=$(echo "$candidates" | grep "$player" | head -n1)
+    if [ -n "$target" ]; then
+      break
+    fi
+  done
   if [ -z "$target" ]; then
     # Otherwise fallback on whatever media player is found, if any
     target=$(echo $candidates | head -n1)
+  fi
+  if [ -z "$target" ]; then
+    return
   fi
   case $1 in
     playpause) dbus-send \
