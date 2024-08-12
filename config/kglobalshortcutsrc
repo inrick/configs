@@ -6,7 +6,7 @@ switch-to-activity-d7010f53-dce5-4af6-8cab-df2ba7e828a6=none,none,Switch to acti
 Switch keyboard layout to English (intl., with AltGr dead keys)=none,none,Switch keyboard layout to English (intl.\\, with AltGr dead keys)
 Switch keyboard layout to Swedish=none,none,Switch keyboard layout to Swedish
 Switch to Last-Used Keyboard Layout=Meta+Alt+L,Meta+Alt+L,Switch to Last-Used Keyboard Layout
-Switch to Next Keyboard Layout=Meta+K,none,Switch to Next Keyboard Layout
+Switch to Next Keyboard Layout=Meta+K,Meta+Alt+K,Switch to Next Keyboard Layout
 _k_friendly_name=Keyboard Layout Switcher
 
 [kaccess]
@@ -113,10 +113,6 @@ Switch to Screen to the Left=none,,Switch to Screen to the Left
 Switch to Screen to the Right=none,,Switch to Screen to the Right
 Toggle Night Color=none,none,Toggle Night Light
 Toggle Window Raise/Lower=none,,Toggle Window Raise/Lower
-Walk Through Desktop List=none,none,Walk Through Desktop List
-Walk Through Desktop List (Reverse)=none,none,Walk Through Desktop List (Reverse)
-Walk Through Desktops=none,none,Walk Through Desktops
-Walk Through Desktops (Reverse)=none,none,Walk Through Desktops (Reverse)
 Walk Through Windows=Meta+Tab,Alt+Tab,Walk Through Windows
 Walk Through Windows (Reverse)=Meta+Shift+Tab,Alt+Shift+Tab,Walk Through Windows (Reverse)
 Walk Through Windows Alternative=none,,Walk Through Windows Alternative
@@ -243,7 +239,7 @@ activate task manager entry 7=Meta+7,Meta+7,Activate Task Manager Entry 7
 activate task manager entry 8=Meta+8,Meta+8,Activate Task Manager Entry 8
 activate task manager entry 9=Meta+9,Meta+9,Activate Task Manager Entry 9
 activate widget 19=Meta+M,none,Activate Digital Clock Widget
-activate widget 27=Alt+F1,none,Activate Application Menu Widget
+activate widget 36=Alt+F1,none,Activate Application Launcher Widget
 clear-history=none,,Clear Clipboard History
 clipboard_action=none,Meta+Ctrl+X,Automatic Action Popup Menu
 cycle-panels=Meta+Alt+P,Meta+Alt+P,Move keyboard focus between panels
@@ -251,8 +247,8 @@ cycleNextAction=none,,Next History Item
 cyclePrevAction=none,,Previous History Item
 edit_clipboard=none,none,Edit Contents…
 manage activities=none,Meta+Q,Show Activity Switcher
-next activity=none,Meta+Tab,Walk through activities
-previous activity=none,Meta+Shift+Tab,Walk through activities (Reverse)
+next activity=none,none,Walk through activities
+previous activity=Meta+Shift+A,none,Walk through activities (Reverse)
 repeat_action=none,Meta+Ctrl+R,Manually Invoke Action on Current Clipboard
 show dashboard=none,Ctrl+F12,Show Desktop
 show-barcode=none,,Show Barcode…
@@ -280,11 +276,11 @@ _launch=none
 [services][org.kde.konsole.desktop]
 _launch=none
 
+[services][org.kde.krunner.desktop]
+_launch=Alt+F2\tSearch\tAlt+Space\tMeta+Space
+
 [services][org.kde.plasma-systemmonitor.desktop]
 _launch=Meta+Esc\tCtrl+Shift+Esc
 
 [services][org.kde.plasma.emojier.desktop]
 _launch=Meta+.
-
-[services][rofi-combi.desktop]
-_launch=Meta+Space
