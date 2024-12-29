@@ -17,11 +17,11 @@ gsettings set org.gnome.desktop.interface cursor-blink false
 gsettings set org.gnome.desktop.interface cursor-theme 'Adwaita'
 gsettings set org.gnome.desktop.interface can-change-accels true
 gsettings set org.gnome.desktop.interface enable-animations true
-gsettings set org.gnome.desktop.interface font-antialiasing 'rgba'
+gsettings set org.gnome.desktop.interface font-antialiasing 'grayscale'
 gsettings set org.gnome.desktop.interface font-hinting 'slight'
 gsettings set org.gnome.desktop.interface font-name 'Fira Sans 11'
 gsettings set org.gnome.desktop.interface document-font-name 'Fira Sans 11'
-gsettings set org.gnome.desktop.interface monospace-font-name 'Source Code Pro Medium 11'
+gsettings set org.gnome.desktop.interface monospace-font-name 'Source Code Pro 11.5'
 gsettings set org.gnome.desktop.interface overlay-scrolling false
 gsettings set org.gnome.desktop.interface text-scaling-factor 1
 
