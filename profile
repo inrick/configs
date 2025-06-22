@@ -1,6 +1,6 @@
 umask 022
 
-export PATH=~/.bin:~/local/bin:$PATH
+export PATH=~/.bin:~/local/bin:~/.local/bin:$PATH
 export MANPATH=~/local/share/man:$MANPATH
 export EDITOR=nvim
 export PAGER=less
@@ -10,7 +10,7 @@ export MANWIDTH=80
 # Disable QT_QPA_PLATFORMTHEME when running KDE
 export QT_QPA_PLATFORMTHEME=qt6ct
 export QT_QPA_PLATFORM=wayland
-export QT_WAYLAND_DECORATION=adwaita
+#export QT_WAYLAND_DECORATION=adwaita
 export WINEDLLOVERRIDES="mscoree=d;mshtml=d"
 export GTK_OVERLAY_SCROLLING=0
 #export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"

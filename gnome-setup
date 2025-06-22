@@ -16,7 +16,7 @@ gsettings set org.gnome.desktop.interface clock-show-weekday true
 gsettings set org.gnome.desktop.interface cursor-blink false
 gsettings set org.gnome.desktop.interface cursor-theme 'Adwaita'
 gsettings set org.gnome.desktop.interface can-change-accels true
-gsettings set org.gnome.desktop.interface enable-animations true
+gsettings set org.gnome.desktop.interface enable-animations false
 gsettings set org.gnome.desktop.interface font-antialiasing 'grayscale'
 gsettings set org.gnome.desktop.interface font-hinting 'slight'
 gsettings set org.gnome.desktop.interface font-name 'Fira Sans 11'
@@ -44,15 +44,15 @@ gsettings set org.gnome.desktop.wm.keybindings cycle-windows-backward "[]"
 gsettings set org.gnome.desktop.wm.keybindings maximize "['<Super>Up']"
 gsettings set org.gnome.desktop.wm.keybindings maximize-vertically "['<Super><Alt>Up']"
 gsettings set org.gnome.desktop.wm.keybindings minimize "['<Super>h']"
-gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-1 "[]"
-gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-2 "[]"
-gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-3 "[]"
-gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-4 "[]"
-gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-5 "[]"
-gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-6 "[]"
-gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-7 "[]"
-gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-8 "[]"
-gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-9 "[]"
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-1 "['<Super>1']"
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-2 "['<Super>2']"
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-3 "['<Super>3']"
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-4 "['<Super>4']"
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-5 "['<Super>5']"
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-6 "['<Super>6']"
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-7 "['<Super>7']"
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-8 "['<Super>8']"
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-9 "['<Super>9']"
 gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-down "[]"
 gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-up "[]"
 gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-right "['<Control><Shift>Down']"
@@ -96,7 +96,7 @@ gsettings set org.gnome.shell.keybindings shift-overview-down "[]"
 gsettings set org.gnome.shell.keybindings shift-overview-up "[]"
 gsettings set org.gnome.shell.keybindings toggle-application-view "['<Super>a']"
 gsettings set org.gnome.shell.keybindings toggle-message-tray "['<Super>m']"
-gsettings set org.gnome.shell.keybindings toggle-overview "['<Super>s', '<Super>space']"
+gsettings set org.gnome.shell.keybindings toggle-overview "['<Super>s']"
 gsettings set org.gnome.shell.keybindings toggle-quick-settings "['<Super>0']"
 
 gsettings set org.gnome.mutter.keybindings toggle-tiled-left "['<Super>Left']"
@@ -116,8 +116,10 @@ gsettings set org.gnome.settings-daemon.plugins.media-keys pause-static "['']"
 gsettings set org.gnome.settings-daemon.plugins.media-keys stop-static "['']"
 gsettings set org.gnome.settings-daemon.plugins.media-keys next-static "['']"
 gsettings set org.gnome.settings-daemon.plugins.media-keys previous-static "['']"
+gsettings set org.gnome.settings-daemon.plugins.media-keys volume-down-precise "['<Super><Control>f']"
+gsettings set org.gnome.settings-daemon.plugins.media-keys volume-up-precise "['<Super><Control>d']"
 gsettings set org.gnome.settings-daemon.plugins.media-keys screensaver "['<Super>l']"
-gsettings set org.gnome.settings-daemon.plugins.media-keys custom-keybindings "['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom5/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom6/']"
+gsettings set org.gnome.settings-daemon.plugins.media-keys custom-keybindings "['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom5/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom6/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom7/']"
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ binding ""
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ command "fb2kshoworhide"
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ name "foobar2000 activate"
@@ -131,7 +133,7 @@ gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/or
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/ command "mediacontrol prev"
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/ name "Media player prev"
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4/ binding "<Super>Return"
-gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4/ command "kitty -T Terminal"
+gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4/ command "kitty"
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4/ name "Terminal"
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom5/ binding ""
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom5/ command ""
@@ -139,6 +141,9 @@ gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/or
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom6/ binding "<Ctrl><Shift>Escape"
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom6/ command "gnome-system-monitor"
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom6/ name "system monitor"
+gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom7/ binding "<Super>space"
+gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom7/ command "xfce4-appfinder"
+gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom7/ name "Appfinder"
 
 gsettings set org.gnome.settings-daemon.plugins.color night-light-enabled true
 gsettings set org.gnome.settings-daemon.plugins.color night-light-temperature 3500
