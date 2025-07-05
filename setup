@@ -24,6 +24,7 @@ files=(
   config/cmus/rc
   config/fontconfig/conf.d/99-noto-color-emoji.conf
   config/fontconfig/conf.d/99-pxplus-disable-hint.conf
+  config/ghostty/config
   config/gtk-3.0/gtk.css
   config/kitty/current-theme.conf
   config/kitty/kitty.conf
