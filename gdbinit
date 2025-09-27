@@ -1,7 +1,7 @@
 # /usr/include/sys/syscall.h
 # /usr/include/asm/unistd_64.h
-catch syscall exit
-catch syscall exit_group
+#catch syscall exit
+#catch syscall exit_group
 
 set verbose off
 set print array on
