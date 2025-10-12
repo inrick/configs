@@ -168,7 +168,7 @@ gsettings set org.gnome.mutter center-new-windows true
 gsettings set org.gnome.mutter dynamic-workspaces true
 gsettings set org.gnome.mutter edge-tiling false
 gsettings set org.gnome.mutter locate-pointer-key "Control_R"
-gsettings set org.gnome.mutter overlay-key "Super_L"
+gsettings set org.gnome.mutter overlay-key ""
 gsettings set org.gnome.mutter workspaces-only-on-primary true
 
 gsettings set org.gnome.eog.view extrapolate false
