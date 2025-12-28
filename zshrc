@@ -47,9 +47,7 @@ case "$(uname)" in
     alias grep='grep --color=always'
     alias pacman='pacman --color=always'
     alias open='xdg-open'
-    alias dnd='kde-inhibit --notifications'
-    alias open='xdg-open'
-    alias o='open .'
+    alias o='xdg-open .'
     case "$XDG_SESSION_TYPE" in
     x11)
       alias pbcopy='xsel --input --clipboard'
@@ -58,6 +56,11 @@ case "$(uname)" in
     wayland)
       alias pbcopy='wl-copy'
       alias pbpaste='wl-paste'
+      ;;
+    esac
+    case "$XDG_CURRENT_DESKTOP" in
+    KDE)
+      alias dnd='kde-inhibit --notifications'
       ;;
     esac
     ;;
