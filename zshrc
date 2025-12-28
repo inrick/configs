@@ -37,11 +37,19 @@ bindkey '^[[Z' reverse-menu-complete # shift-tab
 
 stty -ixon
 
+cmd_exists() {
+  command -v "$1" >/dev/null
+}
+
 case "$(uname)" in
   Linux)
     alias ls='ls -F --color=auto --group-directories-first'
     alias grep='grep --color=always'
     alias pacman='pacman --color=always'
+    alias open='xdg-open'
+    alias dnd='kde-inhibit --notifications'
+    alias open='xdg-open'
+    alias o='open .'
     case "$XDG_SESSION_TYPE" in
     x11)
       alias pbcopy='xsel --input --clipboard'
@@ -57,6 +65,12 @@ case "$(uname)" in
     alias ls='ls -FG'
     alias grep='grep --color=always'
     ;;
+  Darwin)
+    alias ls='ls -FG'
+    alias grep='grep --color=always'
+    alias o='open .'
+    alias ql='qlmanage -px >/dev/null'
+    ;;
   OpenBSD)
     alias ls='ls -F';;
 esac
@@ -64,36 +78,32 @@ alias l='ls -lah'
 alias l1='ls -1'
 alias c='cat'
 alias e='$EDITOR'
-alias f='source ranger'
 alias g='git'
-alias p='ipython'
-alias gk='gitg &> /dev/null &'
+
+cmd_exists ranger  && alias f='source ranger'
+cmd_exists ipython && alias p='ipython'
+cmd_exists whipper && alias cdrip='whipper cd rip --track-template="%A/%d (%y)/%t. %n" --disc-template="%A/%d (%y)/%d"'
+cmd_exists ncdu    && alias ncdu='ncdu --color=off'
+cmd_exists mdcat   && alias mdcat='mdcat --columns=80'
+if cmd_exists gitg; then
+  alias gk='gitg &> /dev/null &'
+elif cmd_exists gitk; then
+  alias gk='gitk &> /dev/null &'
+fi
+
 alias hd='hexdump -C'
-alias open='xdg-open'
-alias o='xdg-open .'
-alias cdrip='whipper cd rip --track-template="%A/%d (%y)/%t. %n" --disc-template="%A/%d (%y)/%d"'
 alias objd='objdump -d --disassembler-options=intel --disassembler-color=on'
-alias rg='rg --color=always'
-alias ncdu='ncdu --color=off'
-alias mdcat='mdcat --columns=80'
-alias dnd='kde-inhibit --notifications'
 alias wik='cd ~/Documents/wiki && nvim source/Toplevel/TODO.rst'
+if cmd_exists rg; then
+  alias rg='rg --color=always'
+  alias todos='rg -w "(TODO|FIXME|XXX)"'
+fi
 
 if [[ $TERM == 'xterm-kitty' ]]; then
   alias icat='kitty +kitten icat'
   alias kssh='kitty +kitten ssh'
   alias rg='kitty +kitten hyperlinked_grep'
-  # NOTE: the following is to get a black titlebar in GNOME.
-  # xprop -f _GTK_THEME_VARIANT 8u -set _GTK_THEME_VARIANT "dark" -name Terminal
 fi
-
-night() {
-  if [[ -z "$1" ]]; then
-    gsettings get org.gnome.settings-daemon.plugins.color night-light-temperature
-  else
-    gsettings set org.gnome.settings-daemon.plugins.color night-light-temperature $1
-  fi
-}
 
 zip_epub() {
   # $1 = book_name.epub
@@ -132,6 +142,8 @@ export LESS_TERMCAP_me=$'\e[0m'     # end bold/blink/underline
 export LESS_TERMCAP_se=$'\e[0m'     # end standout
 export LESS_TERMCAP_ue=$'\e[0m'     # end underline
 export LESS=iR                      # ignore case and interpret ANSI color escape sequences
+
+cmd_exists fzf && eval "$(fzf --zsh)"
 
 if [[ -f ~/.zshrc_local ]]; then
   source ~/.zshrc_local
