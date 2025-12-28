@@ -19,7 +19,6 @@ files=(
   bin/xinput_refresh
   "config/Code - OSS/User/keybindings.json"
   "config/Code - OSS/User/settings.json"
-  config/autostart/xresources.desktop
   config/bat/config
   config/cmus/rc
   config/fontconfig/conf.d/99-noto-color-emoji.conf
