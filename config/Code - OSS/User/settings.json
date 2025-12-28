@@ -1,7 +1,7 @@
 {
     "telemetry.telemetryLevel": "off",
-    "editor.fontFamily": "'Source Code Pro Medium'",
-    "editor.tabSize": 2,
+    "editor.fontFamily": "'Source Code Pro'",
+    "editor.tabSize": 4,
     "editor.cursorStyle": "block",
     "editor.occurrencesHighlight": "off",
     "editor.renderLineHighlight": "none",
@@ -23,7 +23,6 @@
     "debug.console.fontSize": 16,
     "markdown.preview.fontSize": 16,
     "terminal.integrated.fontSize": 16,
-    "workbench.colorTheme": "Quiet Light",
     "workbench.colorCustomizations": {
         "editorError.foreground": "#00000000",
         "editorWarning.foreground": "#00000000",
@@ -178,4 +177,8 @@
         "**/.ammonite": true
     },
     "window.titleBarStyle": "custom",
+    "workbench.colorTheme": "Default Light Modern",
+    "git.blame.editorDecoration.enabled": false,
+    "git.blame.statusBarItem.enabled": true,
+    "workbench.activityBar.location": "top",
 }
