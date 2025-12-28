@@ -42,6 +42,9 @@ link-url = true
 adw-toolbar-style = "raised"
 window-theme = "dark"
 window-subtitle = false
+macos-titlebar-style = "native"
+macos-option-as-alt = true
+macos-auto-secure-input = true
 
 keybind = super+t=new_tab
 keybind = super+n=new_window
