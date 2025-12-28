@@ -26,6 +26,7 @@ files=(
   config/ghostty/config
   config/gtk-3.0/gtk.css
   config/kitty/current-theme.conf
+  config/kitty/keys_linux.conf
   config/kitty/kitty.conf
   config/kitty/open-actions.conf
   config/kitty/themes/moon.conf
