@@ -100,9 +100,11 @@ if cmd_exists rg; then
 fi
 
 if [[ $TERM == 'xterm-kitty' ]]; then
-  alias icat='kitty +kitten icat'
-  alias kssh='kitty +kitten ssh'
-  alias rg='kitty +kitten hyperlinked_grep'
+  if cmd_exists kitty; then
+    alias icat='kitty +kitten icat'
+    alias kssh='kitty +kitten ssh'
+    alias rg='kitty +kitten hyperlinked_grep'
+  fi
 fi
 
 zip_epub() {
