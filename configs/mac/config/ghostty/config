@@ -1,0 +1,63 @@
+font-family = "Source Code Pro Medium"
+font-style-bold = "Source Code Pro Bold"
+font-style-italic = "Source Code Pro Italic"
+font-style-bold-italic = "Source Code Pro Bold Italic"
+font-size = 15
+
+window-width = 140
+window-height = 44
+
+shell-integration-features = no-cursor
+
+cursor-style = block
+cursor-style-blink = false
+
+foreground = "#000000"
+background = "#fbf1c7"
+
+split-divider-color = #928374
+
+palette = 0=#1d2021
+palette = 1=#9d0006
+palette = 2=#79740e
+palette = 3=#b57614
+palette = 4=#076678
+palette = 5=#8f3f71
+palette = 6=#427b58
+palette = 7=#ebdbb2
+palette = 8=#504945
+palette = 9=#cc241d
+palette = 10=#98971a
+palette = 11=#d79921
+palette = 12=#458588
+palette = 13=#b16286
+palette = 14=#689d6a
+palette = 15=#928374
+
+bold-is-bright = false
+
+link-url = true
+
+window-theme = "dark"
+window-subtitle = false
+macos-titlebar-style = "native"
+macos-option-as-alt = true
+macos-auto-secure-input = true
+
+keybind = super+t=new_tab
+keybind = super+n=new_window
+keybind = super+c=copy_to_clipboard
+keybind = super+v=paste_from_clipboard
+keybind = ctrl+up=previous_tab
+keybind = ctrl+down=next_tab
+keybind = ctrl+page_up=unbind
+keybind = ctrl+page_down=unbind
+keybind = f1=unbind
+keybind = ctrl+shift+h=write_scrollback_file:open
+keybind = ctrl+j=goto_split:next
+keybind = ctrl+k=goto_split:previous
+keybind = ctrl+shift+]=goto_split:next
+keybind = ctrl+shift+[=goto_split:previous
+keybind = super+]=goto_split:next
+keybind = super+[=goto_split:previous
+#keybind = ctrl+shift+enter=new_split:right
