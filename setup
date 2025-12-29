@@ -1,193 +1,156 @@
-#!/usr/bin/env zsh
-readonly SCRIPT=$0
-readonly SCRIPTPATH=${0:a}
-readonly SOURCE=${SCRIPTPATH%/*}
-readonly TARGET=$HOME
+#!/usr/bin/env python3
 
-typeset -a files
-files=(
-  bin/chromium-default
-  bin/go-update-binaries
-  bin/fb2kadd
-  bin/fb2kshoworhide
-  bin/firefox-default
-  bin/foobar2000
-  bin/kitty-activate
-  bin/mediacontrol
-  bin/rofi_run_custom_list
-  bin/terminal-activate
-  bin/xinput_refresh
-  "config/Code - OSS/User/keybindings.json"
-  "config/Code - OSS/User/settings.json"
-  config/bat/config
-  config/cmus/rc
-  config/fontconfig/conf.d/99-noto-color-emoji.conf
-  config/fontconfig/conf.d/99-pxplus-disable-hint.conf
-  config/ghostty/config
-  config/gtk-3.0/gtk.css
-  config/kitty/current-theme.conf
-  config/kitty/kitty-linux.conf
-  config/kitty/kitty-macos.conf
-  config/kitty/kitty.conf
-  config/kitty/open-actions.conf
-  config/kitty/themes/moon.conf
-  config/kitty/themes/sun.conf
-  config/lf/lfrc
-  config/mc/mc.keymap
-  config/plasma-workspace/env/myenv.sh
-  config/ranger/plugins/devicons2
-  config/ranger/rc.conf
-  config/rofi/config.rasi
-  config/rofi/theme.rasi
-  config/Thunar/uca.xml
-  config/kglobalshortcutsrc
-  local/share/applications/custom/ark.desktop
-  local/share/applications/custom/chromium-default.desktop
-  local/share/applications/custom/dolphin.desktop
-  local/share/applications/custom/firefox-default.desktop
-  local/share/applications/custom/foobar2000.desktop
-  local/share/applications/custom/okular.desktop
-  local/share/applications/custom/Ripcord.desktop
-  local/share/applications/kitty_launch.desktop
-  local/share/applications/mediacontrol-playpause.desktop
-  local/share/applications/mediacontrol-prev.desktop
-  local/share/applications/mediacontrol-next.desktop
-  local/share/applications/rofi-combi.desktop
-  local/share/aurorae/themes/Reactionary
-  local/share/color-schemes/BreezeCustom.colors
-  local/share/color-schemes/Reactionary.colors
-  local/share/file-manager/actions/add_to_foobar2000.desktop
-  local/share/file-manager/actions/send_to_foobar2000.desktop
-  local/share/icons/cur9
-  local/share/icons/OSX-ElCap
-  local/share/icons/foobar2000_alt.png
-  local/share/icons/foobar2000_metro.png
-  local/share/icons/foobar2000_tango.png
-  local/share/icons/foobar2000.png
-  "local/share/konsole/My Default.profile"
-  "local/share/konsole/My Gruvbox.colorscheme"
-  "local/share/konsole/My XFree.keytab"
-  local/share/kservices5/ServiceMenus/foobar2000.desktop
-  local/share/mc/skins/spring.ini
-  local/share/plasma/desktoptheme/Reactionary
-  jupyter/nbconfig/notebook.json
-  jupyter/jupyter_qtconsole_config.py
-  jupyter/qtconsole.css
-  gdbinit
-  gitconfig
-  inputrc
-  lambda-term-inputrc
-  latexmkrc
-  lldbinit
-  ocamlinit
-  profile
-  tmux.conf
-  utoprc
-  Xresources
-  zshrc
-)
-readonly files
+# TODO: make dry_run and target_dir configurable
+# TODO: when removing symlinks, also remove empty directories left behind
 
-print_usage() {
-  cat << EOF
-Usage: $SCRIPT <COMMAND>
+import os
+import sys
+import textwrap
+from dataclasses import dataclass
+from pathlib import Path
+from typing import Iterable
 
-COMMANDS:
-    install        Install config files to '$TARGET'.
-    remove         Remove config files from '$TARGET'.
-    install-icons  Download and install icons.
-    help           Print this help.
 
-Note that setup will only remove files that are linked to this path and
-will only install files that do not already exist, meaning it is always
-safe to run.
-EOF
-  exit $1
-}
+@dataclass
+class Config:
+    bin_name: str
+    uname: str
+    target_dir: Path
+    shared_dir: Path
+    linux_dir: Path
+    mac_dir: Path
+    dry_run: bool
 
-check_src_files() {
-  local src=
-  for f in $files; do
-    src=$SOURCE/$f
-    if [[ ! -e "$src" ]]; then
-      echo "ERROR: expected source file '$src' does not exist"
-      exit 1
-    fi
-  done
-}
 
-install() {
-  local src=
-  local target=
-  local target_base=
-  local installed=
-  local exists=
+@dataclass
+class Link:
+    src: Path
+    dst: Path
 
-  for f in $files; do
-    src=$SOURCE/$f
-    target=$TARGET/.$f
-    target_base=${target%/*}
-    if [[ -e "$target" ]]; then
-      exists+=("$target")
-    else
-      [[ -d "$target_base" ]] || mkdir -p "$target_base"
-      ln -s "$src" "$target"
-      installed+=("$target")
-    fi
-  done
 
-  echo "Already exist, remove and run again to install:"
-  printf "    %s\n" $exists
-  echo "Installed:"
-  printf "    %s\n" $installed
-}
+def mkconfig() -> Config:
+    script_dir = Path(__file__).parent
+    target_dir = Path.home()
+    return Config(
+        bin_name=sys.argv[0],
+        uname=os.uname().sysname,
+        target_dir=target_dir,
+        shared_dir=script_dir / "configs" / "shared",
+        linux_dir=script_dir / "configs" / "linux",
+        mac_dir=script_dir / "configs" / "mac",
+        dry_run=False,
+    )
 
-remove() {
-  local src=
-  local target=
-  local removed=
-  local kept=
 
-  for f in $files; do
-    src=$SOURCE/$f
-    target=$TARGET/.$f
-    # Remove if target is symlink to src
-    if [[ -L "$target" && $(readlink "$target") == $src ]]; then
-      rm "$target"
-      removed+=("$target")
-    else
-      kept+=("$target")
-    fi
-  done
+def print_usage(cfg: Config, exit_code: int):
+    msg = f"""\
+    Usage: {cfg.bin_name} <COMMAND>
 
-  echo "Kept because not linked here:"
-  printf "    %s\n" $kept
-  echo "Removed:"
-  printf "    %s\n" $removed
-}
+    COMMANDS:
+        link      Symlink configuration files into '{cfg.target_dir}'.
+        unlink    Remove symlinked configuration files from '{cfg.target_dir}'.
+        help      Print this help.
 
-install_icons() {
-  if [[ -d ~/.local/share/icons/SE98 ]]; then
-    echo "SE98 icons are already installed; skipping."
-    return
-  fi
-  local src_url="https://github.com/nestoris/Win98SE/archive/refs/tags/v0.2.16.tar.gz"
-  echo "Downloading SE98 icons..."
-  wget -q "$src_url" || exit 1
-  echo "Extracting SE98 to ~/.local/share/icons"
-  tar -xz \
-    -f "v0.2.16.tar.gz" \
-    -C ~/.local/share/icons/ \
-    --strip-components=1 \
-    "Win98SE-0.2.16/SE98/" || exit 1
-  echo "Cleaning up downloaded archive."
-  rm "v0.2.16.tar.gz"
-}
+    Note that setup will only remove files that are linked to this path and
+    will only install files that do not already exist, meaning it is always
+    safe to run.\
+    """
+    msg = textwrap.dedent(msg)
+    print(msg)
+    sys.exit(exit_code)
 
-case $1 in
-  install) check_src_files; install; exit 0;;
-  remove) remove; exit 0;;
-  install-icons) install_icons; exit 0;;
-  help|--help|-h) print_usage 0;;
-esac
-print_usage 1
+
+def link_targets_path(src: Path, dst: Path) -> Iterable[Link]:
+    for dirpath, _, filenames in src.walk():
+        for fname in filenames:
+            srcpath = dirpath / fname
+            relpath = srcpath.relative_to(src)
+            dstpath = dst / Path(f".{relpath}")
+            yield Link(src=srcpath, dst=dstpath)
+
+
+def link_targets(cfg: Config) -> Iterable[Link]:
+    yield from link_targets_path(cfg.shared_dir, cfg.target_dir)
+    if cfg.uname == "Linux":
+        yield from link_targets_path(cfg.linux_dir, cfg.target_dir)
+    elif cfg.uname == "Darwin":
+        yield from link_targets_path(cfg.mac_dir, cfg.target_dir)
+
+
+def is_linked_here(link: Link) -> bool:
+    return link.dst.is_symlink() and link.dst.resolve() == link.src.resolve()
+
+
+def print_links(links: list[Link]):
+    width = max(len(str(x.src)) for x in links)
+    print("\n".join(f"    {str(x.src).ljust(width)}  -->  {x.dst}" for x in links))
+
+
+def print_links_reverse(links: list[Link]):
+    width = max(len(str(x.dst)) for x in links)
+    print("\n".join(f"    {str(x.dst).ljust(width)}  -->  {x.src}" for x in links))
+
+
+def install(cfg: Config):
+    installed = []
+    skipped = []
+    already_installed = []
+    for link in link_targets(cfg):
+        if link.dst.exists(follow_symlinks=False):
+            if is_linked_here(link):
+                already_installed.append(link)
+            else:
+                skipped.append(link)
+        else:
+            if not cfg.dry_run:
+                link.dst.parent.mkdir(parents=True, exist_ok=True)
+                os.symlink(link.src, link.dst)
+            installed.append(link)
+    if already_installed:
+        print("The following were aleady installed:")
+        print_links(already_installed)
+    if skipped:
+        print("Skipped because another file already exists:")
+        print("\n".join(f"    {x.dst}" for x in skipped))
+    if installed:
+        if cfg.dry_run:
+            print("DRY RUN. Would install the following:")
+        else:
+            print("Installed:")
+        print_links(installed)
+
+
+def remove(cfg: Config):
+    removed = []
+    links_elsewhere = []
+    for link in link_targets(cfg):
+        if is_linked_here(link):
+            if not cfg.dry_run:
+                os.unlink(link.dst)
+            removed.append(link)
+        elif link.dst.exists():
+            links_elsewhere.append(link)
+    if links_elsewhere:
+        print("Kept because not linked here:")
+        print("\n".join(f"    {x.dst}" for x in links_elsewhere))
+    if removed:
+        if cfg.dry_run:
+            print("DRY RUN. Would remove the following files:")
+        else:
+            print("Removed:")
+        print_links_reverse(removed)
+
+
+if __name__ == "__main__":
+    cfg = mkconfig()
+    if len(sys.argv) != 2:
+        print_usage(cfg, 1)
+    cmd = sys.argv[1]
+    if cmd == "link":
+        install(cfg)
+    elif cmd == "unlink":
+        remove(cfg)
+    elif cmd == "help":
+        print_usage(cfg, 0)
+    else:
+        print_usage(cfg, 1)

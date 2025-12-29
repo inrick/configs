@@ -1,12 +1,15 @@
 Instructions
 ------------
 
-The setup script will only remove files that are linked to this path and will
-only install files that do not already exist, meaning it is always safe to run:
+The `setup` script creates symlinks of relevant configuration files (based on
+system uname) into the user's home directory. Links are only created for files
+that do not already exist. Similarly, when unlinking, the script only ever
+removes links to files that point to within this repository. In other words,
+it is always safe to run:
 
-  * run `./setup install` to symlink config files to home,
+  * Run `./setup link` to symlink config files to home
 
-  * run `./setup remove` to remove created symlinks.
+  * Run `./setup unlink` to remove created symlinks.
 
 
 Misc.
