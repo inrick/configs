@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 
 # TODO: make dry_run and target_dir configurable
-# TODO: when removing symlinks, also remove empty directories left behind
 
 import os
 import sys
@@ -120,6 +119,17 @@ def install(cfg: Config):
         print_links(installed)
 
 
+def remove_empty_dst_dirs(links: list[Link]):
+    for link in links:
+        dir = link.dst.parent
+        while True:
+            try:
+                dir.rmdir()
+                dir = dir.parent
+            except Exception:
+                break
+
+
 def remove(cfg: Config):
     removed = []
     links_elsewhere = []
@@ -139,6 +149,8 @@ def remove(cfg: Config):
         else:
             print("Removed:")
         print_links_reverse(removed)
+    if not cfg.dry_run:
+        remove_empty_dst_dirs(removed)
 
 
 if __name__ == "__main__":
