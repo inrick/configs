@@ -101,10 +101,11 @@ def install(cfg: Config):
             else:
                 skipped.append(link)
         else:
-            if not cfg.dry_run:
-                link.dst.parent.mkdir(parents=True, exist_ok=True)
-                os.symlink(link.src, link.dst)
             installed.append(link)
+    if not cfg.dry_run:
+        for link in installed:
+            link.dst.parent.mkdir(parents=True, exist_ok=True)
+            os.symlink(link.src, link.dst)
     if already_installed:
         print("The following were aleady installed:")
         print_links(already_installed)
@@ -135,11 +136,13 @@ def remove(cfg: Config):
     links_elsewhere = []
     for link in link_targets(cfg):
         if is_linked_here(link):
-            if not cfg.dry_run:
-                os.unlink(link.dst)
             removed.append(link)
         elif link.dst.exists():
             links_elsewhere.append(link)
+    if not cfg.dry_run:
+        for link in removed:
+            os.unlink(link.dst)
+        remove_empty_dst_dirs(removed)
     if links_elsewhere:
         print("Kept because not linked here:")
         print("\n".join(f"    {x.dst}" for x in links_elsewhere))
@@ -149,8 +152,6 @@ def remove(cfg: Config):
         else:
             print("Removed:")
         print_links_reverse(removed)
-    if not cfg.dry_run:
-        remove_empty_dst_dirs(removed)
 
 
 if __name__ == "__main__":
