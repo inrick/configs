@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 
-# TODO: make dry_run and target_dir configurable
-
+import optparse
 import os
 import sys
 import textwrap
@@ -27,17 +26,16 @@ class Link:
     dst: Path
 
 
-def mkconfig() -> Config:
+def mkconfig(opts) -> Config:
     script_dir = Path(__file__).parent
-    target_dir = Path.home()
     return Config(
         bin_name=sys.argv[0],
         uname=os.uname().sysname,
-        target_dir=target_dir,
+        target_dir=opts.target_dir,
         shared_dir=script_dir / "configs" / "shared",
         linux_dir=script_dir / "configs" / "linux",
         mac_dir=script_dir / "configs" / "mac",
-        dry_run=False,
+        dry_run=opts.dry_run,
     )
 
 
@@ -45,10 +43,12 @@ def print_usage(cfg: Config, exit_code: int):
     msg = f"""\
     Usage: {cfg.bin_name} <COMMAND>
 
+    Target directory defaults to user home unless specified.
+
     COMMANDS:
-        link      Symlink configuration files into '{cfg.target_dir}'.
-        unlink    Remove symlinked configuration files from '{cfg.target_dir}'.
-        help      Print this help.
+        link   [-n] [-t target_dir]  Symlink configuration files into '{cfg.target_dir}'.
+        unlink [-n] [-t target_dir]  Remove symlinked configuration files from '{cfg.target_dir}'.
+        help                         Print this help.
 
     Note that setup will only remove files that are linked to this path and
     will only install files that do not already exist, meaning it is always
@@ -155,10 +155,15 @@ def remove(cfg: Config):
 
 
 if __name__ == "__main__":
-    cfg = mkconfig()
-    if len(sys.argv) != 2:
+    # Prefer optparse to argparse for being less opinionated.
+    parser = optparse.OptionParser(add_help_option=False)
+    parser.add_option("-n", "--dry-run", action="store_true")
+    parser.add_option("-t", "--target-dir", type=str, default=Path.home())
+    opts, args = parser.parse_args()
+    cfg = mkconfig(opts)
+    if len(args) != 1:
         print_usage(cfg, 1)
-    cmd = sys.argv[1]
+    cmd = args[0]
     if cmd == "link":
         install(cfg)
     elif cmd == "unlink":
