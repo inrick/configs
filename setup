@@ -107,7 +107,7 @@ def install(cfg: Config):
             link.dst.parent.mkdir(parents=True, exist_ok=True)
             os.symlink(link.src, link.dst)
     if already_installed:
-        print("The following were aleady installed:")
+        print("The following were already installed:")
         print_links(already_installed)
     if skipped:
         print("Skipped because another file already exists:")
