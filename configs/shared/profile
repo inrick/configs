@@ -1,0 +1,49 @@
+umask 077
+
+export PATH=~/.bin:~/local/bin:~/.local/bin:$PATH
+export MANPATH=~/local/share/man:$MANPATH
+export EDITOR=nvim
+export PAGER=less
+export VISUAL=nvim
+export MANWIDTH=80
+
+# Add Go and Rust paths
+export GOPATH=~/local/go
+export GOBIN=~/local/go/bin
+export PATH=$GOBIN:$PATH
+export CARGO_TARGET_DIR=~/.cargo/target
+
+# Some settings only relevant for graphical desktops.
+case "XDG_SESSION_TYPE" in
+  x11|wayland)
+    export BROWSER=firefox-default
+    export WINEDLLOVERRIDES="mscoree=d;mshtml=d"
+    export GTK_OVERLAY_SCROLLING=0
+    if [ -d "$XDG_RUNTIME_DIR/gcr/ssh" ]; then
+      export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/gcr/ssh"
+    fi
+    if [ "$XDG_SESSION_TYPE" -eq "wayland" ]; then
+      export MOZ_ENABLE_WAYLAND=1
+    fi
+  ;;
+esac
+
+# Others only specifically when running GNOME.
+case "$XDG_CURRENT_DESKTOP" in
+  GNOME)
+    # Only override these QT settings for GNOME. But have started
+    # disabling it even there, to default to Xwayland so that windows
+    # get "server side" decorations and shadows, even if it means
+    # fractional scaling is broken.
+    #export QT_QPA_PLATFORMTHEME=qt6ct
+    #export QT_QPA_PLATFORM=wayland
+    #export QT_WAYLAND_DECORATION=adwaita
+  ;;
+esac
+
+# Mac requires handling differently.
+case "$(uname)" in
+  Darwin)
+    export BROWSER=firefox
+  ;;
+esac
