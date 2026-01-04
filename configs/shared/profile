@@ -1,4 +1,4 @@
-umask 077
+umask 022
 
 export PATH=~/.bin:~/local/bin:~/.local/bin:$PATH
 export MANPATH=~/local/share/man:$MANPATH
